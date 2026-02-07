@@ -1,33 +1,68 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
-import { Scale, Ruler, Calculator } from "lucide-react";
+import { Scale, Ruler, Calculator, Calendar } from "lucide-react";
 
 interface BMICalculatorProps {
-  onCalculate: (bmi: number, weight: number, height: number) => void;
+  onCalculate: (bmi: number, weight: number, height: number, age: number) => void;
 }
 
 export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
   const [weight, setWeight] = useState<number>(70);
   const [height, setHeight] = useState<number>(170);
+  const [age, setAge] = useState<number>(30);
 
-  const handleCalculate = () => {
-    const h = height / 100; // Convert cm to m
+  // Calculate BMI in real-time
+  useEffect(() => {
+    const h = height / 100;
     const bmi = weight / (h * h);
-    onCalculate(bmi, weight, height);
-  };
+    onCalculate(bmi, weight, height, age);
+  }, [weight, height, age, onCalculate]);
+
+  const bmi = weight / Math.pow(height / 100, 2);
 
   return (
     <div className="glass-card p-8 animate-slide-up">
-      <div className="flex items-center gap-3 mb-8">
-        <div className="p-3 rounded-xl bg-primary/10">
-          <Calculator className="w-6 h-6 text-primary" />
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-3">
+          <div className="p-3 rounded-xl bg-primary/10">
+            <Calculator className="w-6 h-6 text-primary" />
+          </div>
+          <h2 className="text-2xl font-display font-bold">Calculateur IMC</h2>
         </div>
-        <h2 className="text-2xl font-display font-bold">Calculateur IMC</h2>
+        <div className="text-right">
+          <p className="text-sm text-muted-foreground">Votre IMC</p>
+          <p className="text-3xl font-display font-bold gradient-text">{bmi.toFixed(1)}</p>
+        </div>
       </div>
 
-      <div className="space-y-10">
+      <div className="space-y-8">
+        {/* Age Slider */}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <Label className="flex items-center gap-2 text-muted-foreground">
+              <Calendar className="w-4 h-4" />
+              Âge
+            </Label>
+            <div className="flex items-baseline gap-1">
+              <span className="text-3xl font-display font-bold text-age">{age}</span>
+              <span className="text-muted-foreground font-medium">ans</span>
+            </div>
+          </div>
+          <Slider
+            value={[age]}
+            onValueChange={(value) => setAge(value[0])}
+            min={18}
+            max={80}
+            step={1}
+            className="cursor-pointer [&_[role=slider]]:border-age [&>span>span]:bg-age"
+          />
+          <div className="flex justify-between text-xs text-muted-foreground">
+            <span>18 ans</span>
+            <span>80 ans</span>
+          </div>
+        </div>
+
         {/* Weight Slider */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
@@ -72,20 +107,13 @@ export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
             min={100}
             max={220}
             step={1}
-            className="cursor-pointer [&_[role=slider]]:bg-accent [&_.bg-primary]:bg-accent"
+            className="cursor-pointer [&_[role=slider]]:border-accent [&_.bg-gradient-to-r]:from-accent [&_.bg-gradient-to-r]:to-accent/80"
           />
           <div className="flex justify-between text-xs text-muted-foreground">
             <span>100 cm</span>
             <span>220 cm</span>
           </div>
         </div>
-
-        <Button 
-          onClick={handleCalculate}
-          className="w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 glow-effect transition-all duration-300 hover:scale-[1.02]"
-        >
-          Calculer mon IMC
-        </Button>
       </div>
     </div>
   );
