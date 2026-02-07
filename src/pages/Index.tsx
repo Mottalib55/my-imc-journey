@@ -42,19 +42,16 @@ const Index = () => {
           </p>
         </header>
 
-        {/* Main Grid */}
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
-          {/* Left Column */}
-          <div className="space-y-6 md:space-y-8">
-            <BMICalculator onCalculate={handleCalculate} />
-            <BMIGauge bmi={bmi} />
-          </div>
+        {/* Top Row - Calculator and Gauge side by side */}
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+          <BMICalculator onCalculate={handleCalculate} />
+          <BMIGauge bmi={bmi} />
+        </div>
 
-          {/* Right Column */}
-          <div className="space-y-6 md:space-y-8">
-            <PopulationChart bmi={bmi} age={age} />
-            <BMIInfo bmi={bmi} age={age} />
-          </div>
+        {/* Bottom Row - Charts and Info */}
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+          <PopulationChart bmi={bmi} age={age} />
+          <BMIInfo bmi={bmi} age={age} />
         </div>
 
         {/* Footer */}
