@@ -69,6 +69,10 @@ export default {
           overweight: "hsl(var(--overweight))",
           obese: "hsl(var(--obese))",
         },
+        age: {
+          DEFAULT: "hsl(var(--age))",
+          foreground: "hsl(var(--age-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
