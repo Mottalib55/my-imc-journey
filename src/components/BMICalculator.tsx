@@ -1,13 +1,31 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Scale, Ruler, Calculator } from "lucide-react";
+import { getCurrentLang } from "@/config/routes";
 
 interface BMICalculatorProps {
   onCalculate: (bmi: number, weight: number, height: number) => void;
 }
 
+const i18n: Record<string, { title: string; weight: string; height: string }> = {
+  fr: { title: "Calculateur IMC", weight: "Poids", height: "Taille" },
+  en: { title: "BMI Calculator", weight: "Weight", height: "Height" },
+  es: { title: "Calculadora IMC", weight: "Peso", height: "Estatura" },
+  pt: { title: "Calculadora IMC", weight: "Peso", height: "Altura" },
+  ar: { title: "حاسبة مؤشر كتلة الجسم", weight: "الوزن", height: "الطول" },
+  de: { title: "BMI-Rechner", weight: "Gewicht", height: "Größe" },
+  it: { title: "Calcolatore IMC", weight: "Peso", height: "Altezza" },
+  hi: { title: "बीएमआई कैलकुलेटर", weight: "वज़न", height: "कद" },
+  zh: { title: "BMI计算器", weight: "体重", height: "身高" },
+};
+
 export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
+  const location = useLocation();
+  const lang = getCurrentLang(location.pathname);
+  const t = i18n[lang] || i18n.fr;
+
   const [weight, setWeight] = useState<number>(70);
   const [height, setHeight] = useState<number>(170);
   const [activeSlider, setActiveSlider] = useState<string | null>(null);
@@ -27,7 +45,7 @@ export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
         <div className="p-3 rounded-xl bg-primary/10">
           <Calculator className="w-6 h-6 text-primary" />
         </div>
-        <h2 className="text-2xl font-display font-bold">Calculateur IMC</h2>
+        <h2 className="text-2xl font-display font-bold">{t.title}</h2>
       </div>
 
       <div className="space-y-6">
@@ -40,7 +58,7 @@ export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
           <div className="flex items-center justify-between">
             <Label className="flex items-center gap-2 text-muted-foreground">
               <Scale className={`w-4 h-4 transition-all duration-200 ${activeSlider === 'weight' ? 'text-primary scale-125' : ''}`} />
-              Poids
+              {t.weight}
             </Label>
             <div className="flex items-baseline gap-1">
               <span className={`text-3xl font-display font-bold transition-all duration-150 ${
@@ -75,7 +93,7 @@ export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
           <div className="flex items-center justify-between">
             <Label className="flex items-center gap-2 text-muted-foreground">
               <Ruler className={`w-4 h-4 transition-all duration-200 ${activeSlider === 'height' ? 'text-accent scale-125' : ''}`} />
-              Taille
+              {t.height}
             </Label>
             <div className="flex items-baseline gap-1">
               <span className={`text-3xl font-display font-bold transition-all duration-150 ${
