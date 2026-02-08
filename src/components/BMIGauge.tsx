@@ -352,11 +352,11 @@ export const BMIGauge = ({ bmi }: BMIGaugeProps) => {
       <div className="text-center mb-6">
         {bmi !== null ? (
           <div className={`transition-transform duration-150 ${isChanging ? 'scale-105' : 'scale-100'}`}>
-            <div className="flex items-center justify-center gap-3">
+            <div className="relative inline-flex items-center justify-center">
               <span className={`text-6xl md:text-7xl font-display font-bold transition-colors duration-200 ${category?.color}`}>
                 {animatedBmi.toFixed(1)}
               </span>
-              <div className={`p-2 rounded-full transition-all duration-200 ${
+              <div className={`absolute -right-10 p-2 rounded-full transition-all duration-200 ${
                 isChanging ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
               } ${trend === 'up' ? 'bg-destructive/20 text-destructive' : trend === 'down' ? 'bg-success/20 text-success' : 'bg-muted text-muted-foreground'}`}>
                 <TrendIcon className="w-5 h-5" />
