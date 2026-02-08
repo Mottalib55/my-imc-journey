@@ -4,25 +4,22 @@
       <stop offset="0%" stop-color="#8b5cf6"/>
       <stop offset="100%" stop-color="#6d28d9"/>
     </linearGradient>
-    <linearGradient id="arc-green" x1="0%" y1="0%" x2="50%" y2="0%">
-      <stop offset="0%" stop-color="#22c55e"/>
-      <stop offset="100%" stop-color="#4ade80"/>
-    </linearGradient>
   </defs>
   <!-- Background -->
   <rect width="512" height="512" rx="96" fill="url(#bg)"/>
   <!-- Gauge arc - underweight (blue) -->
-  <path d="M 130 340 A 150 150 0 0 1 175 215" stroke="#60a5fa" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <path d="M 110 320 A 170 170 0 0 1 160 190" stroke="#60a5fa" stroke-width="36" fill="none" stroke-linecap="round"/>
   <!-- Gauge arc - normal (green) -->
-  <path d="M 183 207 A 150 150 0 0 1 329 207" stroke="#4ade80" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <path d="M 170 180 A 170 170 0 0 1 342 180" stroke="#4ade80" stroke-width="36" fill="none" stroke-linecap="round"/>
   <!-- Gauge arc - overweight (yellow) -->
-  <path d="M 337 215 A 150 150 0 0 1 370 280" stroke="#facc15" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <path d="M 352 190 A 170 170 0 0 1 390 268" stroke="#facc15" stroke-width="36" fill="none" stroke-linecap="round"/>
   <!-- Gauge arc - obese (red) -->
-  <path d="M 374 290 A 150 150 0 0 1 382 340" stroke="#f87171" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <path d="M 395 280 A 170 170 0 0 1 402 320" stroke="#f87171" stroke-width="36" fill="none" stroke-linecap="round"/>
   <!-- Needle pointing to normal range -->
-  <line x1="256" y1="340" x2="240" y2="210" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <line x1="256" y1="330" x2="235" y2="185" stroke="white" stroke-width="12" stroke-linecap="round"/>
   <!-- Center dot -->
-  <circle cx="256" cy="340" r="18" fill="white"/>
-  <!-- BMI text -->
-  <text x="256" y="430" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="80" fill="white" letter-spacing="8">BMI</text>
+  <circle cx="256" cy="330" r="22" fill="white"/>
+  <!-- Small person silhouette below gauge -->
+  <circle cx="256" cy="400" r="16" fill="white" opacity="0.9"/>
+  <path d="M 256 416 L 256 460 M 236 436 L 276 436 M 244 480 L 256 460 L 268 480" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
 </svg>
