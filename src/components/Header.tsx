@@ -2,6 +2,149 @@ import { Link, useLocation } from "react-router-dom";
 import { Activity, User, Users, Menu, X, ChevronDown, Dumbbell, Baby, Table, HelpCircle, Heart, Globe } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
+// --- Route mapping ---
+
+type Lang = "fr" | "en" | "es" | "pt";
+
+const routeMap: Record<string, Record<Lang, string>> = {
+  main:           { fr: "/",                    en: "/bmi",                  es: "/es/imc",                       pt: "/pt/imc" },
+  men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem" },
+  women:          { fr: "/imc-femme",           en: "/bmi-women",            es: "/es/imc-mujer",                 pt: "/pt/imc-mulher" },
+  athletes:       { fr: "/imc-sportif",         en: "/bmi-athletes",         es: "/es/imc-deportista",            pt: "/pt/imc-atleta" },
+  children:       { fr: "/imc-enfant",          en: "/bmi-children",         es: "/es/imc-nino",                  pt: "/pt/imc-crianca" },
+  table:          { fr: "/tableau-imc",         en: "/bmi-table",            es: "/es/tabla-imc",                 pt: "/pt/tabela-imc" },
+  interpretation: { fr: "/interpretation-imc",  en: "/bmi-interpretation",   es: "/es/interpretacion-imc",        pt: "/pt/interpretacao-imc" },
+  limitations:    { fr: "/limites-imc",         en: "/bmi-limitations",      es: "/es/limitaciones-imc",          pt: "/pt/limitacoes-imc" },
+  faq:            { fr: "/faq-imc",             en: "/bmi-faq",              es: "/es/preguntas-frecuentes-imc",  pt: "/pt/perguntas-frequentes-imc" },
+  health:         { fr: "/sante-et-poids",      en: "/health-weight",        es: "/es/salud-peso",                pt: "/pt/saude-peso" },
+};
+
+const pathToLang: Record<string, Lang> = {};
+for (const routes of Object.values(routeMap)) {
+  for (const [lang, path] of Object.entries(routes)) {
+    pathToLang[path] = lang as Lang;
+  }
+}
+
+const getCurrentLang = (pathname: string): Lang => pathToLang[pathname] || "fr";
+
+const getEquivalentPath = (currentPath: string, targetLang: Lang): string => {
+  for (const routes of Object.values(routeMap)) {
+    if (Object.values(routes).includes(currentPath)) {
+      return routes[targetLang];
+    }
+  }
+  return routeMap.main[targetLang];
+};
+
+// --- i18n labels ---
+
+const i18n: Record<Lang, {
+  logo: [string, string];
+  calculator: string;
+  profiles: string;
+  info: string;
+  language: string;
+  men: string;
+  women: string;
+  athletes: string;
+  children: string;
+  table: string;
+  interpretation: string;
+  limitations: string;
+  faq: string;
+  health: string;
+  mobileProfiles: string;
+  mobileInfo: string;
+  mobileLang: string;
+}> = {
+  fr: {
+    logo: ["Calculateur ", "IMC"],
+    calculator: "Calculateur",
+    profiles: "Profils",
+    info: "Infos",
+    language: "Langue",
+    men: "IMC Homme",
+    women: "IMC Femme",
+    athletes: "IMC Sportif",
+    children: "IMC Enfant",
+    table: "Tableau IMC",
+    interpretation: "Interpr\u00e9tation",
+    limitations: "Limites IMC",
+    faq: "FAQ",
+    health: "Sant\u00e9 et Poids",
+    mobileProfiles: "Profils",
+    mobileInfo: "Informations",
+    mobileLang: "Langues",
+  },
+  en: {
+    logo: ["BMI ", "Calculator"],
+    calculator: "Calculator",
+    profiles: "Profiles",
+    info: "Info",
+    language: "Language",
+    men: "BMI Men",
+    women: "BMI Women",
+    athletes: "BMI Athletes",
+    children: "BMI Children",
+    table: "BMI Table",
+    interpretation: "Interpretation",
+    limitations: "BMI Limitations",
+    faq: "FAQ",
+    health: "Health & Weight",
+    mobileProfiles: "Profiles",
+    mobileInfo: "Information",
+    mobileLang: "Languages",
+  },
+  es: {
+    logo: ["Calculadora ", "IMC"],
+    calculator: "Calculadora",
+    profiles: "Perfiles",
+    info: "Info",
+    language: "Idioma",
+    men: "IMC Hombre",
+    women: "IMC Mujer",
+    athletes: "IMC Deportista",
+    children: "IMC Ni\u00f1o",
+    table: "Tabla IMC",
+    interpretation: "Interpretaci\u00f3n",
+    limitations: "Limitaciones",
+    faq: "FAQ",
+    health: "Salud y Peso",
+    mobileProfiles: "Perfiles",
+    mobileInfo: "Informaci\u00f3n",
+    mobileLang: "Idiomas",
+  },
+  pt: {
+    logo: ["Calculadora ", "IMC"],
+    calculator: "Calculadora",
+    profiles: "Perfis",
+    info: "Info",
+    language: "Idioma",
+    men: "IMC Homem",
+    women: "IMC Mulher",
+    athletes: "IMC Atleta",
+    children: "IMC Crian\u00e7a",
+    table: "Tabela IMC",
+    interpretation: "Interpreta\u00e7\u00e3o",
+    limitations: "Limita\u00e7\u00f5es",
+    faq: "FAQ",
+    health: "Sa\u00fade e Peso",
+    mobileProfiles: "Perfis",
+    mobileInfo: "Informa\u00e7\u00e3o",
+    mobileLang: "Idiomas",
+  },
+};
+
+const langLabels: Record<Lang, string> = {
+  fr: "Fran\u00e7ais",
+  en: "English",
+  es: "Espa\u00f1ol",
+  pt: "Portugu\u00eas",
+};
+
+// --- Dropdown component ---
+
 interface DropdownProps {
   label: string;
   icon: React.ElementType;
@@ -69,44 +212,50 @@ const Dropdown = ({ label, icon: Icon, items, isActive, onItemClick }: DropdownP
   );
 };
 
+// --- Header component ---
+
 export const Header = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const currentLang = getCurrentLang(location.pathname);
+  const t = i18n[currentLang];
+
   const mainLinks = [
-    { path: "/", label: "Calculateur", icon: Activity },
+    { path: routeMap.main[currentLang], label: t.calculator, icon: Activity },
   ];
 
   const profileLinks = [
-    { path: "/imc-homme", label: "IMC Homme", icon: User },
-    { path: "/imc-femme", label: "IMC Femme", icon: Users },
-    { path: "/imc-sportif", label: "IMC Sportif", icon: Dumbbell },
-    { path: "/imc-enfant", label: "IMC Enfant", icon: Baby },
+    { path: routeMap.men[currentLang], label: t.men, icon: User },
+    { path: routeMap.women[currentLang], label: t.women, icon: Users },
+    { path: routeMap.athletes[currentLang], label: t.athletes, icon: Dumbbell },
+    { path: routeMap.children[currentLang], label: t.children, icon: Baby },
   ];
 
   const infoLinks = [
-    { path: "/tableau-imc", label: "Tableau IMC", icon: Table },
-    { path: "/interpretation-imc", label: "Interpretation", icon: HelpCircle },
-    { path: "/limites-imc", label: "Limites IMC", icon: HelpCircle },
-    { path: "/faq-imc", label: "FAQ", icon: HelpCircle },
-    { path: "/sante-et-poids", label: "Sante et Poids", icon: Heart },
+    { path: routeMap.table[currentLang], label: t.table, icon: Table },
+    { path: routeMap.interpretation[currentLang], label: t.interpretation, icon: HelpCircle },
+    { path: routeMap.limitations[currentLang], label: t.limitations, icon: HelpCircle },
+    { path: routeMap.faq[currentLang], label: t.faq, icon: HelpCircle },
+    { path: routeMap.health[currentLang], label: t.health, icon: Heart },
   ];
 
-  const languageLinks = [
-    { path: "/bmi", label: "English (BMI)" },
-    { path: "/es/imc", label: "Espanol" },
-    { path: "/pt/imc", label: "Portugues" },
-  ];
+  const languageLinks = (Object.keys(langLabels) as Lang[])
+    .filter(lang => lang !== currentLang)
+    .map(lang => ({
+      path: getEquivalentPath(location.pathname, lang),
+      label: langLabels[lang],
+    }));
 
   const isActive = (path: string) => location.pathname === path;
 
   const allMobileLinks = [
     ...mainLinks,
-    { type: "divider", label: "Profils" },
+    { type: "divider", label: t.mobileProfiles },
     ...profileLinks,
-    { type: "divider", label: "Informations" },
+    { type: "divider", label: t.mobileInfo },
     ...infoLinks,
-    { type: "divider", label: "Langues" },
+    { type: "divider", label: t.mobileLang },
     ...languageLinks.map(l => ({ ...l, icon: Globe })),
   ];
 
@@ -115,12 +264,12 @@ export const Header = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to={routeMap.main[currentLang]} className="flex items-center gap-2 group">
             <div className="p-2 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
               <Activity className="w-5 h-5 text-primary" />
             </div>
             <span className="font-display font-bold text-lg hidden sm:block">
-              Calculateur <span className="gradient-text">IMC</span>
+              {t.logo[0]}<span className="gradient-text">{t.logo[1]}</span>
             </span>
           </Link>
 
@@ -145,21 +294,21 @@ export const Header = () => {
             })}
 
             <Dropdown
-              label="Profils"
+              label={t.profiles}
               icon={User}
               items={profileLinks}
               isActive={isActive}
             />
 
             <Dropdown
-              label="Infos"
+              label={t.info}
               icon={HelpCircle}
               items={infoLinks}
               isActive={isActive}
             />
 
             <Dropdown
-              label="Langue"
+              label={t.language}
               icon={Globe}
               items={languageLinks}
               isActive={isActive}

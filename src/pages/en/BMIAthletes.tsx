@@ -4,34 +4,44 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
+const lbsToKg = (lbs: number) => lbs * 0.453592;
+const inToCm = (inches: number) => inches * 2.54;
+
 const BMIAthletes = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(85);
-  const [height, setHeight] = useState(180);
+  const [weightLbs, setWeightLbs] = useState(187);
+  const [heightIn, setHeightIn] = useState(71);
 
-  const calculateBMI = useCallback((w: number, h: number) => {
-    const heightInM = h / 100;
-    const calculatedBmi = w / (heightInM * heightInM);
+  const feet = Math.floor(heightIn / 12);
+  const inches = heightIn % 12;
+
+  const calculateBMI = useCallback((wLbs: number, hIn: number) => {
+    const wKg = lbsToKg(wLbs);
+    const hCm = inToCm(hIn);
+    const heightInM = hCm / 100;
+    const calculatedBmi = wKg / (heightInM * heightInM);
     setBmi(calculatedBmi);
   }, []);
 
   // Calculate BMI on initial load
   useEffect(() => {
-    calculateBMI(weight, height);
+    calculateBMI(weightLbs, heightIn);
   }, []);
 
   const handleWeightChange = (value: number[]) => {
-    setWeight(value[0]);
-    calculateBMI(value[0], height);
+    setWeightLbs(value[0]);
+    calculateBMI(value[0], heightIn);
   };
 
   const handleHeightChange = (value: number[]) => {
-    setHeight(value[0]);
-    calculateBMI(weight, value[0]);
+    setHeightIn(value[0]);
+    calculateBMI(weightLbs, value[0]);
   };
 
-  // Calculate FFMI estimation
-  const ffmi = weight && height ? (weight * 0.85) / Math.pow(height / 100, 2) : null;
+  // Calculate FFMI estimation (convert to metric for calculation)
+  const weightKg = lbsToKg(weightLbs);
+  const heightCm = inToCm(heightIn);
+  const ffmi = weightKg && heightCm ? (weightKg * 0.85) / Math.pow(heightCm / 100, 2) : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,13 +92,13 @@ const BMIAthletes = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Weight</label>
-                  <span className="text-2xl font-bold text-orange-500">{weight} kg</span>
+                  <span className="text-2xl font-bold text-orange-500">{weightLbs} lbs</span>
                 </div>
                 <Slider
-                  value={[weight]}
+                  value={[weightLbs]}
                   onValueChange={handleWeightChange}
-                  min={50}
-                  max={200}
+                  min={110}
+                  max={440}
                   step={1}
                   className="py-4"
                 />
@@ -97,13 +107,13 @@ const BMIAthletes = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Height</label>
-                  <span className="text-2xl font-bold text-orange-500">{height} cm</span>
+                  <span className="text-2xl font-bold text-orange-500">{feet}'{inches}"</span>
                 </div>
                 <Slider
-                  value={[height]}
+                  value={[heightIn]}
                   onValueChange={handleHeightChange}
-                  min={150}
-                  max={220}
+                  min={59}
+                  max={87}
                   step={1}
                   className="py-4"
                 />

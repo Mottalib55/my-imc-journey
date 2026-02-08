@@ -5,30 +5,38 @@ import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp } from "lucid
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
 
+const lbsToKg = (lbs: number) => lbs * 0.453592;
+const inToCm = (inches: number) => inches * 2.54;
+
 const BMI = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(70);
-  const [height, setHeight] = useState(170);
+  const [weightLbs, setWeightLbs] = useState(154);
+  const [heightIn, setHeightIn] = useState(67);
 
-  const calculateBMI = useCallback((w: number, h: number) => {
-    const heightInM = h / 100;
-    const calculatedBmi = w / (heightInM * heightInM);
+  const feet = Math.floor(heightIn / 12);
+  const inches = heightIn % 12;
+
+  const calculateBMI = useCallback((wLbs: number, hIn: number) => {
+    const wKg = lbsToKg(wLbs);
+    const hCm = inToCm(hIn);
+    const heightInM = hCm / 100;
+    const calculatedBmi = wKg / (heightInM * heightInM);
     setBmi(calculatedBmi);
   }, []);
 
   // Calculate BMI on initial load
   useEffect(() => {
-    calculateBMI(weight, height);
+    calculateBMI(weightLbs, heightIn);
   }, []);
 
   const handleWeightChange = (value: number[]) => {
-    setWeight(value[0]);
-    calculateBMI(value[0], height);
+    setWeightLbs(value[0]);
+    calculateBMI(value[0], heightIn);
   };
 
   const handleHeightChange = (value: number[]) => {
-    setHeight(value[0]);
-    calculateBMI(weight, value[0]);
+    setHeightIn(value[0]);
+    calculateBMI(weightLbs, value[0]);
   };
 
   return (
@@ -66,38 +74,38 @@ const BMI = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Weight</label>
-                  <span className="text-2xl font-bold text-primary">{weight} kg</span>
+                  <span className="text-2xl font-bold text-primary">{weightLbs} lbs</span>
                 </div>
                 <Slider
-                  value={[weight]}
+                  value={[weightLbs]}
                   onValueChange={handleWeightChange}
-                  min={30}
-                  max={200}
+                  min={66}
+                  max={440}
                   step={1}
                   className="py-4"
                 />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>30 kg</span>
-                  <span>200 kg</span>
+                  <span>66 lbs</span>
+                  <span>440 lbs</span>
                 </div>
               </div>
 
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Height</label>
-                  <span className="text-2xl font-bold text-primary">{height} cm</span>
+                  <span className="text-2xl font-bold text-primary">{feet}'{inches}"</span>
                 </div>
                 <Slider
-                  value={[height]}
+                  value={[heightIn]}
                   onValueChange={handleHeightChange}
-                  min={100}
-                  max={220}
+                  min={39}
+                  max={87}
                   step={1}
                   className="py-4"
                 />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>100 cm</span>
-                  <span>220 cm</span>
+                  <span>3'3"</span>
+                  <span>7'3"</span>
                 </div>
               </div>
             </div>
