@@ -94,6 +94,18 @@ import LimitiIMC from "./pages/it/LimitiIMC";
 import DomandeFrequentiIMC from "./pages/it/DomandeFrequentiIMC";
 import SalutePeso from "./pages/it/SalutePeso";
 
+// Hindi pages
+import BMIHi from "./pages/hi/BMI";
+import BMIPurush from "./pages/hi/BMIPurush";
+import BMIMahila from "./pages/hi/BMIMahila";
+import BMIKhiladi from "./pages/hi/BMIKhiladi";
+import BMIBachche from "./pages/hi/BMIBachche";
+import BMITalika from "./pages/hi/BMITalika";
+import BMIVyakhya from "./pages/hi/BMIVyakhya";
+import BMISeemayen from "./pages/hi/BMISeemayen";
+import BMIPrashn from "./pages/hi/BMIPrashn";
+import SwasthyaVajan from "./pages/hi/SwasthyaVajan";
+
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -206,6 +218,18 @@ const App = () => (
           <Route path="/it/limiti-imc" element={<LimitiIMC />} />
           <Route path="/it/domande-frequenti-imc" element={<DomandeFrequentiIMC />} />
           <Route path="/it/salute-peso" element={<SalutePeso />} />
+
+          {/* Hindi pages */}
+          <Route path="/hi/bmi" element={<BMIHi />} />
+          <Route path="/hi/bmi-purush" element={<BMIPurush />} />
+          <Route path="/hi/bmi-mahila" element={<BMIMahila />} />
+          <Route path="/hi/bmi-khiladi" element={<BMIKhiladi />} />
+          <Route path="/hi/bmi-bachche" element={<BMIBachche />} />
+          <Route path="/hi/bmi-talika" element={<BMITalika />} />
+          <Route path="/hi/bmi-vyakhya" element={<BMIVyakhya />} />
+          <Route path="/hi/bmi-seemayen" element={<BMISeemayen />} />
+          <Route path="/hi/bmi-prashn" element={<BMIPrashn />} />
+          <Route path="/hi/swasthya-vajan" element={<SwasthyaVajan />} />
 
           {/* Admin */}
           <Route path="/admin" element={<Admin />} />

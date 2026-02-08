@@ -102,6 +102,16 @@ jobs:
             "it/limiti-imc"
             "it/domande-frequenti-imc"
             "it/salute-peso"
+            "hi/bmi"
+            "hi/bmi-purush"
+            "hi/bmi-mahila"
+            "hi/bmi-khiladi"
+            "hi/bmi-bachche"
+            "hi/bmi-talika"
+            "hi/bmi-vyakhya"
+            "hi/bmi-seemayen"
+            "hi/bmi-prashn"
+            "hi/swasthya-vajan"
             "admin"
           )
           for route in "${ROUTES[@]}"; do

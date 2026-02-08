@@ -4,19 +4,19 @@ import { useState, useRef, useEffect } from "react";
 
 // --- Route mapping ---
 
-type Lang = "fr" | "en" | "es" | "pt" | "ar" | "de" | "it";
+type Lang = "fr" | "en" | "es" | "pt" | "ar" | "de" | "it" | "hi";
 
 const routeMap: Record<string, Record<Lang, string>> = {
-  main:           { fr: "/imc",                  en: "/",                     es: "/es/imc",                       pt: "/pt/imc",                       ar: "/ar/imc",              de: "/de/bmi",                it: "/it/imc" },
-  men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem",                 ar: "/ar/imc-rajul",        de: "/de/bmi-maenner",        it: "/it/imc-uomo" },
-  women:          { fr: "/imc-femme",           en: "/bmi-women",            es: "/es/imc-mujer",                 pt: "/pt/imc-mulher",                ar: "/ar/imc-maraa",        de: "/de/bmi-frauen",         it: "/it/imc-donna" },
-  athletes:       { fr: "/imc-sportif",         en: "/bmi-athletes",         es: "/es/imc-deportista",            pt: "/pt/imc-atleta",                ar: "/ar/imc-riyadi",       de: "/de/bmi-sportler",       it: "/it/imc-sportivo" },
-  children:       { fr: "/imc-enfant",          en: "/bmi-children",         es: "/es/imc-nino",                  pt: "/pt/imc-crianca",               ar: "/ar/imc-tifl",         de: "/de/bmi-kinder",         it: "/it/imc-bambino" },
-  table:          { fr: "/tableau-imc",         en: "/bmi-table",            es: "/es/tabla-imc",                 pt: "/pt/tabela-imc",                ar: "/ar/jadwal-imc",       de: "/de/bmi-tabelle",        it: "/it/tabella-imc" },
-  interpretation: { fr: "/interpretation-imc",  en: "/bmi-interpretation",   es: "/es/interpretacion-imc",        pt: "/pt/interpretacao-imc",         ar: "/ar/tafsir-imc",       de: "/de/bmi-interpretation", it: "/it/interpretazione-imc" },
-  limitations:    { fr: "/limites-imc",         en: "/bmi-limitations",      es: "/es/limitaciones-imc",          pt: "/pt/limitacoes-imc",            ar: "/ar/hudud-imc",        de: "/de/bmi-grenzen",        it: "/it/limiti-imc" },
-  faq:            { fr: "/faq-imc",             en: "/bmi-faq",              es: "/es/preguntas-frecuentes-imc",  pt: "/pt/perguntas-frequentes-imc",  ar: "/ar/asila-imc",        de: "/de/bmi-faq",            it: "/it/domande-frequenti-imc" },
-  health:         { fr: "/sante-et-poids",      en: "/health-weight",        es: "/es/salud-peso",                pt: "/pt/saude-peso",                ar: "/ar/siha-wazn",        de: "/de/gesundheit-gewicht", it: "/it/salute-peso" },
+  main:           { fr: "/imc",                  en: "/",                     es: "/es/imc",                       pt: "/pt/imc",                       ar: "/ar/imc",              de: "/de/bmi",                it: "/it/imc",                    hi: "/hi/bmi" },
+  men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem",                 ar: "/ar/imc-rajul",        de: "/de/bmi-maenner",        it: "/it/imc-uomo",               hi: "/hi/bmi-purush" },
+  women:          { fr: "/imc-femme",           en: "/bmi-women",            es: "/es/imc-mujer",                 pt: "/pt/imc-mulher",                ar: "/ar/imc-maraa",        de: "/de/bmi-frauen",         it: "/it/imc-donna",              hi: "/hi/bmi-mahila" },
+  athletes:       { fr: "/imc-sportif",         en: "/bmi-athletes",         es: "/es/imc-deportista",            pt: "/pt/imc-atleta",                ar: "/ar/imc-riyadi",       de: "/de/bmi-sportler",       it: "/it/imc-sportivo",           hi: "/hi/bmi-khiladi" },
+  children:       { fr: "/imc-enfant",          en: "/bmi-children",         es: "/es/imc-nino",                  pt: "/pt/imc-crianca",               ar: "/ar/imc-tifl",         de: "/de/bmi-kinder",         it: "/it/imc-bambino",            hi: "/hi/bmi-bachche" },
+  table:          { fr: "/tableau-imc",         en: "/bmi-table",            es: "/es/tabla-imc",                 pt: "/pt/tabela-imc",                ar: "/ar/jadwal-imc",       de: "/de/bmi-tabelle",        it: "/it/tabella-imc",            hi: "/hi/bmi-talika" },
+  interpretation: { fr: "/interpretation-imc",  en: "/bmi-interpretation",   es: "/es/interpretacion-imc",        pt: "/pt/interpretacao-imc",         ar: "/ar/tafsir-imc",       de: "/de/bmi-interpretation", it: "/it/interpretazione-imc",    hi: "/hi/bmi-vyakhya" },
+  limitations:    { fr: "/limites-imc",         en: "/bmi-limitations",      es: "/es/limitaciones-imc",          pt: "/pt/limitacoes-imc",            ar: "/ar/hudud-imc",        de: "/de/bmi-grenzen",        it: "/it/limiti-imc",             hi: "/hi/bmi-seemayen" },
+  faq:            { fr: "/faq-imc",             en: "/bmi-faq",              es: "/es/preguntas-frecuentes-imc",  pt: "/pt/perguntas-frequentes-imc",  ar: "/ar/asila-imc",        de: "/de/bmi-faq",            it: "/it/domande-frequenti-imc",  hi: "/hi/bmi-prashn" },
+  health:         { fr: "/sante-et-poids",      en: "/health-weight",        es: "/es/salud-peso",                pt: "/pt/saude-peso",                ar: "/ar/siha-wazn",        de: "/de/gesundheit-gewicht", it: "/it/salute-peso",            hi: "/hi/swasthya-vajan" },
 };
 
 const pathToLang: Record<string, Lang> = {};
@@ -172,6 +172,25 @@ const i18n: Record<Lang, {
     mobileInfo: "Informazioni",
     mobileLang: "Lingue",
   },
+  hi: {
+    logo: ["BMI ", "कैलकुलेटर"],
+    calculator: "कैलकुलेटर",
+    profiles: "प्रोफाइल",
+    info: "जानकारी",
+    language: "भाषा",
+    men: "BMI पुरुष",
+    women: "BMI महिला",
+    athletes: "BMI खिलाड़ी",
+    children: "BMI बच्चे",
+    table: "BMI तालिका",
+    interpretation: "व्याख्या",
+    limitations: "BMI सीमाएं",
+    faq: "FAQ",
+    health: "स्वास्थ्य",
+    mobileProfiles: "प्रोफाइल",
+    mobileInfo: "जानकारी",
+    mobileLang: "भाषाएं",
+  },
   ar: {
     logo: ["حاسبة ", "مؤشر كتلة الجسم"],
     calculator: "الحاسبة",
@@ -200,6 +219,7 @@ const langLabels: Record<Lang, string> = {
   pt: "Portugu\u00eas",
   de: "Deutsch",
   it: "Italiano",
+  hi: "हिन्दी",
   ar: "العربية",
 };
 

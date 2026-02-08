@@ -438,6 +438,67 @@ export const defaultSEO: PageSEO[] = [
     title: "Salute e Peso : Guida Completa | IMC",
     description: "Tutto sulla relazione tra peso e salute. Consigli di nutrizione, attività fisica e mantenimento di un peso sano.",
   },
+  // --- हिन्दी ---
+  {
+    path: "/hi/bmi",
+    lang: "hi",
+    title: "मुफ्त BMI कैलकुलेटर | बॉडी मास इंडेक्स ऑनलाइन",
+    description: "हमारे मुफ्त कैलकुलेटर से तुरंत अपना BMI कैलकुलेट करें। अपना आदर्श वजन जानें और व्यक्तिगत स्वास्थ्य सलाह प्राप्त करें।",
+  },
+  {
+    path: "/hi/bmi-purush",
+    lang: "hi",
+    title: "पुरुषों के लिए BMI कैलकुलेटर | पुरुष BMI चार्ट",
+    description: "हमारे विशेष टूल से पुरुषों का BMI कैलकुलेट करें। पुरुष BMI चार्ट, आदर्श वजन और पुरुष स्वास्थ्य सलाह।",
+  },
+  {
+    path: "/hi/bmi-mahila",
+    lang: "hi",
+    title: "महिलाओं के लिए BMI कैलकुलेटर | महिला BMI चार्ट",
+    description: "हमारे विशेष टूल से महिलाओं का BMI कैलकुलेट करें। महिला BMI चार्ट, हार्मोनल कारक और जीवन के हर चरण के लिए सलाह।",
+  },
+  {
+    path: "/hi/bmi-khiladi",
+    lang: "hi",
+    title: "खिलाड़ियों के लिए BMI | BMI एथलीटों के लिए क्यों गलत है",
+    description: "BMI खिलाड़ियों और बॉडीबिल्डरों के लिए क्यों गलत है। FFMI और शरीर संरचना के बेहतर विकल्प जानें।",
+  },
+  {
+    path: "/hi/bmi-bachche",
+    lang: "hi",
+    title: "बच्चों और किशोरों के लिए BMI कैलकुलेटर",
+    description: "उम्र और लिंग के अनुसार अपने बच्चे का BMI कैलकुलेट करें। WHO विकास वक्र और बाल चिकित्सा BMI व्याख्या।",
+  },
+  {
+    path: "/hi/bmi-talika",
+    lang: "hi",
+    title: "BMI तालिका | WHO वर्गीकरण गाइड",
+    description: "WHO मानकों के अनुसार संपूर्ण BMI वर्गीकरण तालिका। कम वजन, सामान्य, अधिक वजन और मोटापा श्रेणियां।",
+  },
+  {
+    path: "/hi/bmi-vyakhya",
+    lang: "hi",
+    title: "BMI व्याख्या | अपने BMI परिणाम समझें",
+    description: "अपने BMI परिणामों की व्याख्या कैसे करें। प्रत्येक श्रेणी का अर्थ, सीमाएं और ध्यान देने योग्य कारक।",
+  },
+  {
+    path: "/hi/bmi-seemayen",
+    lang: "hi",
+    title: "BMI की सीमाएं | BMI क्या नहीं बताता",
+    description: "BMI की सीमाओं को समझें। बॉडी मास इंडेक्स हमेशा सही क्यों नहीं होता और कौन से विकल्प उपयोग करें।",
+  },
+  {
+    path: "/hi/bmi-prashn",
+    lang: "hi",
+    title: "BMI FAQ | BMI के बारे में अक्सर पूछे जाने वाले प्रश्न",
+    description: "BMI के बारे में सबसे आम प्रश्नों के उत्तर। बॉडी मास इंडेक्स की गणना, व्याख्या और उपयोग कैसे करें।",
+  },
+  {
+    path: "/hi/swasthya-vajan",
+    lang: "hi",
+    title: "स्वास्थ्य और वजन | संपूर्ण कल्याण मार्गदर्शिका",
+    description: "वजन और स्वास्थ्य के बीच संबंध के बारे में सब कुछ। पोषण सलाह, शारीरिक गतिविधि और स्वस्थ वजन बनाए रखना।",
+  },
 ];
 
 const STORAGE_KEY = "seo-overrides";
