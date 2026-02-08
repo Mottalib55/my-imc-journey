@@ -34,7 +34,7 @@ const Admin = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const [activeLang, setActiveLang] = useState("fr");
+  const [activeLang, setActiveLang] = useState("all");
   const [editingPath, setEditingPath] = useState<string | null>(null);
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
@@ -91,7 +91,7 @@ const Admin = () => {
     setTimeout(() => setSavedMessage(null), 2000);
   };
 
-  const pagesForLang = seoData.filter((s) => s.lang === activeLang);
+  const pagesForLang = activeLang === "all" ? seoData : seoData.filter((s) => s.lang === activeLang);
   const defaultForPath = (path: string) => defaultSEO.find((s) => s.path === path);
   const isOverridden = (page: PageSEO) => {
     const def = defaultForPath(page.path);
@@ -166,7 +166,23 @@ const Admin = () => {
         </div>
 
         {/* Language Tabs */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex gap-2 mb-6 flex-wrap">
+          <button
+            onClick={() => setActiveLang("all")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+              activeLang === "all"
+                ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+            }`}
+          >
+            <Globe className="w-4 h-4" />
+            Tous
+            <span className={`px-2 py-0.5 rounded-full text-xs ${
+              activeLang === "all" ? "bg-primary-foreground/20" : "bg-muted"
+            }`}>
+              {seoData.length}
+            </span>
+          </button>
           {Object.entries(langNames).map(([lang, name]) => {
             const count = seoData.filter((s) => s.lang === lang).length;
             return (
@@ -200,7 +216,12 @@ const Admin = () => {
             return (
               <div key={page.path} className={`glass-card p-6 ${modified ? "border-primary/30" : ""}`}>
                 <div className="flex items-start justify-between gap-4 mb-3">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {activeLang === "all" && (
+                      <span className={`px-2 py-1 rounded text-xs font-medium bg-${langColors[page.lang]}-500/10 text-${langColors[page.lang]}-500 uppercase`}>
+                        {page.lang}
+                      </span>
+                    )}
                     <span className={`px-2 py-1 rounded text-xs font-mono bg-${langColors[page.lang]}-500/10 text-${langColors[page.lang]}-500`}>
                       {page.path}
                     </span>
