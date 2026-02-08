@@ -30,6 +30,54 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: cp dist/index.html dist/404.html
+      - name: Generate static routes for SPA
+        run: |
+          ROUTES=(
+            "imc-homme"
+            "imc-femme"
+            "imc-sportif"
+            "imc-enfant"
+            "tableau-imc"
+            "interpretation-imc"
+            "limites-imc"
+            "faq-imc"
+            "sante-et-poids"
+            "bmi"
+            "bmi-men"
+            "bmi-women"
+            "bmi-athletes"
+            "bmi-children"
+            "bmi-table"
+            "bmi-interpretation"
+            "bmi-limitations"
+            "bmi-faq"
+            "health-weight"
+            "es/imc"
+            "es/imc-hombre"
+            "es/imc-mujer"
+            "es/imc-deportista"
+            "es/imc-nino"
+            "es/tabla-imc"
+            "es/interpretacion-imc"
+            "es/limitaciones-imc"
+            "es/preguntas-frecuentes-imc"
+            "es/salud-peso"
+            "pt/imc"
+            "pt/imc-homem"
+            "pt/imc-mulher"
+            "pt/imc-atleta"
+            "pt/imc-crianca"
+            "pt/tabela-imc"
+            "pt/interpretacao-imc"
+            "pt/limitacoes-imc"
+            "pt/perguntas-frequentes-imc"
+            "pt/saude-peso"
+            "admin"
+          )
+          for route in "${ROUTES[@]}"; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
 
       - uses: actions/configure-pages@v4
 
