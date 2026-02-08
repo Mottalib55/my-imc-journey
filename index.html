@@ -1,22 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- SEO Meta Tags -->
+    <title>Calcul IMC Gratuit - Calculateur et Simulateur IMC en ligne | IMC Homme & Femme</title>
+    <meta name="description" content="Calcul IMC gratuit et instantané. Calculateur IMC homme et femme pour connaître votre indice de masse corporelle. Simulateur IMC avec poids idéal et conseils personnalisés selon votre âge. Test IMC rapide !" />
+    <meta name="keywords" content="IMC, calcul IMC, IMC calcul, calculer IMC, calculateur IMC, calculette IMC, simulateur IMC, IMC simulateur, IMC en ligne, IMC gratuit, IMC homme, IMC femme, IMC adulte, IMC enfant, IMC ado, IMC senior, IMC age, indice IMC, index IMC, indice de masse corporelle, body mass index, BMI, mon IMC, quel est mon IMC, connaitre son IMC, verifier son IMC, test IMC, IMC test, IMC rapide, IMC facile, IMC instantané, poids idéal, poids santé, poids forme, masse corporelle, corpulence, surpoids, obésité, maigreur, IMC normal, bon IMC, mauvais IMC, IMC ideal, IMC moyen, tableau IMC, courbe IMC, formule IMC, calcul poids ideal, calculer poids ideal" />
+    <meta name="author" content="Calculateur IMC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bmi-imc.com/" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Calculateur IMC Gratuit - Calculez votre Indice de Masse Corporelle" />
+    <meta property="og:description" content="Calculez votre IMC instantanément avec notre outil gratuit. Découvrez si vous êtes en surpoids, poids normal ou obésité avec des conseils adaptés à votre âge." />
+    <meta property="og:site_name" content="Calculateur IMC" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Calculateur IMC Gratuit - Indice de Masse Corporelle" />
+    <meta name="twitter:description" content="Calculez votre IMC gratuitement et obtenez des conseils personnalisés pour atteindre votre poids idéal." />
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="apple-mobile-web-app-title" content="Calculateur IMC" />
+    <meta name="application-name" content="Calculateur IMC" />
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Calculateur IMC",
+      "description": "Calculateur d'Indice de Masse Corporelle (IMC) gratuit en ligne avec conseils personnalisés",
+      "url": "https://bmi-imc.com",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "featureList": [
+        "Calcul IMC instantané",
+        "Conseils personnalisés selon l'âge",
+        "Tableau des catégories OMS",
+        "Calcul du poids idéal"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment calculer son IMC ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'IMC se calcule en divisant le poids (en kg) par la taille au carré (en m). Formule : IMC = Poids / (Taille × Taille). Par exemple, pour 70 kg et 1,75 m : IMC = 70 / (1,75 × 1,75) = 22,86."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est l'IMC idéal ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selon l'OMS, un IMC normal se situe entre 18,5 et 24,9 kg/m². En dessous de 18,5, on parle de maigreur. Entre 25 et 29,9, c'est du surpoids. Au-delà de 30, c'est de l'obésité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'IMC est-il fiable ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'IMC est un bon indicateur général mais présente des limites. Il ne distingue pas la masse grasse de la masse musculaire et n'est pas adapté aux sportifs, femmes enceintes ou personnes âgées."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est l'IMC idéal pour une femme ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'IMC idéal pour une femme se situe entre 18,5 et 24,9 kg/m², comme pour les hommes. Cependant, les femmes ont naturellement plus de masse grasse. Un IMC de 21-22 est souvent considéré comme optimal pour une femme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est l'IMC idéal pour un homme ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'IMC idéal pour un homme est compris entre 18,5 et 24,9 kg/m². Un IMC de 22-23 est souvent considéré comme optimal. Attention, les hommes musclés peuvent avoir un IMC élevé sans excès de graisse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calculer son poids idéal ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le poids idéal se calcule à partir de l'IMC. Pour un IMC de 22 (milieu de la normale), multipliez votre taille (en m) au carré par 22. Exemple : pour 1,70 m : 1,70 × 1,70 × 22 = 63,6 kg."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel IMC à 50 ans ou 60 ans ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Après 50 ans, un IMC légèrement supérieur (jusqu'à 25-27) est acceptable et peut même être protecteur. L'important est de maintenir une activité physique et une alimentation équilibrée."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre IMC homme et IMC femme ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formule de calcul IMC est identique pour les hommes et les femmes. Cependant, les femmes ont naturellement plus de masse grasse (20-25%) que les hommes (15-20%), ce qui peut influencer l'interprétation."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

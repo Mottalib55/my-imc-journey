@@ -1,25 +1,27 @@
 import { useState, useCallback } from "react";
+import { Header } from "@/components/Header";
 import { BMICalculator } from "@/components/BMICalculator";
 import { BMIGauge } from "@/components/BMIGauge";
-import { PopulationChart } from "@/components/PopulationChart";
+import { BMIDetails } from "@/components/BMIDetails";
 import { BMIInfo } from "@/components/BMIInfo";
+import { SEOContent } from "@/components/SEOContent";
 import { Activity } from "lucide-react";
 
 const Index = () => {
   const [bmi, setBmi] = useState<number | null>(null);
   const [weight, setWeight] = useState<number | null>(null);
   const [height, setHeight] = useState<number | null>(null);
-  const [age, setAge] = useState<number | null>(null);
 
-  const handleCalculate = useCallback((calculatedBmi: number, w: number, h: number, a: number) => {
+  const handleCalculate = useCallback((calculatedBmi: number, w: number, h: number) => {
     setBmi(calculatedBmi);
     setWeight(w);
     setHeight(h);
-    setAge(a);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
+
       {/* Background decoration */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl animate-float" />
@@ -48,11 +50,14 @@ const Index = () => {
           <BMIGauge bmi={bmi} />
         </div>
 
-        {/* Bottom Row - Charts and Info */}
+        {/* Bottom Row - Details and Recommendations */}
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
-          <PopulationChart bmi={bmi} age={age} />
-          <BMIInfo bmi={bmi} age={age} />
+          <BMIDetails bmi={bmi} weight={weight} height={height} />
+          <BMIInfo bmi={bmi} />
         </div>
+
+        {/* SEO Content */}
+        <SEOContent />
 
         {/* Footer */}
         <footer className="text-center mt-16 text-sm text-muted-foreground">
