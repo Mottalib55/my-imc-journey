@@ -1,0 +1,307 @@
+export interface PageSEO {
+  path: string;
+  lang: string;
+  title: string;
+  description: string;
+}
+
+export const defaultSEO: PageSEO[] = [
+  // --- Français ---
+  {
+    path: "/",
+    lang: "fr",
+    title: "Calcul IMC Gratuit | Calculateur IMC en ligne - BMI-IMC",
+    description: "Calculez votre IMC instantan\u00e9ment. Calculateur gratuit d'Indice de Masse Corporelle avec conseils personnalis\u00e9s. D\u00e9couvrez votre poids id\u00e9al.",
+  },
+  {
+    path: "/imc-homme",
+    lang: "fr",
+    title: "IMC Homme : Calculateur IMC Masculin | BMI-IMC",
+    description: "Calculez l'IMC masculin avec notre outil sp\u00e9cialis\u00e9. Poids id\u00e9al homme, tableau IMC et conseils adapt\u00e9s \u00e0 la morphologie masculine.",
+  },
+  {
+    path: "/imc-femme",
+    lang: "fr",
+    title: "IMC Femme : Calculateur IMC F\u00e9minin | BMI-IMC",
+    description: "Calculez l'IMC f\u00e9minin avec notre outil d\u00e9di\u00e9. Poids id\u00e9al femme, facteurs hormonaux et conseils adapt\u00e9s \u00e0 chaque \u00e9tape de vie.",
+  },
+  {
+    path: "/imc-sportif",
+    lang: "fr",
+    title: "IMC Sportif : BMI pour Athl\u00e8tes et Musculation | BMI-IMC",
+    description: "Pourquoi l'IMC est biais\u00e9 pour les sportifs. D\u00e9couvrez le FFMI et les alternatives pour \u00e9valuer votre composition corporelle.",
+  },
+  {
+    path: "/imc-enfant",
+    lang: "fr",
+    title: "IMC Enfant et Adolescent : Calculateur P\u00e9diatrique | BMI-IMC",
+    description: "Calculez l'IMC de votre enfant ou adolescent. Courbes de croissance OMS, interpr\u00e9tation par \u00e2ge et sexe.",
+  },
+  {
+    path: "/tableau-imc",
+    lang: "fr",
+    title: "Tableau IMC : Classification OMS Compl\u00e8te | BMI-IMC",
+    description: "Tableau complet des cat\u00e9gories IMC selon l'OMS. Maigreur, poids normal, surpoids et ob\u00e9sit\u00e9 avec seuils d\u00e9taill\u00e9s.",
+  },
+  {
+    path: "/interpretation-imc",
+    lang: "fr",
+    title: "Interpr\u00e9tation IMC : Comprendre vos R\u00e9sultats | BMI-IMC",
+    description: "Comment interpr\u00e9ter votre r\u00e9sultat IMC. Signification des cat\u00e9gories, limites et facteurs \u00e0 prendre en compte.",
+  },
+  {
+    path: "/limites-imc",
+    lang: "fr",
+    title: "Limites de l'IMC : Ce que l'IMC ne Dit Pas | BMI-IMC",
+    description: "D\u00e9couvrez les limites du calcul IMC. Pourquoi l'indice de masse corporelle n'est pas toujours fiable et quelles alternatives utiliser.",
+  },
+  {
+    path: "/faq-imc",
+    lang: "fr",
+    title: "FAQ IMC : Questions Fr\u00e9quentes sur l'IMC | BMI-IMC",
+    description: "R\u00e9ponses aux questions les plus fr\u00e9quentes sur l'IMC. Comment calculer, interpr\u00e9ter et utiliser l'indice de masse corporelle.",
+  },
+  {
+    path: "/sante-et-poids",
+    lang: "fr",
+    title: "Sant\u00e9 et Poids : Guide Complet | BMI-IMC",
+    description: "Tout savoir sur la relation entre poids et sant\u00e9. Conseils nutrition, activit\u00e9 physique et maintien d'un poids sant\u00e9.",
+  },
+
+  // --- English ---
+  {
+    path: "/bmi",
+    lang: "en",
+    title: "Free BMI Calculator | Body Mass Index Online - BMI-IMC",
+    description: "Calculate your BMI instantly with our free Body Mass Index calculator. Get personalized health insights and discover your ideal weight range.",
+  },
+  {
+    path: "/bmi-men",
+    lang: "en",
+    title: "BMI Calculator for Men | Male BMI Chart & Ideal Weight",
+    description: "Calculate BMI for men with our specialized tool. Male BMI chart, ideal weight by height, and health advice tailored for men.",
+  },
+  {
+    path: "/bmi-women",
+    lang: "en",
+    title: "BMI Calculator for Women | Female BMI Chart & Ideal Weight",
+    description: "Calculate BMI for women with our dedicated tool. Female BMI chart, ideal weight, hormonal factors and life stage advice.",
+  },
+  {
+    path: "/bmi-athletes",
+    lang: "en",
+    title: "BMI for Athletes | Why BMI Fails for Muscular People",
+    description: "Why BMI is inaccurate for athletes and bodybuilders. Discover FFMI and better alternatives to assess body composition.",
+  },
+  {
+    path: "/bmi-children",
+    lang: "en",
+    title: "BMI Calculator for Kids & Teens | Pediatric BMI",
+    description: "Calculate your child's BMI with age and gender-specific charts. WHO growth curves and pediatric BMI interpretation.",
+  },
+  {
+    path: "/bmi-table",
+    lang: "en",
+    title: "BMI Chart & Table | WHO Classification Guide",
+    description: "Complete BMI classification table according to WHO standards. Underweight, normal, overweight and obesity categories explained.",
+  },
+  {
+    path: "/bmi-interpretation",
+    lang: "en",
+    title: "BMI Interpretation | Understanding Your BMI Results",
+    description: "How to interpret your BMI results. What each category means, limitations to consider, and when to consult a doctor.",
+  },
+  {
+    path: "/bmi-limitations",
+    lang: "en",
+    title: "BMI Limitations | What BMI Doesn't Tell You",
+    description: "Understand the limitations of BMI. Why Body Mass Index isn't always accurate and what alternatives to use instead.",
+  },
+  {
+    path: "/bmi-faq",
+    lang: "en",
+    title: "BMI FAQ | Frequently Asked Questions About BMI",
+    description: "Answers to the most common questions about BMI. How to calculate, interpret, and use Body Mass Index effectively.",
+  },
+  {
+    path: "/health-weight",
+    lang: "en",
+    title: "Health & Weight | Complete Wellness Guide - BMI-IMC",
+    description: "Everything about the relationship between weight and health. Nutrition tips, physical activity, and maintaining a healthy weight.",
+  },
+
+  // --- Espa\u00f1ol ---
+  {
+    path: "/es/imc",
+    lang: "es",
+    title: "Calculadora IMC Gratis | \u00cdndice de Masa Corporal Online",
+    description: "Calcula tu IMC al instante con nuestra calculadora gratuita. Descubre tu peso ideal y obt\u00e9n consejos personalizados de salud.",
+  },
+  {
+    path: "/es/imc-hombre",
+    lang: "es",
+    title: "IMC Hombre : Calculadora IMC para Hombres | BMI-IMC",
+    description: "Calcula el IMC masculino con nuestra herramienta especializada. Peso ideal hombre, tabla IMC y consejos de salud masculina.",
+  },
+  {
+    path: "/es/imc-mujer",
+    lang: "es",
+    title: "IMC Mujer : Calculadora IMC para Mujeres | BMI-IMC",
+    description: "Calcula el IMC femenino con nuestra herramienta dedicada. Peso ideal mujer, factores hormonales y consejos por etapa de vida.",
+  },
+  {
+    path: "/es/imc-deportista",
+    lang: "es",
+    title: "IMC Deportista : Por qu\u00e9 el IMC Falla en Atletas",
+    description: "Por qu\u00e9 el IMC es inexacto para deportistas y culturistas. Descubre el FFMI y mejores alternativas de composici\u00f3n corporal.",
+  },
+  {
+    path: "/es/imc-nino",
+    lang: "es",
+    title: "IMC Ni\u00f1os y Adolescentes : Calculadora Pedi\u00e1trica",
+    description: "Calcula el IMC de tu hijo con tablas espec\u00edficas por edad y sexo. Curvas de crecimiento OMS e interpretaci\u00f3n pedi\u00e1trica.",
+  },
+  {
+    path: "/es/tabla-imc",
+    lang: "es",
+    title: "Tabla IMC : Clasificaci\u00f3n OMS Completa | BMI-IMC",
+    description: "Tabla completa de categor\u00edas IMC seg\u00fan la OMS. Bajo peso, normal, sobrepeso y obesidad con umbrales detallados.",
+  },
+  {
+    path: "/es/interpretacion-imc",
+    lang: "es",
+    title: "Interpretaci\u00f3n IMC : Entiende tus Resultados | BMI-IMC",
+    description: "C\u00f3mo interpretar tu resultado de IMC. Significado de cada categor\u00eda, limitaciones y factores a considerar.",
+  },
+  {
+    path: "/es/limitaciones-imc",
+    lang: "es",
+    title: "Limitaciones del IMC : Lo que el IMC No Dice | BMI-IMC",
+    description: "Conoce las limitaciones del c\u00e1lculo IMC. Por qu\u00e9 el \u00edndice de masa corporal no siempre es fiable y qu\u00e9 alternativas usar.",
+  },
+  {
+    path: "/es/preguntas-frecuentes-imc",
+    lang: "es",
+    title: "FAQ IMC : Preguntas Frecuentes sobre el IMC | BMI-IMC",
+    description: "Respuestas a las preguntas m\u00e1s comunes sobre el IMC. C\u00f3mo calcular, interpretar y utilizar el \u00edndice de masa corporal.",
+  },
+  {
+    path: "/es/salud-peso",
+    lang: "es",
+    title: "Salud y Peso : Gu\u00eda Completa | BMI-IMC",
+    description: "Todo sobre la relaci\u00f3n entre peso y salud. Consejos de nutrici\u00f3n, actividad f\u00edsica y mantenimiento de un peso saludable.",
+  },
+
+  // --- Portugu\u00eas ---
+  {
+    path: "/pt/imc",
+    lang: "pt",
+    title: "Calculadora IMC Gr\u00e1tis | \u00cdndice de Massa Corporal Online",
+    description: "Calcule seu IMC instantaneamente com nossa calculadora gratuita. Descubra seu peso ideal e obtenha conselhos personalizados.",
+  },
+  {
+    path: "/pt/imc-homem",
+    lang: "pt",
+    title: "IMC Homem : Calculadora IMC para Homens | BMI-IMC",
+    description: "Calcule o IMC masculino com nossa ferramenta especializada. Peso ideal homem, tabela IMC e conselhos de sa\u00fade masculina.",
+  },
+  {
+    path: "/pt/imc-mulher",
+    lang: "pt",
+    title: "IMC Mulher : Calculadora IMC para Mulheres | BMI-IMC",
+    description: "Calcule o IMC feminino com nossa ferramenta dedicada. Peso ideal mulher, fatores hormonais e conselhos por fase da vida.",
+  },
+  {
+    path: "/pt/imc-atleta",
+    lang: "pt",
+    title: "IMC Atleta : Por que o IMC Falha em Esportistas | BMI-IMC",
+    description: "Por que o IMC \u00e9 impreciso para atletas e fisiculturistas. Descubra o FFMI e melhores alternativas de composi\u00e7\u00e3o corporal.",
+  },
+  {
+    path: "/pt/imc-crianca",
+    lang: "pt",
+    title: "IMC Crian\u00e7as e Adolescentes : Calculadora Pedi\u00e1trica",
+    description: "Calcule o IMC do seu filho com tabelas espec\u00edficas por idade e sexo. Curvas de crescimento OMS e interpreta\u00e7\u00e3o pedi\u00e1trica.",
+  },
+  {
+    path: "/pt/tabela-imc",
+    lang: "pt",
+    title: "Tabela IMC : Classifica\u00e7\u00e3o OMS Completa | BMI-IMC",
+    description: "Tabela completa de categorias IMC segundo a OMS. Baixo peso, normal, sobrepeso e obesidade com limiares detalhados.",
+  },
+  {
+    path: "/pt/interpretacao-imc",
+    lang: "pt",
+    title: "Interpreta\u00e7\u00e3o IMC : Entenda seus Resultados | BMI-IMC",
+    description: "Como interpretar seu resultado de IMC. Significado de cada categoria, limita\u00e7\u00f5es e fatores a considerar.",
+  },
+  {
+    path: "/pt/limitacoes-imc",
+    lang: "pt",
+    title: "Limita\u00e7\u00f5es do IMC : O que o IMC N\u00e3o Diz | BMI-IMC",
+    description: "Conhe\u00e7a as limita\u00e7\u00f5es do c\u00e1lculo IMC. Por que o \u00edndice de massa corporal nem sempre \u00e9 confi\u00e1vel e que alternativas usar.",
+  },
+  {
+    path: "/pt/perguntas-frequentes-imc",
+    lang: "pt",
+    title: "FAQ IMC : Perguntas Frequentes sobre o IMC | BMI-IMC",
+    description: "Respostas \u00e0s perguntas mais comuns sobre o IMC. Como calcular, interpretar e utilizar o \u00edndice de massa corporal.",
+  },
+  {
+    path: "/pt/saude-peso",
+    lang: "pt",
+    title: "Sa\u00fade e Peso : Guia Completo | BMI-IMC",
+    description: "Tudo sobre a rela\u00e7\u00e3o entre peso e sa\u00fade. Dicas de nutri\u00e7\u00e3o, atividade f\u00edsica e manuten\u00e7\u00e3o de um peso saud\u00e1vel.",
+  },
+];
+
+const STORAGE_KEY = "seo-overrides";
+
+export const getSEOForPath = (path: string): PageSEO => {
+  const defaults = defaultSEO.find((s) => s.path === path);
+  if (!defaults) {
+    return defaultSEO[0];
+  }
+
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const overrides: Record<string, Partial<PageSEO>> = JSON.parse(raw);
+      if (overrides[path]) {
+        return { ...defaults, ...overrides[path] };
+      }
+    }
+  } catch {
+    // ignore parse errors
+  }
+
+  return defaults;
+};
+
+export const saveSEOOverride = (path: string, data: Partial<PageSEO>) => {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const overrides: Record<string, Partial<PageSEO>> = raw ? JSON.parse(raw) : {};
+    overrides[path] = { ...overrides[path], ...data };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(overrides));
+  } catch {
+    // ignore
+  }
+};
+
+export const resetSEOOverride = (path: string) => {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const overrides: Record<string, Partial<PageSEO>> = JSON.parse(raw);
+      delete overrides[path];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(overrides));
+    }
+  } catch {
+    // ignore
+  }
+};
+
+export const resetAllSEOOverrides = () => {
+  localStorage.removeItem(STORAGE_KEY);
+};
