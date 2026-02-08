@@ -82,6 +82,18 @@ import BMIGrenzen from "./pages/de/BMIGrenzen";
 import BMIFAQDe from "./pages/de/BMIFAQ";
 import GesundheitGewicht from "./pages/de/GesundheitGewicht";
 
+// Italian pages
+import IMCIt from "./pages/it/IMC";
+import IMCUomo from "./pages/it/IMCUomo";
+import IMCDonna from "./pages/it/IMCDonna";
+import IMCSportivo from "./pages/it/IMCSportivo";
+import IMCBambino from "./pages/it/IMCBambino";
+import TabellaIMC from "./pages/it/TabellaIMC";
+import InterpretazioneIMC from "./pages/it/InterpretazioneIMC";
+import LimitiIMC from "./pages/it/LimitiIMC";
+import DomandeFrequentiIMC from "./pages/it/DomandeFrequentiIMC";
+import SalutePeso from "./pages/it/SalutePeso";
+
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -182,6 +194,18 @@ const App = () => (
           <Route path="/de/bmi-grenzen" element={<BMIGrenzen />} />
           <Route path="/de/bmi-faq" element={<BMIFAQDe />} />
           <Route path="/de/gesundheit-gewicht" element={<GesundheitGewicht />} />
+
+          {/* Italian pages */}
+          <Route path="/it/imc" element={<IMCIt />} />
+          <Route path="/it/imc-uomo" element={<IMCUomo />} />
+          <Route path="/it/imc-donna" element={<IMCDonna />} />
+          <Route path="/it/imc-sportivo" element={<IMCSportivo />} />
+          <Route path="/it/imc-bambino" element={<IMCBambino />} />
+          <Route path="/it/tabella-imc" element={<TabellaIMC />} />
+          <Route path="/it/interpretazione-imc" element={<InterpretazioneIMC />} />
+          <Route path="/it/limiti-imc" element={<LimitiIMC />} />
+          <Route path="/it/domande-frequenti-imc" element={<DomandeFrequentiIMC />} />
+          <Route path="/it/salute-peso" element={<SalutePeso />} />
 
           {/* Admin */}
           <Route path="/admin" element={<Admin />} />

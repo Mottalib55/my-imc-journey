@@ -92,6 +92,16 @@ jobs:
             "de/bmi-grenzen"
             "de/bmi-faq"
             "de/gesundheit-gewicht"
+            "it/imc"
+            "it/imc-uomo"
+            "it/imc-donna"
+            "it/imc-sportivo"
+            "it/imc-bambino"
+            "it/tabella-imc"
+            "it/interpretazione-imc"
+            "it/limiti-imc"
+            "it/domande-frequenti-imc"
+            "it/salute-peso"
             "admin"
           )
           for route in "${ROUTES[@]}"; do

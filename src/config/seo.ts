@@ -377,6 +377,67 @@ export const defaultSEO: PageSEO[] = [
     title: "Gesundheit & Gewicht | Vollständiger Wellness-Leitfaden",
     description: "Alles über die Beziehung zwischen Gewicht und Gesundheit. Ernährungstipps, körperliche Aktivität und ein gesundes Gewicht halten.",
   },
+  // --- Italiano ---
+  {
+    path: "/it/imc",
+    lang: "it",
+    title: "Calcolatore IMC Gratuito | Indice di Massa Corporea Online",
+    description: "Calcola il tuo IMC istantaneamente con il nostro calcolatore gratuito. Scopri il tuo peso ideale e ottieni consigli personalizzati sulla salute.",
+  },
+  {
+    path: "/it/imc-uomo",
+    lang: "it",
+    title: "IMC Uomo : Calcolatore IMC per Uomini | IMC",
+    description: "Calcola l'IMC maschile con il nostro strumento specializzato. Peso ideale uomo, tabella IMC e consigli per la salute maschile.",
+  },
+  {
+    path: "/it/imc-donna",
+    lang: "it",
+    title: "IMC Donna : Calcolatore IMC per Donne | IMC",
+    description: "Calcola l'IMC femminile con il nostro strumento dedicato. Peso ideale donna, fattori ormonali e consigli per ogni fase della vita.",
+  },
+  {
+    path: "/it/imc-sportivo",
+    lang: "it",
+    title: "IMC Sportivo : Perché l'IMC Fallisce negli Atleti",
+    description: "Perché l'IMC è impreciso per sportivi e bodybuilder. Scopri il FFMI e le migliori alternative per la composizione corporea.",
+  },
+  {
+    path: "/it/imc-bambino",
+    lang: "it",
+    title: "IMC Bambini e Adolescenti : Calcolatore Pediatrico",
+    description: "Calcola l'IMC di tuo figlio con tabelle specifiche per età e sesso. Curve di crescita OMS e interpretazione pediatrica.",
+  },
+  {
+    path: "/it/tabella-imc",
+    lang: "it",
+    title: "Tabella IMC : Classificazione OMS Completa | IMC",
+    description: "Tabella completa delle categorie IMC secondo l'OMS. Sottopeso, normopeso, sovrappeso e obesità con soglie dettagliate.",
+  },
+  {
+    path: "/it/interpretazione-imc",
+    lang: "it",
+    title: "Interpretazione IMC : Comprendere i Risultati | IMC",
+    description: "Come interpretare il risultato del tuo IMC. Significato di ogni categoria, limitazioni e fattori da considerare.",
+  },
+  {
+    path: "/it/limiti-imc",
+    lang: "it",
+    title: "Limiti dell'IMC : Cosa l'IMC Non Dice | IMC",
+    description: "Scopri i limiti del calcolo IMC. Perché l'indice di massa corporea non è sempre affidabile e quali alternative usare.",
+  },
+  {
+    path: "/it/domande-frequenti-imc",
+    lang: "it",
+    title: "FAQ IMC : Domande Frequenti sull'IMC | IMC",
+    description: "Risposte alle domande più frequenti sull'IMC. Come calcolare, interpretare e utilizzare l'indice di massa corporea.",
+  },
+  {
+    path: "/it/salute-peso",
+    lang: "it",
+    title: "Salute e Peso : Guida Completa | IMC",
+    description: "Tutto sulla relazione tra peso e salute. Consigli di nutrizione, attività fisica e mantenimento di un peso sano.",
+  },
 ];
 
 const STORAGE_KEY = "seo-overrides";
