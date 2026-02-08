@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Français -->
+  <url>
+    <loc>https://bmi-imc.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/imc-homme</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-homme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-men" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-hombre" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-homem" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/imc-femme</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-femme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-women" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-mujer" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-mulher" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/imc-sportif</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-sportif" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-athletes" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-deportista" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-atleta" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/imc-enfant</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-enfant" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-children" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-nino" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-crianca" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/tableau-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/tableau-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-table" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/tabla-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/tabela-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/interpretation-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/interpretation-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-interpretation" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/interpretacion-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/interpretacao-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/limites-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/limites-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-limitations" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/limitaciones-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/limitacoes-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/faq-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/faq-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/preguntas-frecuentes-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/perguntas-frequentes-imc" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/sante-et-poids</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/sante-et-poids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/health-weight" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/salud-peso" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/saude-peso" />
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://bmi-imc.com/bmi</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-men</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-homme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-men" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-hombre" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-homem" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-women</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-femme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-women" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-mujer" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-mulher" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-athletes</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-sportif" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-athletes" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-deportista" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-atleta" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-children</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-enfant" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-children" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-nino" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-crianca" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-table</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/tableau-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-table" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/tabla-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/tabela-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-interpretation</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/interpretation-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-interpretation" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/interpretacion-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/interpretacao-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-limitations</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/limites-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-limitations" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/limitaciones-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/limitacoes-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/bmi-faq</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/faq-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/preguntas-frecuentes-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/perguntas-frequentes-imc" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/health-weight</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/sante-et-poids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/health-weight" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/salud-peso" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/saude-peso" />
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Español -->
+  <url>
+    <loc>https://bmi-imc.com/es/imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/imc-hombre</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-homme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-men" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-hombre" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-homem" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/imc-mujer</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-femme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-women" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-mujer" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-mulher" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/imc-deportista</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-sportif" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-athletes" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-deportista" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-atleta" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/imc-nino</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-enfant" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-children" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-nino" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-crianca" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/tabla-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/tableau-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-table" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/tabla-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/tabela-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/interpretacion-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/interpretation-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-interpretation" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/interpretacion-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/interpretacao-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/limitaciones-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/limites-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-limitations" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/limitaciones-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/limitacoes-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/preguntas-frecuentes-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/faq-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/preguntas-frecuentes-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/perguntas-frequentes-imc" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/es/salud-peso</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/sante-et-poids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/health-weight" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/salud-peso" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/saude-peso" />
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Português -->
+  <url>
+    <loc>https://bmi-imc.com/pt/imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/imc-homem</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-homme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-men" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-hombre" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-homem" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/imc-mulher</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-femme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-women" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-mujer" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-mulher" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/imc-atleta</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-sportif" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-athletes" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-deportista" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-atleta" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/imc-crianca</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-enfant" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-children" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-nino" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-crianca" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/tabela-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/tableau-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-table" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/tabla-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/tabela-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/interpretacao-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/interpretation-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-interpretation" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/interpretacion-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/interpretacao-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/limitacoes-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/limites-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-limitations" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/limitaciones-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/limitacoes-imc" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/perguntas-frequentes-imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/faq-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/preguntas-frecuentes-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/perguntas-frequentes-imc" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/pt/saude-peso</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/sante-et-poids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/health-weight" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/salud-peso" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/saude-peso" />
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
