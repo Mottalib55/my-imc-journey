@@ -4,19 +4,19 @@ import { useState, useRef, useEffect } from "react";
 
 // --- Route mapping ---
 
-type Lang = "fr" | "en" | "es" | "pt" | "ar";
+type Lang = "fr" | "en" | "es" | "pt" | "ar" | "de";
 
 const routeMap: Record<string, Record<Lang, string>> = {
-  main:           { fr: "/imc",                  en: "/",                     es: "/es/imc",                       pt: "/pt/imc",                       ar: "/ar/imc" },
-  men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem",                 ar: "/ar/imc-rajul" },
-  women:          { fr: "/imc-femme",           en: "/bmi-women",            es: "/es/imc-mujer",                 pt: "/pt/imc-mulher",                ar: "/ar/imc-maraa" },
-  athletes:       { fr: "/imc-sportif",         en: "/bmi-athletes",         es: "/es/imc-deportista",            pt: "/pt/imc-atleta",                ar: "/ar/imc-riyadi" },
-  children:       { fr: "/imc-enfant",          en: "/bmi-children",         es: "/es/imc-nino",                  pt: "/pt/imc-crianca",               ar: "/ar/imc-tifl" },
-  table:          { fr: "/tableau-imc",         en: "/bmi-table",            es: "/es/tabla-imc",                 pt: "/pt/tabela-imc",                ar: "/ar/jadwal-imc" },
-  interpretation: { fr: "/interpretation-imc",  en: "/bmi-interpretation",   es: "/es/interpretacion-imc",        pt: "/pt/interpretacao-imc",         ar: "/ar/tafsir-imc" },
-  limitations:    { fr: "/limites-imc",         en: "/bmi-limitations",      es: "/es/limitaciones-imc",          pt: "/pt/limitacoes-imc",            ar: "/ar/hudud-imc" },
-  faq:            { fr: "/faq-imc",             en: "/bmi-faq",              es: "/es/preguntas-frecuentes-imc",  pt: "/pt/perguntas-frequentes-imc",  ar: "/ar/asila-imc" },
-  health:         { fr: "/sante-et-poids",      en: "/health-weight",        es: "/es/salud-peso",                pt: "/pt/saude-peso",                ar: "/ar/siha-wazn" },
+  main:           { fr: "/imc",                  en: "/",                     es: "/es/imc",                       pt: "/pt/imc",                       ar: "/ar/imc",              de: "/de/bmi" },
+  men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem",                 ar: "/ar/imc-rajul",        de: "/de/bmi-maenner" },
+  women:          { fr: "/imc-femme",           en: "/bmi-women",            es: "/es/imc-mujer",                 pt: "/pt/imc-mulher",                ar: "/ar/imc-maraa",        de: "/de/bmi-frauen" },
+  athletes:       { fr: "/imc-sportif",         en: "/bmi-athletes",         es: "/es/imc-deportista",            pt: "/pt/imc-atleta",                ar: "/ar/imc-riyadi",       de: "/de/bmi-sportler" },
+  children:       { fr: "/imc-enfant",          en: "/bmi-children",         es: "/es/imc-nino",                  pt: "/pt/imc-crianca",               ar: "/ar/imc-tifl",         de: "/de/bmi-kinder" },
+  table:          { fr: "/tableau-imc",         en: "/bmi-table",            es: "/es/tabla-imc",                 pt: "/pt/tabela-imc",                ar: "/ar/jadwal-imc",       de: "/de/bmi-tabelle" },
+  interpretation: { fr: "/interpretation-imc",  en: "/bmi-interpretation",   es: "/es/interpretacion-imc",        pt: "/pt/interpretacao-imc",         ar: "/ar/tafsir-imc",       de: "/de/bmi-interpretation" },
+  limitations:    { fr: "/limites-imc",         en: "/bmi-limitations",      es: "/es/limitaciones-imc",          pt: "/pt/limitacoes-imc",            ar: "/ar/hudud-imc",        de: "/de/bmi-grenzen" },
+  faq:            { fr: "/faq-imc",             en: "/bmi-faq",              es: "/es/preguntas-frecuentes-imc",  pt: "/pt/perguntas-frequentes-imc",  ar: "/ar/asila-imc",        de: "/de/bmi-faq" },
+  health:         { fr: "/sante-et-poids",      en: "/health-weight",        es: "/es/salud-peso",                pt: "/pt/saude-peso",                ar: "/ar/siha-wazn",        de: "/de/gesundheit-gewicht" },
 };
 
 const pathToLang: Record<string, Lang> = {};
@@ -134,6 +134,25 @@ const i18n: Record<Lang, {
     mobileInfo: "Informa\u00e7\u00e3o",
     mobileLang: "Idiomas",
   },
+  de: {
+    logo: ["BMI-", "Rechner"],
+    calculator: "Rechner",
+    profiles: "Profile",
+    info: "Info",
+    language: "Sprache",
+    men: "BMI Männer",
+    women: "BMI Frauen",
+    athletes: "BMI Sportler",
+    children: "BMI Kinder",
+    table: "BMI-Tabelle",
+    interpretation: "Interpretation",
+    limitations: "BMI-Grenzen",
+    faq: "FAQ",
+    health: "Gesundheit",
+    mobileProfiles: "Profile",
+    mobileInfo: "Informationen",
+    mobileLang: "Sprachen",
+  },
   ar: {
     logo: ["حاسبة ", "مؤشر كتلة الجسم"],
     calculator: "الحاسبة",
@@ -160,6 +179,7 @@ const langLabels: Record<Lang, string> = {
   en: "English",
   es: "Espa\u00f1ol",
   pt: "Portugu\u00eas",
+  de: "Deutsch",
   ar: "العربية",
 };
 

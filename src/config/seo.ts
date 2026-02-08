@@ -315,6 +315,68 @@ export const defaultSEO: PageSEO[] = [
     title: "الصحة والوزن | دليل شامل للوزن الصحي",
     description: "كل ما تحتاج معرفته عن العلاقة بين الوزن والصحة. نصائح التغذية والنشاط البدني والحفاظ على وزن صحي.",
   },
+
+  // --- Deutsch ---
+  {
+    path: "/de/bmi",
+    lang: "de",
+    title: "BMI-Rechner Kostenlos | Body-Mass-Index Online Berechnen",
+    description: "Berechnen Sie Ihren BMI sofort mit unserem kostenlosen Rechner. Ermitteln Sie Ihr Idealgewicht und erhalten Sie personalisierte Gesundheitstipps.",
+  },
+  {
+    path: "/de/bmi-maenner",
+    lang: "de",
+    title: "BMI-Rechner für Männer | BMI-Tabelle & Idealgewicht",
+    description: "Berechnen Sie den BMI für Männer mit unserem spezialisierten Tool. Männer-BMI-Tabelle, Idealgewicht nach Größe und Gesundheitstipps.",
+  },
+  {
+    path: "/de/bmi-frauen",
+    lang: "de",
+    title: "BMI-Rechner für Frauen | BMI-Tabelle & Idealgewicht",
+    description: "Berechnen Sie den BMI für Frauen mit unserem spezialisierten Tool. Frauen-BMI-Tabelle, hormonelle Faktoren und Tipps für jede Lebensphase.",
+  },
+  {
+    path: "/de/bmi-sportler",
+    lang: "de",
+    title: "BMI für Sportler | Warum der BMI bei Muskelmasse versagt",
+    description: "Warum der BMI für Sportler und Bodybuilder ungenau ist. Entdecken Sie den FFMI und bessere Alternativen zur Körperzusammensetzung.",
+  },
+  {
+    path: "/de/bmi-kinder",
+    lang: "de",
+    title: "BMI-Rechner für Kinder & Jugendliche | Pädiatrischer BMI",
+    description: "Berechnen Sie den BMI Ihres Kindes mit alters- und geschlechtsspezifischen Tabellen. WHO-Wachstumskurven und pädiatrische BMI-Interpretation.",
+  },
+  {
+    path: "/de/bmi-tabelle",
+    lang: "de",
+    title: "BMI-Tabelle | WHO-Klassifikation Vollständig",
+    description: "Vollständige BMI-Klassifikationstabelle nach WHO-Standards. Untergewicht, Normalgewicht, Übergewicht und Adipositas erklärt.",
+  },
+  {
+    path: "/de/bmi-interpretation",
+    lang: "de",
+    title: "BMI-Interpretation | Ihre Ergebnisse Verstehen",
+    description: "Wie Sie Ihren BMI-Wert richtig interpretieren. Was jede Kategorie bedeutet, Einschränkungen und wann Sie einen Arzt aufsuchen sollten.",
+  },
+  {
+    path: "/de/bmi-grenzen",
+    lang: "de",
+    title: "Grenzen des BMI | Was der BMI Nicht Verrät",
+    description: "Verstehen Sie die Grenzen des BMI. Warum der Body-Mass-Index nicht immer genau ist und welche Alternativen es gibt.",
+  },
+  {
+    path: "/de/bmi-faq",
+    lang: "de",
+    title: "BMI FAQ | Häufig Gestellte Fragen zum BMI",
+    description: "Antworten auf die häufigsten Fragen zum BMI. Wie berechnen, interpretieren und den Body-Mass-Index effektiv nutzen.",
+  },
+  {
+    path: "/de/gesundheit-gewicht",
+    lang: "de",
+    title: "Gesundheit & Gewicht | Vollständiger Wellness-Leitfaden",
+    description: "Alles über die Beziehung zwischen Gewicht und Gesundheit. Ernährungstipps, körperliche Aktivität und ein gesundes Gewicht halten.",
+  },
 ];
 
 const STORAGE_KEY = "seo-overrides";

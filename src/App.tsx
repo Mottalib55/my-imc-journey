@@ -70,6 +70,18 @@ import HududIMC from "./pages/ar/HududIMC";
 import AsilaIMC from "./pages/ar/AsilaIMC";
 import SihaWazn from "./pages/ar/SihaWazn";
 
+// German pages
+import BMIDe from "./pages/de/BMI";
+import BMIMaenner from "./pages/de/BMIMaenner";
+import BMIFrauen from "./pages/de/BMIFrauen";
+import BMISportler from "./pages/de/BMISportler";
+import BMIKinder from "./pages/de/BMIKinder";
+import BMITabelle from "./pages/de/BMITabelle";
+import BMIInterpretationDe from "./pages/de/BMIInterpretation";
+import BMIGrenzen from "./pages/de/BMIGrenzen";
+import BMIFAQDe from "./pages/de/BMIFAQ";
+import GesundheitGewicht from "./pages/de/GesundheitGewicht";
+
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -158,6 +170,18 @@ const App = () => (
           <Route path="/ar/hudud-imc" element={<HududIMC />} />
           <Route path="/ar/asila-imc" element={<AsilaIMC />} />
           <Route path="/ar/siha-wazn" element={<SihaWazn />} />
+
+          {/* German pages */}
+          <Route path="/de/bmi" element={<BMIDe />} />
+          <Route path="/de/bmi-maenner" element={<BMIMaenner />} />
+          <Route path="/de/bmi-frauen" element={<BMIFrauen />} />
+          <Route path="/de/bmi-sportler" element={<BMISportler />} />
+          <Route path="/de/bmi-kinder" element={<BMIKinder />} />
+          <Route path="/de/bmi-tabelle" element={<BMITabelle />} />
+          <Route path="/de/bmi-interpretation" element={<BMIInterpretationDe />} />
+          <Route path="/de/bmi-grenzen" element={<BMIGrenzen />} />
+          <Route path="/de/bmi-faq" element={<BMIFAQDe />} />
+          <Route path="/de/gesundheit-gewicht" element={<GesundheitGewicht />} />
 
           {/* Admin */}
           <Route path="/admin" element={<Admin />} />

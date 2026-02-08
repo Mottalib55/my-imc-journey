@@ -82,6 +82,16 @@ jobs:
             "ar/hudud-imc"
             "ar/asila-imc"
             "ar/siha-wazn"
+            "de/bmi"
+            "de/bmi-maenner"
+            "de/bmi-frauen"
+            "de/bmi-sportler"
+            "de/bmi-kinder"
+            "de/bmi-tabelle"
+            "de/bmi-interpretation"
+            "de/bmi-grenzen"
+            "de/bmi-faq"
+            "de/gesundheit-gewicht"
             "admin"
           )
           for route in "${ROUTES[@]}"; do
