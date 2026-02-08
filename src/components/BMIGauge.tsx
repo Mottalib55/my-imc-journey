@@ -121,7 +121,7 @@ export const BMIGauge = ({ bmi }: BMIGaugeProps) => {
   const TrendIcon = trend === 'up' ? TrendingUp : trend === 'down' ? TrendingDown : Minus;
 
   return (
-    <div className="glass-card p-6 md:p-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+    <div className="glass-card p-6 md:p-8 animate-slide-up overflow-hidden" style={{ animationDelay: "0.1s" }}>
       <h2 className="text-2xl font-display font-bold mb-6">Votre Position</h2>
 
       {/* BMI Display */}

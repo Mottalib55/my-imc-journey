@@ -22,7 +22,7 @@ export const BMICalculator = ({ onCalculate }: BMICalculatorProps) => {
   }, [weight, height, onCalculate, bmi]);
 
   return (
-    <div className="glass-card p-6 md:p-8 animate-slide-up">
+    <div className="glass-card p-6 md:p-8 animate-slide-up overflow-hidden">
       <div className="flex items-center gap-3 mb-6">
         <div className="p-3 rounded-xl bg-primary/10">
           <Calculator className="w-6 h-6 text-primary" />

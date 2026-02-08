@@ -70,7 +70,7 @@ export const BMIInfo = ({ bmi }: BMIInfoProps) => {
   const Icon = advice?.icon || Info;
 
   return (
-    <div className="glass-card p-6 md:p-8 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+    <div className="glass-card p-6 md:p-8 animate-slide-up overflow-hidden" style={{ animationDelay: "0.3s" }}>
       <div className="flex items-center gap-3 mb-6">
         <div className="p-3 rounded-xl bg-primary/10">
           <Info className="w-6 h-6 text-primary" />
