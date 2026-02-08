@@ -106,6 +106,18 @@ import BMISeemayen from "./pages/hi/BMISeemayen";
 import BMIPrashn from "./pages/hi/BMIPrashn";
 import SwasthyaVajan from "./pages/hi/SwasthyaVajan";
 
+// Chinese pages
+import BMIZh from "./pages/zh/BMI";
+import BMINanxing from "./pages/zh/BMINanxing";
+import BMINvxing from "./pages/zh/BMINvxing";
+import BMIYundongyuan from "./pages/zh/BMIYundongyuan";
+import BMIErtong from "./pages/zh/BMIErtong";
+import BMIBiao from "./pages/zh/BMIBiao";
+import BMIJiedu from "./pages/zh/BMIJiedu";
+import BMIJuxianxing from "./pages/zh/BMIJuxianxing";
+import BMIChangjianwenti from "./pages/zh/BMIChangjianwenti";
+import JiankangTizhong from "./pages/zh/JiankangTizhong";
+
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -230,6 +242,18 @@ const App = () => (
           <Route path="/hi/bmi-seemayen" element={<BMISeemayen />} />
           <Route path="/hi/bmi-prashn" element={<BMIPrashn />} />
           <Route path="/hi/swasthya-vajan" element={<SwasthyaVajan />} />
+
+          {/* Chinese pages */}
+          <Route path="/zh/bmi" element={<BMIZh />} />
+          <Route path="/zh/bmi-nanxing" element={<BMINanxing />} />
+          <Route path="/zh/bmi-nvxing" element={<BMINvxing />} />
+          <Route path="/zh/bmi-yundongyuan" element={<BMIYundongyuan />} />
+          <Route path="/zh/bmi-ertong" element={<BMIErtong />} />
+          <Route path="/zh/bmi-biao" element={<BMIBiao />} />
+          <Route path="/zh/bmi-jiedu" element={<BMIJiedu />} />
+          <Route path="/zh/bmi-juxianxing" element={<BMIJuxianxing />} />
+          <Route path="/zh/bmi-changjianwenti" element={<BMIChangjianwenti />} />
+          <Route path="/zh/jiankang-tizhong" element={<JiankangTizhong />} />
 
           {/* Admin */}
           <Route path="/admin" element={<Admin />} />

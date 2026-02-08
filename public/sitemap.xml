@@ -13,6 +13,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -25,6 +26,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -37,6 +39,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -49,6 +52,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -61,6 +65,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -73,6 +78,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -85,6 +91,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -97,6 +104,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -109,6 +117,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -121,6 +130,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -135,6 +145,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -147,6 +158,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -159,6 +171,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -171,6 +184,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -183,6 +197,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -195,6 +210,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -207,6 +223,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -219,6 +236,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -231,6 +249,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -243,6 +262,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -257,6 +277,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -269,6 +290,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -281,6 +303,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -293,6 +316,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -305,6 +329,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -317,6 +342,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -329,6 +355,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -341,6 +368,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -353,6 +381,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -365,6 +394,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -379,6 +409,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -391,6 +422,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -403,6 +435,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -415,6 +448,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -427,6 +461,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -439,6 +474,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -451,6 +487,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -463,6 +500,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -475,6 +513,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -487,6 +526,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -501,6 +541,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -513,6 +554,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -525,6 +567,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -537,6 +580,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -549,6 +593,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -561,6 +606,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -573,6 +619,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -585,6 +632,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -597,6 +645,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -609,6 +658,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -623,6 +673,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -635,6 +686,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -647,6 +699,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -659,6 +712,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -671,6 +725,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -683,6 +738,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -695,6 +751,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -707,6 +764,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -719,6 +777,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -731,6 +790,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -745,6 +805,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -757,6 +818,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -769,6 +831,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -781,6 +844,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -793,6 +857,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -805,6 +870,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -817,6 +883,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -829,6 +896,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -841,6 +909,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -853,6 +922,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 
@@ -867,6 +937,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
     <priority>1.0</priority>
   </url>
   <url>
@@ -879,6 +950,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -891,6 +963,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -903,6 +976,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -915,6 +989,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
     <priority>0.9</priority>
   </url>
   <url>
@@ -927,6 +1002,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -939,6 +1015,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -951,6 +1028,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -963,6 +1041,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
     <priority>0.7</priority>
   </url>
   <url>
@@ -975,6 +1054,139 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
     <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 中文 -->
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/imc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-nanxing</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-homme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-men" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-hombre" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-homem" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/imc-rajul" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-maenner" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-uomo" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-purush" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nanxing" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-nvxing</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-femme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-women" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-mujer" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-mulher" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/imc-maraa" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-frauen" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-donna" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-mahila" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-nvxing" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-yundongyuan</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-sportif" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-athletes" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-deportista" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-atleta" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/imc-riyadi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-sportler" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-sportivo" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-khiladi" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-yundongyuan" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-ertong</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc-enfant" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-children" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc-nino" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc-crianca" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/imc-tifl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-kinder" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/imc-bambino" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-bachche" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-ertong" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-biao</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/tableau-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-table" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/tabla-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/tabela-imc" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/jadwal-imc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-tabelle" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/tabella-imc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-talika" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-biao" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-jiedu</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/interpretation-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-interpretation" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/interpretacion-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/interpretacao-imc" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/tafsir-imc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-interpretation" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/interpretazione-imc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-vyakhya" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-jiedu" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-juxianxing</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/limites-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-limitations" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/limitaciones-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/limitacoes-imc" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/hudud-imc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-grenzen" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/limiti-imc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-seemayen" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-juxianxing" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/bmi-changjianwenti</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/faq-imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi-faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/preguntas-frecuentes-imc" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/perguntas-frequentes-imc" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/asila-imc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/bmi-faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/domande-frequenti-imc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/bmi-prashn" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/bmi-changjianwenti" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bmi-imc.com/zh/jiankang-tizhong</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/sante-et-poids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/health-weight" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/salud-peso" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/saude-peso" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bmi-imc.com/ar/siha-wazn" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bmi-imc.com/de/gesundheit-gewicht" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://bmi-imc.com/it/salute-peso" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://bmi-imc.com/hi/swasthya-vajan" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bmi-imc.com/zh/jiankang-tizhong" />
     <priority>0.7</priority>
   </url>
 

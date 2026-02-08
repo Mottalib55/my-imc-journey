@@ -499,6 +499,68 @@ export const defaultSEO: PageSEO[] = [
     title: "स्वास्थ्य और वजन | संपूर्ण कल्याण मार्गदर्शिका",
     description: "वजन और स्वास्थ्य के बीच संबंध के बारे में सब कुछ। पोषण सलाह, शारीरिक गतिविधि और स्वस्थ वजन बनाए रखना।",
   },
+
+  // --- 中文 ---
+  {
+    path: "/zh/bmi",
+    lang: "zh",
+    title: "免费BMI计算器 | 在线身体质量指数计算 - BMI",
+    description: "使用我们的免费计算器即时计算您的BMI。了解您的理想体重，获取个性化的健康建议。",
+  },
+  {
+    path: "/zh/bmi-nanxing",
+    lang: "zh",
+    title: "男性BMI计算器 | 男性BMI标准与理想体重",
+    description: "使用我们的专业工具计算男性BMI。男性BMI对照表、按身高的理想体重及男性健康建议。",
+  },
+  {
+    path: "/zh/bmi-nvxing",
+    lang: "zh",
+    title: "女性BMI计算器 | 女性BMI标准与理想体重",
+    description: "使用我们的专用工具计算女性BMI。女性BMI对照表、激素因素及各生命阶段的健康建议。",
+  },
+  {
+    path: "/zh/bmi-yundongyuan",
+    lang: "zh",
+    title: "运动员BMI | 为什么BMI不适用于肌肉发达的人",
+    description: "BMI对运动员和健身者为何不准确。了解FFMI及评估身体成分的更好替代方案。",
+  },
+  {
+    path: "/zh/bmi-ertong",
+    lang: "zh",
+    title: "儿童与青少年BMI计算器 | 儿科BMI",
+    description: "根据年龄和性别计算孩子的BMI。WHO生长曲线及儿科BMI解读。",
+  },
+  {
+    path: "/zh/bmi-biao",
+    lang: "zh",
+    title: "BMI分类表 | WHO完整分类标准",
+    description: "根据WHO标准的完整BMI分类表。体重过轻、正常、超重和肥胖各类别详细说明。",
+  },
+  {
+    path: "/zh/bmi-jiedu",
+    lang: "zh",
+    title: "BMI解读 | 理解您的BMI结果",
+    description: "如何解读您的BMI结果。每个类别的含义、需要考虑的局限性及何时咨询医生。",
+  },
+  {
+    path: "/zh/bmi-juxianxing",
+    lang: "zh",
+    title: "BMI的局限性 | BMI无法告诉您什么",
+    description: "了解BMI的局限性。为什么身体质量指数并不总是准确的，以及应该使用哪些替代指标。",
+  },
+  {
+    path: "/zh/bmi-changjianwenti",
+    lang: "zh",
+    title: "BMI常见问题 | 关于BMI的所有问题解答",
+    description: "关于BMI最常见问题的解答。如何计算、解读和有效使用身体质量指数。",
+  },
+  {
+    path: "/zh/jiankang-tizhong",
+    lang: "zh",
+    title: "健康与体重 | 完整健康指南",
+    description: "关于体重与健康关系的一切。营养建议、体育锻炼及保持健康体重的方法。",
+  },
 ];
 
 const STORAGE_KEY = "seo-overrides";

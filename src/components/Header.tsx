@@ -157,6 +157,25 @@ const i18n: Record<Lang, {
     mobileInfo: "जानकारी",
     mobileLang: "भाषाएं",
   },
+  zh: {
+    logo: ["BMI ", "计算器"],
+    calculator: "计算器",
+    profiles: "人群",
+    info: "信息",
+    language: "语言",
+    men: "男性BMI",
+    women: "女性BMI",
+    athletes: "运动员BMI",
+    children: "儿童BMI",
+    table: "BMI分类表",
+    interpretation: "BMI解读",
+    limitations: "BMI局限性",
+    faq: "常见问题",
+    health: "健康与体重",
+    mobileProfiles: "人群",
+    mobileInfo: "信息",
+    mobileLang: "语言",
+  },
   ar: {
     logo: ["حاسبة ", "مؤشر كتلة الجسم"],
     calculator: "الحاسبة",
@@ -186,6 +205,7 @@ const langLabels: Record<Lang, string> = {
   de: "Deutsch",
   it: "Italiano",
   hi: "हिन्दी",
+  zh: "中文",
   ar: "العربية",
 };
 

@@ -112,6 +112,16 @@ jobs:
             "hi/bmi-seemayen"
             "hi/bmi-prashn"
             "hi/swasthya-vajan"
+            "zh/bmi"
+            "zh/bmi-nanxing"
+            "zh/bmi-nvxing"
+            "zh/bmi-yundongyuan"
+            "zh/bmi-ertong"
+            "zh/bmi-biao"
+            "zh/bmi-jiedu"
+            "zh/bmi-juxianxing"
+            "zh/bmi-changjianwenti"
+            "zh/jiankang-tizhong"
             "admin"
           )
           for route in "${ROUTES[@]}"; do
