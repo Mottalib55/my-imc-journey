@@ -5,38 +5,36 @@ import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp } from "lucid
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
 
-const lbsToKg = (lbs: number) => lbs * 0.453592;
-const inToCm = (inches: number) => inches * 2.54;
+const kgToLbs = (kg: number) => Math.round(kg * 2.20462);
+const cmToFtIn = (cm: number) => {
+  const totalIn = Math.round(cm / 2.54);
+  return `${Math.floor(totalIn / 12)}'${totalIn % 12}"`;
+};
 
 const BMI = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weightLbs, setWeightLbs] = useState(154);
-  const [heightIn, setHeightIn] = useState(67);
+  const [weight, setWeight] = useState(70);
+  const [height, setHeight] = useState(170);
 
-  const feet = Math.floor(heightIn / 12);
-  const inches = heightIn % 12;
-
-  const calculateBMI = useCallback((wLbs: number, hIn: number) => {
-    const wKg = lbsToKg(wLbs);
-    const hCm = inToCm(hIn);
-    const heightInM = hCm / 100;
-    const calculatedBmi = wKg / (heightInM * heightInM);
+  const calculateBMI = useCallback((w: number, h: number) => {
+    const heightM = h / 100;
+    const calculatedBmi = w / (heightM * heightM);
     setBmi(calculatedBmi);
   }, []);
 
   // Calculate BMI on initial load
   useEffect(() => {
-    calculateBMI(weightLbs, heightIn);
+    calculateBMI(weight, height);
   }, []);
 
   const handleWeightChange = (value: number[]) => {
-    setWeightLbs(value[0]);
-    calculateBMI(value[0], heightIn);
+    setWeight(value[0]);
+    calculateBMI(value[0], height);
   };
 
   const handleHeightChange = (value: number[]) => {
-    setHeightIn(value[0]);
-    calculateBMI(weightLbs, value[0]);
+    setHeight(value[0]);
+    calculateBMI(weight, value[0]);
   };
 
   return (
@@ -74,38 +72,38 @@ const BMI = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Weight</label>
-                  <span className="text-2xl font-bold text-primary">{weightLbs} lbs <span className="text-base font-normal text-muted-foreground">({Math.round(lbsToKg(weightLbs))} kg)</span></span>
+                  <span className="text-2xl font-bold text-primary">{weight} kg <span className="text-base font-normal text-muted-foreground">({kgToLbs(weight)} lbs)</span></span>
                 </div>
                 <Slider
-                  value={[weightLbs]}
+                  value={[weight]}
                   onValueChange={handleWeightChange}
-                  min={66}
-                  max={440}
+                  min={30}
+                  max={200}
                   step={1}
                   className="py-4"
                 />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>66 lbs</span>
-                  <span>440 lbs</span>
+                  <span>30 kg</span>
+                  <span>200 kg</span>
                 </div>
               </div>
 
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Height</label>
-                  <span className="text-2xl font-bold text-primary">{feet}'{inches}" <span className="text-base font-normal text-muted-foreground">({(inToCm(heightIn) / 100).toFixed(2)} m)</span></span>
+                  <span className="text-2xl font-bold text-primary">{height} cm <span className="text-base font-normal text-muted-foreground">({cmToFtIn(height)})</span></span>
                 </div>
                 <Slider
-                  value={[heightIn]}
+                  value={[height]}
                   onValueChange={handleHeightChange}
-                  min={39}
-                  max={87}
+                  min={100}
+                  max={220}
                   step={1}
                   className="py-4"
                 />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>3'3"</span>
-                  <span>7'3"</span>
+                  <span>100 cm</span>
+                  <span>220 cm</span>
                 </div>
               </div>
             </div>

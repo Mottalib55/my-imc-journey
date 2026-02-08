@@ -4,44 +4,40 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
-const lbsToKg = (lbs: number) => lbs * 0.453592;
-const inToCm = (inches: number) => inches * 2.54;
+const kgToLbs = (kg: number) => Math.round(kg * 2.20462);
+const cmToFtIn = (cm: number) => {
+  const totalIn = Math.round(cm / 2.54);
+  return `${Math.floor(totalIn / 12)}'${totalIn % 12}"`;
+};
 
 const BMIAthletes = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weightLbs, setWeightLbs] = useState(187);
-  const [heightIn, setHeightIn] = useState(71);
+  const [weight, setWeight] = useState(85);
+  const [height, setHeight] = useState(180);
 
-  const feet = Math.floor(heightIn / 12);
-  const inches = heightIn % 12;
-
-  const calculateBMI = useCallback((wLbs: number, hIn: number) => {
-    const wKg = lbsToKg(wLbs);
-    const hCm = inToCm(hIn);
-    const heightInM = hCm / 100;
-    const calculatedBmi = wKg / (heightInM * heightInM);
+  const calculateBMI = useCallback((w: number, h: number) => {
+    const heightM = h / 100;
+    const calculatedBmi = w / (heightM * heightM);
     setBmi(calculatedBmi);
   }, []);
 
   // Calculate BMI on initial load
   useEffect(() => {
-    calculateBMI(weightLbs, heightIn);
+    calculateBMI(weight, height);
   }, []);
 
   const handleWeightChange = (value: number[]) => {
-    setWeightLbs(value[0]);
-    calculateBMI(value[0], heightIn);
+    setWeight(value[0]);
+    calculateBMI(value[0], height);
   };
 
   const handleHeightChange = (value: number[]) => {
-    setHeightIn(value[0]);
-    calculateBMI(weightLbs, value[0]);
+    setHeight(value[0]);
+    calculateBMI(weight, value[0]);
   };
 
-  // Calculate FFMI estimation (convert to metric for calculation)
-  const weightKg = lbsToKg(weightLbs);
-  const heightCm = inToCm(heightIn);
-  const ffmi = weightKg && heightCm ? (weightKg * 0.85) / Math.pow(heightCm / 100, 2) : null;
+  // Calculate FFMI estimation (already in metric)
+  const ffmi = weight && height ? (weight * 0.85) / Math.pow(height / 100, 2) : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -92,13 +88,13 @@ const BMIAthletes = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Weight</label>
-                  <span className="text-2xl font-bold text-orange-500">{weightLbs} lbs <span className="text-base font-normal text-muted-foreground">({Math.round(lbsToKg(weightLbs))} kg)</span></span>
+                  <span className="text-2xl font-bold text-orange-500">{weight} kg <span className="text-base font-normal text-muted-foreground">({kgToLbs(weight)} lbs)</span></span>
                 </div>
                 <Slider
-                  value={[weightLbs]}
+                  value={[weight]}
                   onValueChange={handleWeightChange}
-                  min={110}
-                  max={440}
+                  min={50}
+                  max={200}
                   step={1}
                   className="py-4"
                 />
@@ -107,13 +103,13 @@ const BMIAthletes = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Height</label>
-                  <span className="text-2xl font-bold text-orange-500">{feet}'{inches}" <span className="text-base font-normal text-muted-foreground">({(inToCm(heightIn) / 100).toFixed(2)} m)</span></span>
+                  <span className="text-2xl font-bold text-orange-500">{height} cm <span className="text-base font-normal text-muted-foreground">({cmToFtIn(height)})</span></span>
                 </div>
                 <Slider
-                  value={[heightIn]}
+                  value={[height]}
                   onValueChange={handleHeightChange}
-                  min={59}
-                  max={87}
+                  min={150}
+                  max={220}
                   step={1}
                   className="py-4"
                 />
