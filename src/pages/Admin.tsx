@@ -11,6 +11,11 @@ const langNames: Record<string, string> = {
   en: "English",
   es: "Espa\u00f1ol",
   pt: "Portugu\u00eas",
+  ar: "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+  de: "Deutsch",
+  it: "Italiano",
+  hi: "\u0939\u093f\u0928\u094d\u0926\u0940",
+  zh: "\u4e2d\u6587",
 };
 
 const langColors: Record<string, string> = {
@@ -18,6 +23,11 @@ const langColors: Record<string, string> = {
   en: "green",
   es: "orange",
   pt: "purple",
+  ar: "emerald",
+  de: "yellow",
+  it: "red",
+  hi: "amber",
+  zh: "rose",
 };
 
 const Admin = () => {
@@ -136,7 +146,7 @@ const Admin = () => {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-display font-bold">Admin SEO</h1>
-            <p className="text-muted-foreground mt-1">G\u00e9rez les titres et descriptions de vos 40 pages</p>
+            <p className="text-muted-foreground mt-1">G\u00e9rez les titres et descriptions de vos {seoData.length} pages</p>
           </div>
           <div className="flex items-center gap-3">
             {savedMessage && (
