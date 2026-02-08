@@ -33,6 +33,7 @@ jobs:
       - name: Generate static routes for SPA
         run: |
           ROUTES=(
+            "imc"
             "imc-homme"
             "imc-femme"
             "imc-sportif"
@@ -42,7 +43,6 @@ jobs:
             "limites-imc"
             "faq-imc"
             "sante-et-poids"
-            "bmi"
             "bmi-men"
             "bmi-women"
             "bmi-athletes"

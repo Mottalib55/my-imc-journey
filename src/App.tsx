@@ -72,8 +72,11 @@ const App = () => (
       <BrowserRouter>
         <SEOHead />
         <Routes>
-          {/* Main French pages */}
-          <Route path="/" element={<Index />} />
+          {/* Homepage = English */}
+          <Route path="/" element={<BMI />} />
+
+          {/* French pages */}
+          <Route path="/imc" element={<Index />} />
           <Route path="/imc-homme" element={<IMCHomme />} />
           <Route path="/imc-femme" element={<IMCFemme />} />
           <Route path="/imc-sportif" element={<IMCSportif />} />
@@ -89,7 +92,6 @@ const App = () => (
           <Route path="/sante-et-poids" element={<SanteEtPoids />} />
 
           {/* English pages */}
-          <Route path="/bmi" element={<BMI />} />
           <Route path="/bmi-men" element={<BMIMen />} />
           <Route path="/bmi-women" element={<BMIWomen />} />
           <Route path="/bmi-athletes" element={<BMIAthletes />} />

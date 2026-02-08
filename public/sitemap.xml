@@ -4,12 +4,12 @@
 
   <!-- Français -->
   <url>
-    <loc>https://bmi-imc.com/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <loc>https://bmi-imc.com/imc</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
-    <priority>1.0</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bmi-imc.com/imc-homme</loc>
@@ -84,11 +84,11 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- English -->
+  <!-- English (Homepage) -->
   <url>
-    <loc>https://bmi-imc.com/bmi</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <loc>https://bmi-imc.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
     <priority>1.0</priority>
@@ -169,8 +169,8 @@
   <!-- Español -->
   <url>
     <loc>https://bmi-imc.com/es/imc</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
     <priority>1.0</priority>
@@ -251,8 +251,8 @@
   <!-- Português -->
   <url>
     <loc>https://bmi-imc.com/pt/imc</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/bmi" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bmi-imc.com/imc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bmi-imc.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://bmi-imc.com/es/imc" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://bmi-imc.com/pt/imc" />
     <priority>1.0</priority>

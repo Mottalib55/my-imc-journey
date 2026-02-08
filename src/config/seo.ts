@@ -8,7 +8,7 @@ export interface PageSEO {
 export const defaultSEO: PageSEO[] = [
   // --- Français ---
   {
-    path: "/",
+    path: "/imc",
     lang: "fr",
     title: "Calcul IMC Gratuit | Calculateur IMC en ligne - IMC",
     description: "Calculez votre IMC instantan\u00e9ment. Calculateur gratuit d'Indice de Masse Corporelle avec conseils personnalis\u00e9s. D\u00e9couvrez votre poids id\u00e9al.",
@@ -70,7 +70,7 @@ export const defaultSEO: PageSEO[] = [
 
   // --- English ---
   {
-    path: "/bmi",
+    path: "/",
     lang: "en",
     title: "Free BMI Calculator | Body Mass Index Online - BMI",
     description: "Calculate your BMI instantly with our free Body Mass Index calculator. Get personalized health insights and discover your ideal weight range.",

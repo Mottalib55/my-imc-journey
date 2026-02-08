@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 type Lang = "fr" | "en" | "es" | "pt";
 
 const routeMap: Record<string, Record<Lang, string>> = {
-  main:           { fr: "/",                    en: "/bmi",                  es: "/es/imc",                       pt: "/pt/imc" },
+  main:           { fr: "/imc",                  en: "/",                     es: "/es/imc",                       pt: "/pt/imc" },
   men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem" },
   women:          { fr: "/imc-femme",           en: "/bmi-women",            es: "/es/imc-mujer",                 pt: "/pt/imc-mulher" },
   athletes:       { fr: "/imc-sportif",         en: "/bmi-athletes",         es: "/es/imc-deportista",            pt: "/pt/imc-atleta" },
