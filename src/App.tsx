@@ -58,6 +58,18 @@ import LimitacoesIMC from "./pages/pt/LimitacoesIMC";
 import PerguntasFrequentesIMC from "./pages/pt/PerguntasFrequentesIMC";
 import SaudePeso from "./pages/pt/SaudePeso";
 
+// Arabic pages
+import IMCAr from "./pages/ar/IMC";
+import IMCRajul from "./pages/ar/IMCRajul";
+import IMCMaraa from "./pages/ar/IMCMaraa";
+import IMCRiyadi from "./pages/ar/IMCRiyadi";
+import IMCTifl from "./pages/ar/IMCTifl";
+import JadwalIMC from "./pages/ar/JadwalIMC";
+import TafsirIMC from "./pages/ar/TafsirIMC";
+import HududIMC from "./pages/ar/HududIMC";
+import AsilaIMC from "./pages/ar/AsilaIMC";
+import SihaWazn from "./pages/ar/SihaWazn";
+
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -134,6 +146,18 @@ const App = () => (
           <Route path="/pt/limitacoes-imc" element={<LimitacoesIMC />} />
           <Route path="/pt/perguntas-frequentes-imc" element={<PerguntasFrequentesIMC />} />
           <Route path="/pt/saude-peso" element={<SaudePeso />} />
+
+          {/* Arabic pages */}
+          <Route path="/ar/imc" element={<IMCAr />} />
+          <Route path="/ar/imc-rajul" element={<IMCRajul />} />
+          <Route path="/ar/imc-maraa" element={<IMCMaraa />} />
+          <Route path="/ar/imc-riyadi" element={<IMCRiyadi />} />
+          <Route path="/ar/imc-tifl" element={<IMCTifl />} />
+          <Route path="/ar/jadwal-imc" element={<JadwalIMC />} />
+          <Route path="/ar/tafsir-imc" element={<TafsirIMC />} />
+          <Route path="/ar/hudud-imc" element={<HududIMC />} />
+          <Route path="/ar/asila-imc" element={<AsilaIMC />} />
+          <Route path="/ar/siha-wazn" element={<SihaWazn />} />
 
           {/* Admin */}
           <Route path="/admin" element={<Admin />} />

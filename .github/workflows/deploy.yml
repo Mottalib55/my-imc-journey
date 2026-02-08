@@ -72,6 +72,16 @@ jobs:
             "pt/limitacoes-imc"
             "pt/perguntas-frequentes-imc"
             "pt/saude-peso"
+            "ar/imc"
+            "ar/imc-rajul"
+            "ar/imc-maraa"
+            "ar/imc-riyadi"
+            "ar/imc-tifl"
+            "ar/jadwal-imc"
+            "ar/tafsir-imc"
+            "ar/hudud-imc"
+            "ar/asila-imc"
+            "ar/siha-wazn"
             "admin"
           )
           for route in "${ROUTES[@]}"; do

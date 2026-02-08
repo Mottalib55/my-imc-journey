@@ -73,7 +73,7 @@ const BMIWomen = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Weight</label>
-                  <span className="text-2xl font-bold text-pink-500">{weightLbs} lbs</span>
+                  <span className="text-2xl font-bold text-pink-500">{weightLbs} lbs <span className="text-base font-normal text-muted-foreground">({Math.round(lbsToKg(weightLbs))} kg)</span></span>
                 </div>
                 <Slider
                   value={[weightLbs]}
@@ -88,7 +88,7 @@ const BMIWomen = () => {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">Height</label>
-                  <span className="text-2xl font-bold text-pink-500">{feet}'{inches}"</span>
+                  <span className="text-2xl font-bold text-pink-500">{feet}'{inches}" <span className="text-base font-normal text-muted-foreground">({(inToCm(heightIn) / 100).toFixed(2)} m)</span></span>
                 </div>
                 <Slider
                   value={[heightIn]}
