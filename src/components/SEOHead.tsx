@@ -21,6 +21,10 @@ export const SEOHead = () => {
       <meta property="og:url" content={`${DOMAIN}${seo.path}`} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="BMI-IMC" />
+      <meta property="og:image" content={`${DOMAIN}/og-image.png`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:locale" content={localeMap[seo.lang as Lang] || "en_US"} />
       {alternates && Object.entries(alternates)
         .filter(([lang]) => lang !== seo.lang)
@@ -31,6 +35,7 @@ export const SEOHead = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={`${DOMAIN}/og-image.png`} />
       {alternates && Object.entries(alternates).map(([lang, path]) => (
         <link key={`hreflang-${lang}`} rel="alternate" hrefLang={lang} href={`${DOMAIN}${path}`} />
       ))}
