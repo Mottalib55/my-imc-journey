@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="arc-green" x1="0%" y1="0%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Gauge arc - underweight (blue) -->
+  <path d="M 130 340 A 150 150 0 0 1 175 215" stroke="#60a5fa" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <!-- Gauge arc - normal (green) -->
+  <path d="M 183 207 A 150 150 0 0 1 329 207" stroke="#4ade80" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <!-- Gauge arc - overweight (yellow) -->
+  <path d="M 337 215 A 150 150 0 0 1 370 280" stroke="#facc15" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <!-- Gauge arc - obese (red) -->
+  <path d="M 374 290 A 150 150 0 0 1 382 340" stroke="#f87171" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <!-- Needle pointing to normal range -->
+  <line x1="256" y1="340" x2="240" y2="210" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="256" cy="340" r="18" fill="white"/>
+  <!-- BMI text -->
+  <text x="256" y="430" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="80" fill="white" letter-spacing="8">BMI</text>
+</svg>

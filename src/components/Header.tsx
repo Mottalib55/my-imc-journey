@@ -265,9 +265,7 @@ export const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to={routeMap.main[currentLang]} className="flex items-center gap-2 group">
-            <div className="p-2 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
-              <Activity className="w-5 h-5 text-primary" />
-            </div>
+            <img src="/logo.svg" alt="BMI Calculator" className="w-9 h-9 rounded-xl group-hover:scale-105 transition-transform" />
             <span className="font-display font-bold text-lg hidden sm:block">
               {t.logo[0]}<span className="gradient-text">{t.logo[1]}</span>
             </span>
