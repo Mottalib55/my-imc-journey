@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Heart, Activity, Apple, Moon, Brain, Scale, TrendingUp, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const SihaWazn = () => {
   return (
@@ -186,6 +187,9 @@ const SihaWazn = () => {
             <Link to="/ar/imc" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">احسب مؤشري</Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 الصحة والوزن - دليل العافية</p>

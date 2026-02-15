@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { HelpCircle, AlertTriangle, CheckCircle2, Scale, Activity, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIInterpretation = () => {
   return (
@@ -449,6 +450,9 @@ const BMIInterpretation = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI-Interpretation im DACH-Raum</p>

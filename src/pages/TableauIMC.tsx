@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Table, Scale, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const TableauIMC = () => {
   return (
@@ -340,6 +341,9 @@ const TableauIMC = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 Tableau IMC - Classification OMS officielle</p>

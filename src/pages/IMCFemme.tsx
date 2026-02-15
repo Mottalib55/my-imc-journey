@@ -4,6 +4,7 @@ import { BMICalculator } from "@/components/BMICalculator";
 import { BMIGauge } from "@/components/BMIGauge";
 import { BMIDetails } from "@/components/BMIDetails";
 import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, Globe, BookOpen } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCFemme = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -341,6 +342,9 @@ const IMCFemme = () => {
         </div>
 
         {/* Footer */}
+
+        <RelatedPages />
+
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 Calculateur IMC Femme - Outil informatif uniquement</p>
         </footer>

@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
 import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCUomo = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -368,6 +369,9 @@ const IMCUomo = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 Calcolatore IMC per Uomini</p>

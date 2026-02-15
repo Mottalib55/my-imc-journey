@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Baby, AlertTriangle, TrendingUp, BookOpen, Stethoscope, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIKinder = () => {
   return (
@@ -338,6 +339,9 @@ const BMIKinder = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI-Rechner für Kinder - Nur zu Informationszwecken</p>

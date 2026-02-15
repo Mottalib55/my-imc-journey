@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { AlertTriangle, XCircle, CheckCircle2, Users, Dumbbell, Baby, Clock, Globe, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIJuxianxing = () => {
   return (
@@ -303,6 +304,9 @@ const BMIJuxianxing = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 BMI局限性 - 了解身体质量指数</p>

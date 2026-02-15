@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 interface FAQItemProps { question: string; answer: string; }
 
@@ -80,6 +81,9 @@ const AsilaIMC = () => {
             <p>المؤشر أداة بسيطة ولكنها مفيدة لتقييم كتلة جسمك. ومع ذلك، له حدوده ويجب تكميله بمؤشرات أخرى. لا تتردد في استشارة متخصص للحصول على تقييم شامل.</p>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 أسئلة شائعة عن مؤشر كتلة الجسم - إجابات لأسئلتكم</p>

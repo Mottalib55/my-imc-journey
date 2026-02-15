@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { BookOpen, TrendingUp, TrendingDown, Target, AlertTriangle, CheckCircle2, Scale, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const TafsirIMC = () => {
   return (
@@ -269,6 +270,9 @@ const TafsirIMC = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 تفسير مؤشر كتلة الجسم في العالم العربي — وفقاً لإرشادات WHO EMRO</p>

@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Baby, AlertTriangle, TrendingUp, BookOpen, Stethoscope, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIBachche = () => {
   return (
@@ -456,6 +457,9 @@ const BMIBachche = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 भारतीय बच्चों के लिए BMI कैलकुलेटर — IAP विकास चार्ट और ICMR मानक — केवल सूचना के लिए</p>

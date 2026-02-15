@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { BMICalculator } from "@/components/BMICalculator";
 import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, Globe } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCAtleta = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -333,6 +334,9 @@ const IMCAtleta = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>

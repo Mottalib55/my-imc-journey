@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
 import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCMulherPt = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -370,6 +371,9 @@ const IMCMulherPt = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 Calculadora IMC para Mulheres — Fontes: ABESO, VIGITEL, FEBRASGO, IBGE, Ministério da Saúde, DGS Portugal</p>

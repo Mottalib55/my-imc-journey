@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, CheckCircle2, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMISportler = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -529,6 +530,9 @@ const BMISportler = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI für Sportler - Informationstool</p>

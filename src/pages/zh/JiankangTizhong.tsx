@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Heart, Activity, Apple, Moon, Brain, Scale, TrendingUp, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const JiankangTizhong = () => {
   return (
@@ -325,6 +326,9 @@ const JiankangTizhong = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 健康与体重</p>

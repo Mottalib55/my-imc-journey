@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 interface FAQItemProps { question: string; answer: string; }
 
@@ -80,6 +81,9 @@ const BMIFAQDe = () => {
             <p>Der BMI ist ein einfaches, aber nützliches Werkzeug zur Einschätzung Ihrer Körpermasse. Er hat jedoch seine Grenzen und sollte durch andere Indikatoren ergänzt werden. Zögern Sie nicht, einen Spezialisten für eine umfassende Bewertung zu konsultieren.</p>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI FAQ - Antworten auf Ihre Fragen</p>

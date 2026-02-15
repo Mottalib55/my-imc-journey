@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 interface FAQItemProps { question: string; answer: string; }
 
@@ -80,6 +81,9 @@ const DomandeFrequentiIMC = () => {
             <p>L'IMC è uno strumento semplice ma utile per valutare la propria corpulenza. Presenta tuttavia dei limiti e dovrebbe essere completato da altri indicatori. Non esitate a consultare uno specialista per una valutazione completa.</p>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 FAQ IMC - Risposte alle vostre domande</p>

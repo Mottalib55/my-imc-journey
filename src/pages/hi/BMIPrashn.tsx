@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 interface FAQItemProps { question: string; answer: string; }
 
@@ -80,6 +81,9 @@ const BMIPrashn = () => {
             <p>BMI आपके शरीर के वजन का आकलन करने के लिए एक सरल लेकिन उपयोगी उपकरण है। हालांकि, इसकी अपनी सीमाएं हैं और इसे अन्य संकेतकों से पूरित किया जाना चाहिए। व्यापक मूल्यांकन के लिए किसी विशेषज्ञ से परामर्श करने में संकोच न करें।</p>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI FAQ</p>

@@ -6,6 +6,7 @@ import { BMIDetails } from "@/components/BMIDetails";
 import { BMIInfo } from "@/components/BMIInfo";
 import { SEOContent } from "@/components/SEOContent";
 import { Activity } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const Index = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -60,6 +61,9 @@ const Index = () => {
         <SEOContent />
 
         {/* Footer */}
+
+        <RelatedPages />
+
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>
             © 2024 Calculateur IMC • Outil informatif uniquement

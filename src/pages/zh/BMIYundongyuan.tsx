@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIYundongyuan = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -545,6 +546,9 @@ const BMIYundongyuan = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 运动员BMI计算器</p>

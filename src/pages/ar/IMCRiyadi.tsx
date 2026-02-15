@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCRiyadi = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -290,6 +291,9 @@ const IMCRiyadi = () => {
           </div>
 
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 حاسبة مؤشر كتلة الجسم للرياضيين العرب - أداة إعلامية وليست بديلاً عن استشارة الطبيب</p>

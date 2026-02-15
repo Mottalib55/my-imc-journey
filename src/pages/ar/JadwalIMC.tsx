@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Table, Scale, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const JadwalIMC = () => {
   return (
@@ -266,6 +267,9 @@ const JadwalIMC = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 جدول مؤشر كتلة الجسم - تصنيف منظمة الصحة العالمية الرسمي - بيانات WHO EMRO</p>

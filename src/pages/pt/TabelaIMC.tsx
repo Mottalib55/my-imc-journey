@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Table, Scale, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const TabelaIMC = () => {
   return (
@@ -454,6 +455,9 @@ const TabelaIMC = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 Tabela IMC - Classificação OMS oficial</p>

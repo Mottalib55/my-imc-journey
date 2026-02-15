@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 interface FAQItemProps { question: string; answer: string; }
 
@@ -114,6 +115,9 @@ const BMIChangjianwenti = () => {
             <p>BMI是一个简单而实用的体重评估工具，但它也有其局限性，应结合其他健康指标综合判断。如需全面的健康评估，建议咨询专业医生。您也可以查看我们的<a href="/zh/bmi-biao" className="text-primary hover:underline">BMI对照表</a>和<a href="/zh/bmi-jiedu" className="text-primary hover:underline">BMI解读指南</a>获取更多信息。</p>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI常见问题</p>

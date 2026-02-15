@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { HelpCircle, AlertTriangle, CheckCircle2, Scale, Activity, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const InterpretazioneIMC = () => {
   return (
@@ -348,6 +349,9 @@ const InterpretazioneIMC = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 Interpretazione IMC Italia</p>

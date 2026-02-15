@@ -4,6 +4,7 @@ import { BMICalculator } from "@/components/BMICalculator";
 import { BMIGauge } from "@/components/BMIGauge";
 import { BMIDetails } from "@/components/BMIDetails";
 import { User, Dumbbell, Target, Heart, Scale, TrendingUp, Activity, AlertTriangle, CheckCircle2, Globe, BookOpen } from "lucide-react";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCHomme = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -324,6 +325,9 @@ const IMCHomme = () => {
         </div>
 
         {/* Footer */}
+
+        <RelatedPages />
+
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 Calculateur IMC Homme - Outil informatif uniquement</p>
         </footer>

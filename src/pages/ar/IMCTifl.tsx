@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Baby, AlertTriangle, TrendingUp, BookOpen, Stethoscope, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCTifl = () => {
   return (
@@ -310,6 +311,9 @@ const IMCTifl = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 حاسبة مؤشر كتلة الجسم للأطفال - أداة إعلامية فقط - المصادر: WHO EMRO، وزارة الصحة السعودية، وزارة الصحة الإماراتية</p>

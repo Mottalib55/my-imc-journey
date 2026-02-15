@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
 import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const IMCRajul = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -255,6 +256,9 @@ const IMCRajul = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 حاسبة مؤشر كتلة الجسم للرجال العرب - أداة إعلامية | المراجع: WHO EMRO، وزارة الصحة السعودية، MOHAP الإمارات</p>

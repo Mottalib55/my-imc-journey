@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Baby, AlertTriangle, Scale, Activity, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const bmiPercentilesData: Record<string, Record<number, { p3: number; p15: number; p50: number; p85: number; p97: number }>> = {
   boy: {
@@ -607,6 +608,9 @@ const BMIErtong = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 儿童BMI计算器 - 仅供参考</p>

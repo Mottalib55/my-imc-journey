@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
 import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIFrauen = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -348,6 +349,9 @@ const BMIFrauen = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI-Rechner für Frauen - Informationstool</p>

@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2, BookOpen, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMINanxing = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -440,6 +441,9 @@ const BMINanxing = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 中国男性BMI计算器 — 基于WS/T 428-2013中国标准</p>

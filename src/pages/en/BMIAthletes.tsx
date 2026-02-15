@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const kgToLbs = (kg: number) => Math.round(kg * 2.20462);
 const cmToFtIn = (cm: number) => {
@@ -460,6 +461,9 @@ const BMIAthletes = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 BMI Calculator for Athletes - Informational Tool</p>

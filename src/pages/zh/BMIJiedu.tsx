@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { HelpCircle, AlertTriangle, CheckCircle2, Scale, Activity, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIJiedu = () => {
   return (
@@ -491,6 +492,9 @@ const BMIJiedu = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 BMI解读 — 基于中国国家标准WS/T 428-2013</p>

@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { BookOpen, TrendingUp, TrendingDown, Target, AlertTriangle, CheckCircle2, Scale, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const InterpretationIMC = () => {
   return (
@@ -374,6 +375,9 @@ const InterpretationIMC = () => {
             </Link>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 Interprétation IMC - Guide complet</p>

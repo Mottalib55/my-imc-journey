@@ -1,5 +1,7 @@
 export type Lang = "fr" | "en" | "es" | "pt" | "ar" | "de" | "it" | "hi" | "zh";
 
+export type PageType = keyof typeof routeMap;
+
 export const routeMap: Record<string, Record<Lang, string>> = {
   main:           { fr: "/imc",                  en: "/",                     es: "/es/imc",                       pt: "/pt/imc",                       ar: "/ar/imc",              de: "/de/bmi",                it: "/it/imc",                    hi: "/hi/bmi",              zh: "/zh/bmi" },
   men:            { fr: "/imc-homme",           en: "/bmi-men",              es: "/es/imc-hombre",                pt: "/pt/imc-homem",                 ar: "/ar/imc-rajul",        de: "/de/bmi-maenner",        it: "/it/imc-uomo",               hi: "/hi/bmi-purush",       zh: "/zh/bmi-nanxing" },
@@ -40,6 +42,16 @@ export const getAlternates = (currentPath: string): Record<Lang, string> | null 
   for (const routes of Object.values(routeMap)) {
     if (Object.values(routes).includes(normalized)) {
       return routes as Record<Lang, string>;
+    }
+  }
+  return null;
+};
+
+export const getPageType = (pathname: string): PageType | null => {
+  const normalized = normalizePath(pathname);
+  for (const [pageType, routes] of Object.entries(routeMap)) {
+    if (Object.values(routes).includes(normalized)) {
+      return pageType as PageType;
     }
   }
   return null;

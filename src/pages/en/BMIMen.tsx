@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
 import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const kgToLbs = (kg: number) => Math.round(kg * 2.20462);
 const cmToFtIn = (cm: number) => {
@@ -340,6 +341,9 @@ const BMIMen = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 BMI Calculator for Men - Informational Tool</p>

@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
 import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, BookOpen } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIMahila = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -321,6 +322,9 @@ const BMIMahila = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>&copy; 2024 भारतीय महिलाओं के लिए BMI कैलकुलेटर — ICMR दिशानिर्देश</p>

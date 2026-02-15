@@ -4,6 +4,7 @@ import { BMIGauge } from "@/components/BMIGauge";
 import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
+import { RelatedPages } from "@/components/RelatedPages";
 
 const BMIDe = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -456,6 +457,9 @@ const BMIDe = () => {
             </div>
           </div>
         </div>
+
+
+        <RelatedPages />
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
           <p>© 2024 BMI-Rechner</p>
