@@ -122,7 +122,6 @@ jobs:
             "zh/bmi-juxianxing"
             "zh/bmi-changjianwenti"
             "zh/jiankang-tizhong"
-            "admin"
           )
           for route in "${ROUTES[@]}"; do
             mkdir -p "dist/$route"
