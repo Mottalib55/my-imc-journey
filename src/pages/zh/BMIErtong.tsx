@@ -105,10 +105,10 @@ const BMIErtong = () => {
             儿童与青少年
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-green-500">儿童与青少年BMI计算器</span>
+            <span className="text-green-500">儿童与青少年BMI计算器</span> : 儿科BMI标准
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            了解儿童和青少年的BMI：生长曲线、百分位数与专业解读
+            中国6-17岁儿童超重肥胖率已达19%（中国CDC）。使用中国儿童青少年筛查标准WS/T 586-2018进行评估。
           </p>
         </header>
 
@@ -266,39 +266,74 @@ const BMIErtong = () => {
 
         {/* Content Sections */}
         <div className="space-y-8">
-          {/* WHO Growth Curves */}
+          {/* Chinese Growth Standards vs WHO */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-green-500/10">
                 <TrendingUp className="w-6 h-6 text-green-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">WHO生长曲线说明</h2>
+              <h2 className="text-2xl font-display font-bold">中国儿童生长标准与WHO对比</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                世界卫生组织（WHO）制定了儿童和青少年的<strong>生长参考标准</strong>。
-                与成人不同，儿童的BMI不能使用固定阈值（18.5 / 25 / 30）来判断。
-                由于儿童的身体处于不断发育阶段，BMI会随年龄和性别自然变化。
+                中国拥有<strong>自己的国家儿童生长标准</strong>，与WHO标准存在显著差异。
+                卫生行业标准<strong>WS/T 586-2018《学龄儿童青少年超重与肥胖筛查》</strong>是目前中国6-18岁儿童青少年超重肥胖判定的权威依据，
+                由北京大学儿童青少年卫生研究所（原北京CDC）主导制定。
               </p>
               <p>
-                因此，医生使用<strong>百分位曲线</strong>来评估儿童的体重状况，
-                将孩子与同龄同性别的其他儿童进行比较。
+                对于<strong>5岁以下婴幼儿</strong>，中国采用WHO生长曲线标准进行评估。
+                但<strong>学龄儿童（6-18岁）</strong>则使用中国国家标准，因为中国儿童的体格发育特征与WHO参考人群存在差异。
               </p>
 
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-4">如何理解百分位数？</h4>
+                <h4 className="font-bold mb-4">中国标准 vs WHO标准：关键差异</h4>
                 <div className="grid md:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p><strong className="text-info">&lt;第3百分位：</strong> 体重过轻</p>
-                    <p><strong className="text-green-500">第3-85百分位：</strong> 正常范围</p>
-                    <p><strong className="text-warning">第85-97百分位：</strong> 超重</p>
-                    <p><strong className="text-destructive">&gt;第97百分位：</strong> 肥胖</p>
+                    <p className="font-bold mb-2">中国儿童筛查切点（WS/T 586-2018）：</p>
+                    <p><strong className="text-green-500">正常：</strong> BMI &lt; 年龄/性别特异性P85</p>
+                    <p><strong className="text-warning">超重：</strong> BMI &ge; 年龄/性别特异性P85</p>
+                    <p><strong className="text-destructive">肥胖：</strong> BMI &ge; 年龄/性别特异性P95</p>
                   </div>
                   <div>
+                    <p className="font-bold mb-2">重要提示：</p>
                     <p className="text-muted-foreground">
-                      如果一个孩子处于第50百分位，意味着他的BMI高于同龄同性别儿童中50%的人，同时低于另外50%的人。这是一个相对位置指标。
+                      中国成人BMI标准也与国际标准不同：超重切点为<strong>24</strong>（非25），肥胖切点为<strong>28</strong>（非30）。
+                      这是因为亚洲人群在较低BMI水平即可出现代谢异常风险。儿童标准同样反映了中国人群的体格特征。
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* China Childhood Obesity Crisis */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-destructive/10">
+                <TrendingUp className="w-6 h-6 text-destructive" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">中国儿童肥胖危机</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                近三十年来，中国儿童超重肥胖率呈持续上升趋势，已成为重大公共卫生问题。
+                以下数据来自中国疾病预防控制中心（中国CDC）和全国学生体质健康调研。
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mt-4">
+                <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-5 text-center">
+                  <p className="text-3xl font-bold text-destructive mb-2">19%</p>
+                  <p className="text-sm font-medium">6-17岁超重肥胖率</p>
+                  <p className="text-xs text-muted-foreground mt-1">中国CDC最新数据</p>
+                </div>
+                <div className="bg-warning/5 border border-warning/20 rounded-xl p-5 text-center">
+                  <p className="text-3xl font-bold text-warning mb-2">10.4%</p>
+                  <p className="text-sm font-medium">6岁以下儿童超重率</p>
+                  <p className="text-xs text-muted-foreground mt-1">2020年全国数据</p>
+                </div>
+                <div className="bg-info/5 border border-info/20 rounded-xl p-5 text-center">
+                  <p className="text-3xl font-bold text-info mb-2">24.2% vs 13.2%</p>
+                  <p className="text-sm font-medium">男孩 vs 女孩超重肥胖率</p>
+                  <p className="text-xs text-muted-foreground mt-1">显著的性别差异</p>
                 </div>
               </div>
             </div>
@@ -317,27 +352,33 @@ const BMIErtong = () => {
                 与成年人不同，<strong>儿童BMI</strong>不能使用固定的标准阈值来解读。
                 在儿童和青少年时期，身体在不断发育变化，BMI会随着年龄和性别自然波动。
               </p>
+              <p>
+                值得注意的是，<strong>中国成人BMI标准</strong>也与国际WHO标准不同：
+                中国成人超重切点为<strong>24</strong>（WHO为25），肥胖切点为<strong>28</strong>（WHO为30）。
+                同样，中国儿童青少年的超重肥胖筛查标准（WS/T 586-2018）也是基于中国人群数据制定，
+                与WHO国际标准存在差异。
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mt-6">
               <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-5">
-                <h4 className="font-bold text-destructive mb-2">成人BMI</h4>
+                <h4 className="font-bold text-destructive mb-2">中国成人BMI标准</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• 固定的通用阈值</li>
+                  <li>• 固定阈值（中国标准）</li>
                   <li>• &lt;18.5 = 体重过轻</li>
-                  <li>• 18.5-25 = 正常</li>
-                  <li>• 25-30 = 超重</li>
-                  <li>• &gt;30 = 肥胖</li>
+                  <li>• 18.5-24 = 正常（WHO为18.5-25）</li>
+                  <li>• 24-28 = 超重（WHO为25-30）</li>
+                  <li>• &gt;28 = 肥胖（WHO为&gt;30）</li>
                 </ul>
               </div>
               <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-5">
-                <h4 className="font-bold text-green-500 mb-2">儿童BMI</h4>
+                <h4 className="font-bold text-green-500 mb-2">中国儿童BMI标准</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• 使用百分位曲线</li>
-                  <li>• 随年龄变化</li>
-                  <li>• 男孩/女孩有所不同</li>
-                  <li>• 相对解读</li>
-                  <li>• 需要追踪趋势变化</li>
+                  <li>• 使用年龄/性别特异性百分位曲线</li>
+                  <li>• WS/T 586-2018国家标准</li>
+                  <li>• P85为超重切点</li>
+                  <li>• P95为肥胖切点</li>
+                  <li>• 基于中国儿童人群数据制定</li>
                 </ul>
               </div>
             </div>
@@ -355,20 +396,64 @@ const BMIErtong = () => {
               <div className="border border-border rounded-xl p-5">
                 <h4 className="font-bold text-green-500 mb-3">婴幼儿（0-2岁）</h4>
                 <p className="text-sm text-muted-foreground">
-                  通常不计算BMI。此阶段使用体重/身长曲线和头围来评估生长发育情况。母乳喂养的婴儿与配方奶喂养的婴儿生长模式可能不同。
+                  此阶段使用<strong>WHO生长曲线</strong>进行评估，包括体重/身长曲线和头围监测。
+                  中国社区卫生服务中心提供免费的婴幼儿健康体检（0-6岁共13次），
+                  由儿童保健科医生定期监测生长发育指标。母乳喂养的婴儿与配方奶喂养的婴儿生长模式可能不同。
                 </p>
               </div>
               <div className="border border-border rounded-xl p-5">
                 <h4 className="font-bold text-green-500 mb-3">儿童（2-12岁）</h4>
                 <p className="text-sm text-muted-foreground">
-                  BMI需结合体质指数生长曲线来解读。医生会特别关注6岁左右的"脂肪反弹"现象。如果脂肪反弹提前出现，可能预示未来肥胖风险增加。
+                  纳入<strong>国家基本公共卫生服务</strong>体系，享受免费健康管理。
+                  学校每年组织一次体检，监测身高体重等指标。
+                  农村地区享受<strong>营养改善计划</strong>（覆盖2600万+学生）。
+                  医生会特别关注6岁左右的"脂肪反弹"现象，如果提前出现可能预示未来肥胖风险增加。
                 </p>
               </div>
               <div className="border border-border rounded-xl p-5">
                 <h4 className="font-bold text-green-500 mb-3">青少年（12-18岁）</h4>
                 <p className="text-sm text-muted-foreground">
-                  青春期 = 显著的体格变化。男孩和女孩的专用曲线至关重要。激素变化会导致体脂分布发生明显变化。
+                  适用<strong>WS/T 586-2018标准</strong>进行超重肥胖筛查。
+                  中考体育考试将体重纳入评估范围，促进学生关注体质健康。
+                  青春期激素变化导致体格和体脂分布发生显著变化，男孩和女孩的专用曲线至关重要。
+                  建议结合体脂率、腰围等指标综合评估。
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Only Child Effect & Dietary Culture Change */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-green-500/10">
+                <Activity className="w-6 h-6 text-green-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">独生子女效应与饮食文化变迁</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                中国儿童肥胖问题有其独特的社会文化背景，理解这些因素对于有效预防至关重要。
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-4">
+                <div className="border border-border rounded-xl p-5">
+                  <h4 className="font-bold text-green-500 mb-3">"小胖墩"现象</h4>
+                  <ul className="text-sm text-muted-foreground space-y-2">
+                    <li>• <strong>独生子女政策遗产：</strong>"4-2-1"家庭结构（4个祖辈、2个父母、1个孩子），祖辈溺爱喂养</li>
+                    <li>• <strong>传统观念冲突：</strong>"胖就是壮""能吃是福"vs现代健康认知</li>
+                    <li>• <strong>过度喂养：</strong>担心孩子"吃不饱"，频繁加餐，强迫进食</li>
+                    <li>• <strong>隔代养育：</strong>祖辈带孩子比例高，营养知识更新缓慢</li>
+                  </ul>
+                </div>
+                <div className="border border-border rounded-xl p-5">
+                  <h4 className="font-bold text-green-500 mb-3">饮食与生活方式变迁</h4>
+                  <ul className="text-sm text-muted-foreground space-y-2">
+                    <li>• <strong>饮食西化：</strong>传统饮食结构向西式快餐+奶茶+零食转变</li>
+                    <li>• <strong>外卖文化：</strong>外卖平台普及，高热量食品触手可及</li>
+                    <li>• <strong>学业压力：</strong>课业负担重，运动时间被严重压缩</li>
+                    <li>• <strong>城乡差异：</strong>城市儿童肥胖率远高于农村，但农村正在快速追赶</li>
+                    <li>• <strong>屏幕时间：</strong>手机、平板等电子设备使用时间大幅增加</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -381,62 +466,70 @@ const BMIErtong = () => {
               </div>
               <h2 className="text-2xl font-display font-bold">何时应该就医？</h2>
             </div>
+            <div className="text-muted-foreground space-y-4 mb-6">
+              <p>
+                中国的<strong>《中国儿童肥胖诊治指南（2022）》</strong>为儿童肥胖的诊断和治疗提供了规范化指导。
+                家长应充分利用中国医疗体系中的儿童健康管理资源。
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-warning/5 border border-warning/20 rounded-xl p-5">
-                <h4 className="font-bold text-warning mb-3">警示信号</h4>
+                <h4 className="font-bold text-warning mb-3">警示信号（中国标准）</h4>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>• 生长曲线上出现突然的轨道变化</li>
-                  <li>• BMI &gt; 第97百分位</li>
-                  <li>• BMI &lt; 第3百分位</li>
+                  <li>• BMI超过WS/T 586-2018中年龄/性别对应的P95切点</li>
+                  <li>• 生长曲线上出现突然的轨道偏离</li>
+                  <li>• BMI &lt; 第3百分位（营养不良风险）</li>
                   <li>• 脂肪反弹过早出现（&lt;6岁）</li>
-                  <li>• 孩子对自身体重感到焦虑或担忧</li>
+                  <li>• 出现黑棘皮症等代谢异常体征</li>
+                  <li>• 孩子对自身体重感到焦虑或出现厌食行为</li>
                   <li>• 饮食习惯突然明显改变</li>
                 </ul>
               </div>
               <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-5">
-                <h4 className="font-bold text-green-500 mb-3">定期检查</h4>
+                <h4 className="font-bold text-green-500 mb-3">中国医疗资源</h4>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>• 每次就诊时测量体重和身高</li>
-                  <li>• 在生长手册上记录数据</li>
+                  <li>• <strong>社区卫生服务中心：</strong>提供免费儿童健康管理（0-6岁）</li>
+                  <li>• <strong>儿童保健科：</strong>各级医院均设有，可进行专业评估</li>
+                  <li>• <strong>学校体检：</strong>每年一次，涵盖身高、体重、视力等</li>
+                  <li>• <strong>儿童肥胖门诊：</strong>大型三甲医院设有专科门诊</li>
+                  <li>• 参考《中国儿童肥胖诊治指南（2022）》</li>
                   <li>• 追踪变化趋势，而不仅仅是单个数值</li>
-                  <li>• 如有疑虑请及时与医生沟通</li>
-                  <li>• 保持规律的儿童体检计划</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Nutrition tips */}
+          {/* Healthy China 2030 & Child Nutrition */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-green-500/10">
                 <Activity className="w-6 h-6 text-green-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">儿童营养建议</h2>
+              <h2 className="text-2xl font-display font-bold">健康中国2030与儿童营养</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                良好的营养对于儿童的健康成长至关重要。以下是一些帮助孩子保持健康体重的基本建议：
+                <strong>《"健康中国2030"规划纲要》</strong>将儿童肥胖防控纳入国家战略，
+                提出到2030年有效遏制超重肥胖流行的目标。多项国家级计划正在推进中。
               </p>
               <div className="grid md:grid-cols-2 gap-6 mt-4">
                 <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-5">
-                  <h4 className="font-bold text-green-500 mb-3">健康饮食习惯</h4>
+                  <h4 className="font-bold text-green-500 mb-3">国家营养与健康计划</h4>
                   <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• 每天摄入充足的水果和蔬菜</li>
-                    <li>• 选择全谷物而非精制谷物</li>
-                    <li>• 确保足够的蛋白质摄入（鱼、蛋、豆类）</li>
-                    <li>• 限制含糖饮料和零食</li>
-                    <li>• 保证每天饮用充足的水</li>
+                    <li>• <strong>营养改善计划：</strong>覆盖农村义务教育学生2600万+人，提供免费营养午餐</li>
+                    <li>• <strong>学生饮用奶计划：</strong>为在校学生提供优质牛奶，改善钙质摄入</li>
+                    <li>• <strong>国民营养计划（2017-2030）：</strong>重点关注学生营养改善行动</li>
+                    <li>• <strong>儿童青少年肥胖防控实施方案：</strong>2020年六部门联合发布</li>
                   </ul>
                 </div>
                 <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-5">
-                  <h4 className="font-bold text-green-500 mb-3">运动与生活方式</h4>
+                  <h4 className="font-bold text-green-500 mb-3">运动与体质管理</h4>
                   <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• 每天至少60分钟的体育活动</li>
-                    <li>• 限制屏幕时间（电视、手机、平板）</li>
-                    <li>• 鼓励户外活动和团队运动</li>
-                    <li>• 保证充足的睡眠时间</li>
-                    <li>• 建立规律的作息时间</li>
+                    <li>• <strong>全民健身计划：</strong>提升青少年体育参与率</li>
+                    <li>• <strong>中考体育：</strong>体育成绩纳入中考，分值逐年提高</li>
+                    <li>• <strong>双减政策：</strong>减轻学业负担，增加运动时间</li>
+                    <li>• <strong>中医养生与体质调理：</strong>辨识儿童体质类型，通过食疗、推拿等调理偏颇体质</li>
+                    <li>• <strong>学校体育课：</strong>保障每天1小时校园体育活动</li>
                   </ul>
                 </div>
               </div>
@@ -449,25 +542,28 @@ const BMIErtong = () => {
               <div className="p-3 rounded-xl bg-green-500/10">
                 <Scale className="w-6 h-6 text-green-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">关于儿童BMI的全面解析</h2>
+              <h2 className="text-2xl font-display font-bold">关于中国儿童BMI的全面解析</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
                 <strong>儿童BMI计算</strong>使用与成人相同的公式（体重/身高的平方），
-                但<strong>儿童BMI的解读方式</strong>完全不同。我们不能仅因为一个孩子的BMI超过25就判断其超重。
+                但<strong>儿童BMI的解读方式</strong>完全不同。在中国，学龄儿童青少年的超重肥胖判定
+                依据<strong>WS/T 586-2018</strong>国家卫生行业标准，而非WHO国际标准。
               </p>
               <p>
-                <strong>青少年BMI</strong>在青春期尤其难以解读。激素变化会导致显著的体格变化，
-                <strong>男孩BMI</strong>和<strong>女孩BMI</strong>的变化模式各有不同。因此必须使用性别特定的生长曲线。
+                <strong>中国疾病预防控制中心（中国CDC）</strong>的数据显示，
+                中国6-17岁儿童青少年超重肥胖率已达19%，且仍在持续上升。
+                男孩超重肥胖率（24.2%）显著高于女孩（13.2%），这与饮食习惯、运动量等因素密切相关。
               </p>
               <p>
-                对于<strong>婴儿BMI</strong>或<strong>幼儿BMI</strong>，儿科医生通常使用体重/身高生长曲线而非BMI。
-                <strong>3岁儿童BMI</strong>、<strong>5岁儿童BMI</strong>或<strong>10岁儿童BMI</strong>都需要
-                参照百分位曲线来解读。
+                对于<strong>5岁以下幼儿</strong>，中国采用WHO生长曲线和IAP（中华医学会儿科分会）生长图表进行评估。
+                <strong>学龄儿童</strong>则使用中国国家标准，这些标准基于大规模中国儿童人群调查数据制定，
+                更符合中国儿童的体格发育特征。
               </p>
               <p>
-                如果您对孩子的<strong>理想体重</strong>或<strong>理想BMI</strong>有任何疑问，
-                请咨询您的儿科医生，他们可以综合分析整条<strong>生长曲线</strong>的趋势。
+                <strong>健康中国2030</strong>规划已将儿童肥胖防控纳入国家战略。
+                如果您对孩子的体重状况有疑问，建议前往<strong>社区卫生服务中心</strong>或
+                <strong>医院儿童保健科</strong>进行专业评估，参照《中国儿童肥胖诊治指南（2022）》进行规范化管理。
               </p>
             </div>
           </div>

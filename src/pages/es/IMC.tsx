@@ -1,14 +1,14 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp } from "lucide-react";
+import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp, AlertTriangle, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
 
 const IMCEs = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(70);
-  const [height, setHeight] = useState(170);
+  const [weight, setWeight] = useState(74);
+  const [height, setHeight] = useState(169);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightInM = h / 100;
@@ -47,10 +47,10 @@ const IMCEs = () => {
             Calculadora IMC Gratis
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">Calculadora IMC</span> - Indice de Masa Corporal
+            <span className="gradient-text">Calculadora IMC Gratis Online</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Calcula tu Indice de Masa Corporal al instante y descubre tu rango de peso ideal
+            Calcula tu Indice de Masa Corporal con valores adaptados a la realidad de America Latina y Espana
           </p>
         </header>
 
@@ -108,24 +108,74 @@ const IMCEs = () => {
 
         {/* Content */}
         <div className="space-y-8">
-          {/* What is IMC */}
+          {/* Contextualized Intro: IMC in Latin America and Spain */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
                 <BookOpen className="w-6 h-6 text-primary" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Que es el IMC?</h2>
+              <h2 className="text-2xl font-display font-bold">El IMC en America Latina y Espana: Una Realidad Preocupante</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                El <strong>IMC (Indice de Masa Corporal)</strong> es una medida simple que usa tu altura y peso
-                para estimar si tienes un peso saludable. La <strong>formula del IMC</strong> divide tu
-                peso en kilogramos entre tu altura en metros al cuadrado.
+                El <strong>Indice de Masa Corporal (IMC)</strong> tiene un significado particular en el mundo
+                hispanohablante. Segun la <strong>Encuesta Nacional de Salud y Nutricion (ENSANUT)</strong> de
+                Mexico, el 36,1% de la poblacion adulta mexicana vive con obesidad, convirtiendo al pais en uno
+                de los mas afectados del mundo. En <strong>Espana</strong>, la Agencia Espanola de Seguridad
+                Alimentaria y Nutricion (<strong>AESAN</strong>) reporta una prevalencia de obesidad del 16% en
+                adultos, con un 37% adicional en sobrepeso.
               </p>
               <p>
-                El <strong>calculo del IMC</strong> fue inventado en los anos 1830 por el matematico belga
-                Adolphe Quetelet. Hoy en dia, es usado en todo el mundo por medicos y organizaciones de
-                salud como herramienta de deteccion rapida de categorias de peso.
+                La Organizacion Panamericana de la Salud (<strong>OPS/PAHO</strong>) alerta que America Latina
+                presenta las tasas mas altas de obesidad femenina del planeta: en paises como Chile, Argentina
+                y Mexico, mas del 30% de las mujeres adultas viven con obesidad. Esta realidad hace que
+                conocer tu IMC no sea solo un ejercicio de curiosidad, sino una herramienta de prevencion
+                vital para millones de personas en nuestra region.
+              </p>
+              <p>
+                A diferencia de otras regiones, en America Latina la obesidad coexiste con la desnutricion
+                en un fenomeno llamado <strong>"doble carga nutricional"</strong>: familias donde conviven
+                ninos con bajo peso y adultos con sobrepeso. Esta paradoja hace que el IMC sea especialmente
+                relevante como primer indicador para orientar decisiones de salud publica y personal.
+              </p>
+            </div>
+          </div>
+
+          {/* Crisis Silenciosa en America Latina */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-destructive/10">
+                <AlertTriangle className="w-6 h-6 text-destructive" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Crisis Silenciosa en America Latina</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                America Latina enfrenta una <strong>epidemia de obesidad</strong> que la OPS ha catalogado como
+                la principal amenaza de salud publica de la region en el siglo XXI. Las cifras son contundentes:
+                segun datos de la OPS, el <strong>62% de los adultos latinoamericanos</strong> tiene sobrepeso u
+                obesidad, muy por encima del promedio mundial del 39%.
+              </p>
+              <p>
+                <strong>Mexico</strong> ocupa el primer lugar en America Latina en obesidad adulta y el segundo
+                a nivel mundial. <strong>Chile</strong> le sigue de cerca, con un 74% de su poblacion adulta en
+                sobrepeso u obesidad. En <strong>Argentina</strong>, la Encuesta Nacional de Factores de Riesgo
+                revela que el 61,6% de los adultos tiene exceso de peso. <strong>Colombia</strong>, Brasil y Peru
+                muestran tendencias similares al alza, con incrementos de entre 5 y 10 puntos porcentuales en la
+                ultima decada.
+              </p>
+              <p>
+                Lo mas alarmante es el impacto en la <strong>poblacion infantil</strong>: UNICEF reporta que
+                America Latina tiene la tasa mas alta de obesidad infantil de los paises en desarrollo, con
+                casi 4 millones de ninos menores de 5 anos con sobrepeso. La transicion alimentaria de dietas
+                tradicionales ricas en maiz, frijol, frutas y verduras hacia productos ultraprocesados,
+                bebidas azucaradas y comida rapida es la principal responsable de esta crisis.
+              </p>
+              <p>
+                La diabetes tipo 2, directamente vinculada al exceso de peso, se ha convertido en la primera
+                causa de muerte en Mexico y una de las principales en toda la region. Cada punto de IMC por
+                encima de 25 incrementa significativamente el riesgo de hipertension, enfermedades cardiovasculares
+                y ciertos tipos de cancer.
               </p>
             </div>
           </div>
@@ -193,11 +243,51 @@ const IMCEs = () => {
                       <div className="w-3 h-3 rounded-full bg-destructive" />
                       Obesidad Clase III
                     </td>
-                    <td className="py-3 px-4">≥ 40</td>
+                    <td className="py-3 px-4">&ge; 40</td>
                     <td className="py-3 px-4 text-destructive">Riesgo extremo</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          {/* Etiquetado Frontal: La Revolucion del Octogono */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-orange-500/10">
+                <Heart className="w-6 h-6 text-orange-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Etiquetado Frontal: La Revolucion del Octogono</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                America Latina lidera una innovacion mundial en la lucha contra la obesidad: el
+                <strong> etiquetado frontal de advertencia</strong>. En 2016, <strong>Chile</strong> se convirtio
+                en el primer pais del mundo en implementar los sellos octagonales negros con leyendas como
+                "Alto en Azucares", "Alto en Grasas Saturadas", "Alto en Sodio" y "Alto en Calorias" en
+                los envases de alimentos procesados.
+              </p>
+              <p>
+                El exito chileno fue rotundo: estudios de la Universidad de Chile y del Instituto Nacional de
+                Salud Publica mostraron una <strong>reduccion del 25% en la compra de bebidas azucaradas</strong> y
+                del 17% en la compra de cereales con sellos de advertencia durante los primeros 18 meses. Las
+                empresas reformularon masivamente sus productos para evitar los sellos, reduciendo en promedio
+                un 20% el contenido de azucar y sodio.
+              </p>
+              <p>
+                <strong>Mexico</strong> adopto un sistema similar en 2020, anadiendo la prohibicion de
+                personajes animados y celebridades en productos con sellos. <strong>Peru</strong> implemento sus
+                octogonos en 2019, <strong>Uruguay</strong> en 2021 y <strong>Colombia</strong> en 2023. Argentina
+                aprobo su ley de etiquetado frontal en 2021. Espana, por su parte, utiliza el sistema
+                <strong> Nutri-Score</strong> de origen frances, con una escala de letras de la A (mas saludable)
+                a la E (menos saludable).
+              </p>
+              <p>
+                Estas politicas publicas complementan el uso individual del IMC: mientras el IMC te dice donde
+                estas, el etiquetado frontal te ayuda a tomar mejores decisiones alimentarias para llegar a
+                donde quieres estar. Juntos, representan un enfoque integral de prevencion que esta dando
+                resultados medibles en la reduccion de tasas de obesidad en la region.
+              </p>
             </div>
           </div>
 
@@ -212,11 +302,23 @@ const IMCEs = () => {
             <div className="text-muted-foreground space-y-4">
               <p>La <strong>formula del IMC</strong> es simple:</p>
               <div className="bg-muted/30 rounded-xl p-6 text-center">
-                <p className="text-2xl font-bold text-primary">IMC = Peso (kg) / Altura (m)</p>
+                <p className="text-2xl font-bold text-primary">IMC = Peso (kg) / Altura (m)&sup2;</p>
               </div>
               <p>
-                Por ejemplo, si pesas 70 kg y mides 1,75 m:<br />
-                IMC = 70 / (1,75 x 1,75) = 70 / 3,0625 = <strong>22,9</strong>
+                Usando el promedio latinoamericano, si pesas <strong>74 kg</strong> y mides <strong>1,69 m</strong>:<br />
+                IMC = 74 / (1,69 x 1,69) = 74 / 2,8561 = <strong>25,9</strong>
+              </p>
+              <p>
+                Este resultado de 25,9 se situa en la categoria de <strong>sobrepeso</strong> segun la OMS, lo
+                cual refleja precisamente la realidad estadistica de la region: el latinoamericano promedio se
+                encuentra ligeramente por encima del rango saludable. Esto no es una coincidencia, sino el
+                resultado de decadas de transicion alimentaria hacia dietas ricas en ultraprocesados y bebidas
+                azucaradas.
+              </p>
+              <p>
+                Es importante recordar que en el sistema metrico hispanohablante utilizamos la <strong>coma
+                decimal</strong> (25,9 y no 25.9). Nuestra calculadora ya muestra los resultados en el formato
+                que utilizamos en Espana y America Latina.
               </p>
             </div>
           </div>
@@ -231,7 +333,7 @@ const IMCEs = () => {
                 <h3 className="font-bold">IMC Hombre</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                Consideraciones especificas para la composicion corporal masculina
+                Valores de referencia para la composicion corporal masculina en poblacion hispana
               </p>
             </Link>
 
@@ -243,7 +345,7 @@ const IMCEs = () => {
                 <h3 className="font-bold">IMC Mujer</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                Entendiendo el IMC con factores hormonales
+                Factores hormonales y de composicion corporal en la mujer latinoamericana
               </p>
             </Link>
 
@@ -255,37 +357,50 @@ const IMCEs = () => {
                 <h3 className="font-bold">IMC Deportista</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                Por que el IMC no funciona para personas musculosas
+                Limitaciones del IMC en futbolistas, boxeadores y atletas de alta competencia
               </p>
             </Link>
           </div>
 
-          {/* SEO Content */}
+          {/* SEO Content: Latin America + Spain specific */}
           <div className="glass-card p-8">
-            <h2 className="text-2xl font-display font-bold mb-6">Entendiendo tu Indice de Masa Corporal</h2>
+            <h2 className="text-2xl font-display font-bold mb-6">Calculadora de IMC para America Latina y Espana</h2>
             <div className="text-muted-foreground space-y-4">
               <p>
-                La <strong>calculadora de IMC</strong> es una herramienta esencial para entender tu estado de peso.
-                Ya sea que busques una <strong>calculadora IMC gratis</strong>, quieras conocer tu
-                <strong> IMC ideal</strong>, o simplemente quieras <strong>calcular IMC</strong> rapidamente,
-                nuestra herramienta proporciona resultados instantaneos.
+                Nuestra <strong>calculadora de IMC gratis</strong> esta disenada teniendo en cuenta la realidad
+                de la poblacion hispanohablante. Los valores predeterminados reflejan los promedios de peso y
+                altura reportados por la <strong>ENSANUT</strong> en Mexico, el <strong>INE</strong> en Espana y
+                los estudios demograficos de la <strong>OPS (Organizacion Panamericana de la Salud)</strong> para
+                el conjunto de America Latina. Conocer tu <strong>IMC ideal</strong> es el primer paso hacia una
+                mejor salud.
               </p>
               <p>
-                <strong>Cual es un buen IMC</strong>? Un <strong>IMC saludable</strong> esta entre 18,5 y 24,9.
-                La <strong>tabla de IMC</strong> muestra que un <strong>IMC normal</strong> indica que tienes un
-                peso saludable para tu altura. Usa nuestro <strong>verificador de IMC</strong> para saber donde te encuentras.
+                En una region donde la <strong>comida chatarra</strong> ha desplazado progresivamente a la
+                <strong> alimentacion tradicional</strong> basada en maiz, frijol, chile, quinoa, papa y frutas
+                tropicales, calcular tu IMC regularmente se vuelve una herramienta preventiva fundamental. La
+                <strong> AESAN</strong> en Espana y las secretarias de salud de cada pais latinoamericano
+                recomiendan monitorear el peso corporal como parte de los chequeos medicos de rutina.
               </p>
               <p>
-                La <strong>calculadora de indice de masa corporal</strong> usa la <strong>ecuacion de IMC</strong> estandar
-                reconocida por la OMS. Aunque la <strong>escala de IMC</strong> es util, recuerda que no
-                toma en cuenta la masa muscular, edad o composicion corporal.
+                Esta <strong>calculadora IMC online</strong> utiliza la formula estandar reconocida por la
+                <strong> OMS</strong> y adoptada por los sistemas de salud de Mexico (IMSS, ISSSTE), Espana
+                (Sistema Nacional de Salud), Colombia (EPS), Chile (FONASA), Argentina (obras sociales) y el
+                resto de la region. La <strong>tabla de IMC</strong> con las categorias de la OMS te permite
+                interpretar tu resultado y comprender los riesgos asociados a cada rango de peso.
+              </p>
+              <p>
+                Recuerda que el IMC es un <strong>indicador de referencia</strong>, no un diagnostico. Para una
+                evaluacion completa, consulta con tu medico o nutriologo, quien puede complementar el IMC con
+                mediciones de circunferencia de cintura, porcentaje de grasa corporal y analisis de sangre. En
+                America Latina, las unidades basicas de salud, centros de salud comunitarios y consultorios
+                medicos ofrecen estas evaluaciones de manera accesible.
               </p>
             </div>
           </div>
         </div>
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
-          <p>© 2024 Calculadora IMC Gratis - Herramienta de Indice de Masa Corporal</p>
+          <p>&copy; 2024 Calculadora IMC Gratis - Herramienta de Indice de Masa Corporal</p>
         </footer>
       </div>
     </div>

@@ -54,7 +54,7 @@ const BMIPrashn = () => {
             अक्सर पूछे जाने वाले प्रश्न
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">BMI FAQ</span>
+            <span className="gradient-text">BMI FAQ</span> : अक्सर पूछे जाने वाले प्रश्न
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             बॉडी मास इंडेक्स के बारे में सबसे अधिक पूछे जाने वाले प्रश्नों के उत्तर

@@ -37,7 +37,7 @@ const Index = () => {
             Simulateur en temps réel
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">
-            <span className="gradient-text">Calculez votre IMC</span>
+            <span className="gradient-text">Calcul IMC Gratuit en Ligne</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Découvrez votre indice de masse corporelle avec des conseils adaptés à votre âge

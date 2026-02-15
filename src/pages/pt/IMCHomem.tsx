@@ -1,13 +1,13 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 const IMCHomemPt = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(80);
-  const [height, setHeight] = useState(178);
+  const [weight, setWeight] = useState(78);
+  const [height, setHeight] = useState(173);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightInM = h / 100;
@@ -46,10 +46,10 @@ const IMCHomemPt = () => {
             Calculadora IMC para Homens
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-blue-500">IMC Homem</span>: Calcule seu Indice
+            <span className="text-blue-500">IMC Homem</span> : Calculadora IMC Masculino e Peso
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Calculadora de IMC com conselhos personalizados para homens e composicao corporal masculina
+            No Brasil, 57,5% dos homens estão com sobrepeso ou obesidade (VIGITEL 2023). Calculadora de IMC com referências ABESO, VIGITEL e Guia Alimentar Brasileiro.
           </p>
         </header>
 
@@ -109,15 +109,21 @@ const IMCHomemPt = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                O <strong>IMC masculino</strong> e calculado da mesma forma que para mulheres, mas a interpretacao pode variar.
-                Homens naturalmente tem <strong>mais massa muscular</strong> e uma <strong>porcentagem de gordura corporal mais baixa</strong>
-                (15-20% vs 20-25% para mulheres).
+                Segundo o <strong>VIGITEL 2023</strong>, <strong>57,5% dos homens brasileiros</strong> estão com sobrepeso ou obesidade,
+                sendo que <strong>22,8%</strong> são classificados como obesos. Em <strong>Portugal</strong>, a situação é semelhante:
+                <strong> 62% dos homens</strong> apresentam sobrepeso ou obesidade segundo dados da DGS e do inquérito IAN-AF.
               </p>
               <p>
-                Um homem pode ter um <strong>IMC mais alto</strong> enquanto esta em excelente saude se pratica exercicios
-                regularmente ou treino de forca. Por isso a <strong>circunferencia da cintura</strong> e frequentemente
-                um melhor indicador para homens: nao deve exceder <strong>94 cm</strong> (risco moderado) ou
-                <strong>102 cm</strong> (risco alto).
+                O <strong>homem brasileiro médio</strong> tem <strong>1,73 m</strong> de altura e pesa <strong>78 kg</strong> (IBGE),
+                enquanto o <strong>homem português médio</strong> mede <strong>1,74 m</strong> e pesa <strong>80 kg</strong>.
+                A <strong>circunferência da cintura</strong> é um indicador complementar essencial segundo a ABESO:
+                acima de <strong>94 cm</strong> indica risco moderado e acima de <strong>102 cm</strong> indica risco elevado
+                para doenças cardiovasculares e metabólicas.
+              </p>
+              <p>
+                Diferenças regionais no Brasil são significativas: a região <strong>Sul apresenta 26,3% de obesidade</strong> entre
+                homens, enquanto o <strong>Nordeste registra 18,7%</strong>. Essas variações estão ligadas a hábitos alimentares,
+                nível de atividade física e fatores socioeconômicos regionais.
               </p>
             </div>
           </div>
@@ -136,7 +142,7 @@ const IMCHomemPt = () => {
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">Categoria</th>
                     <th className="text-left py-3 px-4 font-semibold">IMC</th>
-                    <th className="text-left py-3 px-4 font-semibold">Exemplo (1,80m)</th>
+                    <th className="text-left py-3 px-4 font-semibold">Exemplo (1,73 m, média BR)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -146,7 +152,7 @@ const IMCHomemPt = () => {
                       Abaixo do peso
                     </td>
                     <td className="py-3 px-4">&lt; 18,5</td>
-                    <td className="py-3 px-4">&lt; 60 kg</td>
+                    <td className="py-3 px-4">&lt; 55 kg</td>
                   </tr>
                   <tr className="border-b border-border/50 bg-success/5">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -154,7 +160,7 @@ const IMCHomemPt = () => {
                       Peso normal
                     </td>
                     <td className="py-3 px-4">18,5 - 24,9</td>
-                    <td className="py-3 px-4">60 - 81 kg</td>
+                    <td className="py-3 px-4">55 - 75 kg</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -162,7 +168,7 @@ const IMCHomemPt = () => {
                       Sobrepeso
                     </td>
                     <td className="py-3 px-4">25 - 29,9</td>
-                    <td className="py-3 px-4">81 - 97 kg</td>
+                    <td className="py-3 px-4">75 - 90 kg</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -170,7 +176,7 @@ const IMCHomemPt = () => {
                       Obesidade
                     </td>
                     <td className="py-3 px-4">≥ 30</td>
-                    <td className="py-3 px-4">&gt; 97 kg</td>
+                    <td className="py-3 px-4">&gt; 90 kg</td>
                   </tr>
                 </tbody>
               </table>
@@ -188,11 +194,11 @@ const IMCHomemPt = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { height: "1,65 m", min: 50, max: 68, ideal: 60 },
-                { height: "1,70 m", min: 53, max: 72, ideal: 64 },
-                { height: "1,75 m", min: 57, max: 76, ideal: 67 },
+                { height: "1,69 m", min: 53, max: 71, ideal: 63 },
+                { height: "1,73 m (média BR)", min: 55, max: 75, ideal: 66 },
+                { height: "1,76 m", min: 57, max: 77, ideal: 68 },
                 { height: "1,80 m", min: 60, max: 81, ideal: 71 },
-                { height: "1,85 m", min: 63, max: 85, ideal: 75 },
-                { height: "1,90 m", min: 67, max: 90, ideal: 79 },
+                { height: "1,84 m", min: 63, max: 84, ideal: 74 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-blue-500">{item.height}</span>
@@ -211,24 +217,24 @@ const IMCHomemPt = () => {
                 <div className="p-3 rounded-xl bg-success/10">
                   <Dumbbell className="w-6 h-6 text-success" />
                 </div>
-                <h3 className="text-xl font-display font-bold">Exercicio e Musculo</h3>
+                <h3 className="text-xl font-display font-bold">Exercício e Músculo</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>O <strong>treino de forca</strong> aumenta a massa muscular e portanto o IMC</span>
+                  <span>O <strong>futebol</strong> é o esporte mais praticado por homens brasileiros, com 30 milhões de praticantes em todo o país</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>Um homem musculoso pode ter um <strong>IMC de 27-28</strong> sem excesso de gordura</span>
+                  <span>Academias de musculação: o <strong>Brasil tem a 2ª maior rede de academias do mundo</strong>, impulsionando o treino de força</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>Combine <strong>cardio e forca</strong> para equilibrio otimo</span>
+                  <span>A <strong>OMS recomenda 150 min de atividade moderada</strong> por semana para manutenção do peso saudável</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>Mire em <strong>150 min de atividade moderada</strong> por semana no minimo</span>
+                  <span>Apenas <strong>30,4% dos homens brasileiros</strong> são fisicamente ativos segundo o VIGITEL</span>
                 </li>
               </ul>
             </div>
@@ -238,26 +244,96 @@ const IMCHomemPt = () => {
                 <div className="p-3 rounded-xl bg-warning/10">
                   <Heart className="w-6 h-6 text-warning" />
                 </div>
-                <h3 className="text-xl font-display font-bold">Saude Masculina</h3>
+                <h3 className="text-xl font-display font-bold">Saúde Masculina</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>A <strong>gordura abdominal</strong> aumenta os riscos cardiovasculares</span>
+                  <span><strong>Doenças cardiovasculares</strong>: principal causa de morte entre homens brasileiros (DataSUS)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>Apos os <strong>40</strong>, o metabolismo desacelera significativamente</span>
+                  <span><strong>Diabetes tipo 2</strong> atinge 9% dos homens brasileiros acima de 30 anos</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>A <strong>testosterona</strong> diminui com a idade, favorecendo ganho de gordura</span>
+                  <span><strong>Novembro Azul</strong>: campanha de conscientização sobre saúde masculina e câncer de próstata</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>Checkup anual de saude <strong>recomendado apos os 50</strong></span>
+                  <span><strong>38% dos homens brasileiros</strong> não procuram médico regularmente (Ministério da Saúde)</span>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          {/* SUS and Obesity Treatment */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-blue-500/10">
+                <Globe className="w-6 h-6 text-blue-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">O SUS e o Tratamento da Obesidade Masculina</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                O <strong>Sistema Único de Saúde (SUS)</strong> oferece tratamento gratuito para obesidade, incluindo
+                acompanhamento nutricional, psicológico e endocrinológico. Os <strong>NASF (Núcleos de Apoio à Saúde
+                da Família)</strong> garantem acesso gratuito a nutricionistas nas Unidades Básicas de Saúde em todo o Brasil.
+              </p>
+              <p>
+                Para casos graves, o <strong>SUS cobre cirurgia bariátrica gratuitamente</strong> para pacientes com
+                IMC ≥ 40 ou IMC ≥ 35 com comorbidades associadas (diabetes, hipertensão, apneia do sono).
+                O <strong>Brasil realizou 11.000 cirurgias bariátricas pelo SUS em 2023</strong>, consolidando-se como
+                referência em cirurgia metabólica na América Latina.
+              </p>
+              <p>
+                O <strong>Guia Alimentar para a População Brasileira</strong>, elogiado pela Universidade de Harvard como
+                um dos melhores do mundo, prioriza <strong>alimentos in natura</strong> e minimamente processados,
+                desestimulando o consumo de ultraprocessados. Seguir suas recomendações é uma das formas mais eficazes
+                de manter um IMC saudável.
+              </p>
+              <p>
+                Em <strong>Portugal</strong>, o <strong>SNS (Serviço Nacional de Saúde)</strong> oferece tratamentos similares,
+                incluindo consultas de nutrição, programas de exercício físico e cirurgia bariátrica para casos elegíveis,
+                através das Unidades de Saúde Familiar e hospitais públicos.
+              </p>
+            </div>
+          </div>
+
+          {/* Body Culture in Brazil */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-warning/10">
+                <Heart className="w-6 h-6 text-warning" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Cultura do Corpo no Brasil e o IMC</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                O Brasil possui uma <strong>cultura do corpo</strong> única, conhecida como "culto ao corpo", que
+                influencia diretamente a forma como os homens interpretam e se relacionam com o IMC. A busca pelo
+                corpo ideal está profundamente enraizada na sociedade brasileira, impactando decisões sobre dieta,
+                exercício e até procedimentos estéticos.
+              </p>
+              <p>
+                A <strong>cultura fitness e de musculação masculina</strong> cresceu exponencialmente no Brasil nas
+                últimas décadas. Com mais de 30.000 academias no país, o treino de hipertrofia tornou-se parte do
+                estilo de vida de milhões de homens, o que pode resultar em um IMC elevado por ganho de massa muscular,
+                e não necessariamente por excesso de gordura.
+              </p>
+              <p>
+                O impacto das <strong>redes sociais na imagem corporal masculina</strong> é cada vez mais significativo.
+                Influenciadores fitness e padrões estéticos divulgados nas plataformas digitais podem gerar
+                expectativas irrealistas e comportamentos alimentares de risco, como dietas restritivas extremas
+                ou uso de suplementos sem orientação profissional.
+              </p>
+              <p>
+                O <strong>Brasil é o 2º país com mais cirurgias plásticas masculinas no mundo</strong> segundo a
+                ISAPS (International Society of Aesthetic Plastic Surgery), refletindo a pressão estética que
+                os homens brasileiros enfrentam. É fundamental lembrar que o IMC é apenas um dos indicadores de
+                saúde e deve ser avaliado em conjunto com outros parâmetros clínicos.
+              </p>
             </div>
           </div>
 
@@ -267,23 +343,29 @@ const IMCHomemPt = () => {
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <Activity className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Tudo sobre o IMC Masculino</h2>
+              <h2 className="text-2xl font-display font-bold">Tudo sobre o IMC Masculino no Brasil e em Portugal</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                A <strong>calculadora de IMC para homens</strong> e essencial para avaliar sua <strong>composicao corporal masculina</strong>.
-                Se voce esta procurando seu <strong>IMC ideal para homens</strong> ou verificar se voce tem um
-                <strong> peso saudavel para homens</strong>, nossa <strong>calculadora IMC masculina</strong> da respostas instantaneas.
+                A <strong>calculadora de IMC para homens brasileiros</strong> leva em consideração dados do
+                <strong> IBGE</strong>, <strong>VIGITEL</strong> e diretrizes da <strong>ABESO</strong> (Associação Brasileira
+                para o Estudo da Obesidade e Síndrome Metabólica). Para o homem brasileiro médio de <strong>1,73 m</strong>,
+                o <strong>peso ideal</strong> situa-se entre 55 e 75 kg, com um IMC entre 18,5 e 24,9.
               </p>
               <p>
-                O <strong>IMC medio para homens</strong> varia por idade e nivel de atividade. Um <strong>IMC normal para homens</strong>
-                esta entre 20 e 25. Para um homem de <strong>1,75 m</strong>, o <strong>peso ideal</strong> e cerca de
-                67 kg. Para um homem de <strong>1,80 m</strong>, e aproximadamente 71 kg.
+                As <strong>diferenças regionais no Brasil</strong> são marcantes: a região Sul apresenta as maiores taxas
+                de obesidade masculina (26,3%), seguida pelo Sudeste (23,1%), Centro-Oeste (22,5%), Norte (20,2%) e
+                Nordeste (18,7%). Essas variações refletem diferenças nos padrões alimentares regionais, acesso a
+                serviços de saúde e condições socioeconômicas, conforme dados do <strong>DataSUS</strong> e do
+                <strong> Ministério da Saúde</strong>.
               </p>
               <p>
-                <strong>Qual deve ser meu IMC homem</strong>? A faixa ideal e 20-25, mas homens atleticos podem estar mais altos.
-                O <strong>IMC para homens acima de 50</strong> pode tolerar valores ligeiramente mais altos (ate 27) sem risco maior.
-                O importante e manter atividade fisica regular e nutricao balanceada.
+                Em <strong>Portugal</strong>, a <strong>DGS (Direção-Geral da Saúde)</strong> monitora a prevalência
+                de sobrepeso e obesidade masculina, que atinge 62% dos homens segundo o inquérito IAN-AF. O
+                <strong> Programa Nacional para a Promoção da Alimentação Saudável (PNPAS)</strong> oferece orientações
+                específicas para a população portuguesa. Para homens acima de 50 anos, tanto no Brasil quanto em
+                Portugal, um IMC entre 22 e 27 pode ser aceitável, desde que acompanhado de exames regulares e
+                estilo de vida ativo.
               </p>
             </div>
           </div>

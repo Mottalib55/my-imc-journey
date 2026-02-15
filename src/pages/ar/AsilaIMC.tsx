@@ -54,7 +54,7 @@ const AsilaIMC = () => {
             الأسئلة الشائعة
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">أسئلة شائعة عن مؤشر كتلة الجسم</span>
+            <span className="gradient-text">أسئلة شائعة عن مؤشر كتلة الجسم FAQ</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             إجابات على الأسئلة الأكثر شيوعاً حول مؤشر كتلة الجسم

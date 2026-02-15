@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp } from "lucide-react";
+import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
 
 const IMCSportivo = () => {
@@ -51,10 +52,11 @@ const IMCSportivo = () => {
             IMC per Sportivi
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-orange-500">IMC per Sportivi</span>: Perché l'IMC inganna gli atleti
+            <span className="text-orange-500">IMC Sportivo</span> : Limiti del BMI per gli Atleti Italiani
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Perché l'IMC non è adatto agli sportivi e quali alternative utilizzare
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Perch&eacute; l'IMC classifica Gianluigi Donnarumma come "sovrappeso" e la maggior parte dei rugbisti come "obesi".
+            La medicina dello sport italiana &egrave; la pi&ugrave; avanzata al mondo.
           </p>
         </header>
 
@@ -63,10 +65,12 @@ const IMCSportivo = () => {
           <div className="flex items-start gap-4">
             <AlertTriangle className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-bold text-orange-500 mb-2">Attenzione: L'IMC è fuorviante per gli sportivi</h3>
+              <h3 className="font-bold text-orange-500 mb-2">Attenzione: L'IMC non tiene conto della massa muscolare</h3>
               <p className="text-muted-foreground">
                 L'IMC non distingue la <strong>massa muscolare</strong> dalla <strong>massa grassa</strong>.
-                Uno sportivo muscoloso può avere un IMC da "sovrappeso" o "obesità" pur essendo in ottima salute.
+                Un atleta di Serie A, un ciclista del Giro d'Italia o un rugbista della Nazionale possono avere
+                un IMC da "sovrappeso" o "obesit&agrave;" pur essendo in condizioni fisiche eccellenti. La <strong>FMSI
+                (Federazione Medico Sportiva Italiana)</strong> utilizza metodi ben pi&ugrave; precisi.
               </p>
             </div>
           </div>
@@ -126,7 +130,9 @@ const IMCSportivo = () => {
               <h2 className="text-xl font-display font-bold">Stima FFMI (Indice di Massa Magra)</h2>
             </div>
             <p className="text-muted-foreground mb-4">
-              L'FFMI è un indicatore migliore per gli sportivi perché tiene conto della massa magra.
+              L'FFMI &egrave; un indicatore migliore per gli sportivi perch&eacute; tiene conto della massa magra.
+              &Egrave; lo strumento raccomandato dalla <strong>FMSI</strong> e dal <strong>CONI</strong> per valutare
+              la composizione corporea degli atleti italiani.
             </p>
             <div className="bg-muted/30 rounded-xl p-4 text-center">
               <p className="text-sm text-muted-foreground mb-2">FFMI stimato (con 15% di massa grassa)</p>
@@ -140,74 +146,162 @@ const IMCSportivo = () => {
 
         {/* Content */}
         <div className="space-y-8">
-          {/* Why BMI is biased */}
+          {/* Why BMI fails for athletes */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-orange-500/10">
                 <Scale className="w-6 h-6 text-orange-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Perché l'IMC fallisce per gli sportivi</h2>
+              <h2 className="text-2xl font-display font-bold">Perch&eacute; l'IMC fallisce per gli sportivi italiani</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                L'<strong>IMC per sportivi</strong> è problematico perché la formula non fa alcuna distinzione tra
-                il peso dei muscoli e quello del grasso. Tuttavia, il <strong>muscolo è più denso del grasso</strong>:
-                a parità di volume, pesa di più.
+                L'<strong>IMC per sportivi</strong> &egrave; problematico perch&eacute; la formula non fa alcuna distinzione tra
+                il peso dei muscoli e quello del grasso. Tuttavia, il <strong>muscolo &egrave; pi&ugrave; denso del grasso</strong>:
+                a parit&agrave; di volume, pesa di pi&ugrave;.
               </p>
               <p>
-                Un bodybuilder alto 1,80 m che pesa 100 kg avrà un <strong>IMC di 30,9</strong> (obesità),
-                anche se ha solo il <strong>10% di massa grassa</strong> ed è in perfetta salute.
+                L'Italia lo sa bene: con la <strong>legge del 1982 sulla tutela sanitaria delle attivit&agrave; sportive</strong>,
+                il nostro Paese &egrave; stato il primo al mondo a rendere obbligatoria la visita medico-sportiva per tutti
+                gli atleti agonisti. Questa visita comprende <strong>ECG, spirometria e analisi della composizione corporea</strong>,
+                strumenti infinitamente pi&ugrave; precisi del semplice IMC.
               </p>
             </div>
           </div>
 
-          {/* Practical Examples */}
+          {/* Famous Italian Athletes */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-orange-500/10">
                 <Dumbbell className="w-6 h-6 text-orange-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Esempi pratici</h2>
+              <h2 className="text-2xl font-display font-bold">Atleti italiani famosi e il loro IMC</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-muted/30 rounded-xl p-6">
+                <h4 className="font-bold mb-3">Gianluigi Donnarumma</h4>
+                <p className="text-xs text-muted-foreground mb-3">Portiere, Paris Saint-Germain / Nazionale</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Altezza: 1,96 m</li>
+                  <li>Peso: 90 kg</li>
+                  <li>IMC: ~23,4 ("normale")</li>
+                  <li>Ma con un fisico imponente, il suo IMC &egrave; basso grazie alla grande altezza</li>
+                  <li>Uno dei migliori portieri al mondo</li>
+                </ul>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6">
+                <h4 className="font-bold mb-3">Jannik Sinner</h4>
+                <p className="text-xs text-muted-foreground mb-3">Tennis, N.1 mondiale</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Altezza: 1,88 m</li>
+                  <li>Peso: 76 kg</li>
+                  <li>IMC: ~21,5 ("normale")</li>
+                  <li>Atleta di resistenza e potenza, muscolatura asciutta e funzionale</li>
+                  <li>L'IMC qui &egrave; relativamente accurato</li>
+                </ul>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6">
+                <h4 className="font-bold mb-3">Gregorio Paltrinieri</h4>
+                <p className="text-xs text-muted-foreground mb-3">Nuoto, Campione Olimpico</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Altezza: 1,90 m</li>
+                  <li>Peso: 77 kg</li>
+                  <li>IMC: ~21,3 ("normale")</li>
+                  <li>Massa grassa bassissima, muscoli potenti per il fondo</li>
+                  <li>L'IMC non riflette le sue eccezionali capacit&agrave; cardiovascolari</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Sport-specific BMI ranges */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-orange-500/10">
+                <Activity className="w-6 h-6 text-orange-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">IMC tipico per sport italiani</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">Giocatore di rugby</h4>
+                <h4 className="font-bold mb-3">Calcio (Serie A)</h4>
+                <p className="text-xs text-muted-foreground mb-2">Lo sport pi&ugrave; popolare d'Italia</p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Altezza: 1,80 m</li>
-                  <li>• Peso: 100 kg</li>
-                  <li>• IMC: 30,9 ("obesità")</li>
-                  <li>• Massa grassa: ~15%</li>
-                  <li>• In realtà: Forma fisica eccellente</li>
+                  <li>IMC tipico: 22-25</li>
+                  <li>Massa grassa: 8-12%</li>
+                  <li>Equilibrio tra agilit&agrave;, resistenza e potenza</li>
+                  <li>I difensori tendono verso la fascia alta, gli attaccanti verso la bassa</li>
                 </ul>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">Maratoneta</h4>
+                <h4 className="font-bold mb-3">Ciclismo (Giro d'Italia)</h4>
+                <p className="text-xs text-muted-foreground mb-2">Rapporto potenza/peso fondamentale</p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Altezza: 1,75 m</li>
-                  <li>• Peso: 62 kg</li>
-                  <li>• IMC: 20,2 ("normale")</li>
-                  <li>• Massa grassa: ~8%</li>
-                  <li>• L'IMC qui è più accurato</li>
+                  <li>IMC tipico: 19-22</li>
+                  <li>Massa grassa: 5-8%</li>
+                  <li>Gli scalatori sono i pi&ugrave; leggeri (IMC 19-20)</li>
+                  <li>I velocisti hanno pi&ugrave; massa muscolare (IMC 21-23)</li>
                 </ul>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">Bodybuilding</h4>
+                <h4 className="font-bold mb-3">Rugby (Nazionale, Top10)</h4>
+                <p className="text-xs text-muted-foreground mb-2">L'IMC li classifica come "obesi"</p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• IMC tipicamente tra 28-35</li>
-                  <li>• Massa grassa: 8-15%</li>
-                  <li>• Stato di salute eccellente</li>
-                  <li>• L'IMC dice "obesità" = falso positivo</li>
+                  <li>IMC tipico: 28-33</li>
+                  <li>Massa grassa: 14-20%</li>
+                  <li>Piloni e seconde linee superano spesso un IMC di 30</li>
+                  <li>Ma la composizione corporea &egrave; prevalentemente muscolare</li>
                 </ul>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">CrossFit / Sport di forza</h4>
+                <h4 className="font-bold mb-3">Pallavolo / Pallanuoto</h4>
+                <p className="text-xs text-muted-foreground mb-2">Discipline in cui l'Italia eccelle a livello mondiale</p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• IMC tipicamente tra 26-30</li>
-                  <li>• Massa grassa: 12-18%</li>
-                  <li>• Elevate prestazioni atletiche</li>
-                  <li>• IMC non rappresentativo</li>
+                  <li>IMC tipico: 23-27</li>
+                  <li>Massa grassa: 10-15%</li>
+                  <li>Atleti alti e muscolosi, struttura imponente</li>
+                  <li>L'IMC tende a sovrastimare il grasso corporeo</li>
                 </ul>
               </div>
+            </div>
+          </div>
+
+          {/* Italian Sports Medicine Section */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-blue-500/10">
+                <Globe className="w-6 h-6 text-blue-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">La medicina dello sport italiana: un modello mondiale</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                L'Italia possiede il <strong>sistema di medicina dello sport pi&ugrave; antico e completo al mondo</strong>.
+                La <strong>legge del 26 ottobre 1971 n. 1099</strong>, poi aggiornata con il <strong>D.M. 18 febbraio 1982</strong>,
+                ha reso l'Italia l'unico Paese al mondo dove la <strong>visita medico-sportiva &egrave; obbligatoria</strong>
+                per chiunque pratichi attivit&agrave; sportiva agonistica. Nessun'altra nazione ha un sistema cos&igrave; capillare e rigoroso.
+              </p>
+              <p>
+                Il <strong>certificato medico sportivo agonistico</strong>, rilasciato esclusivamente da medici specialisti in
+                medicina dello sport, comprende un esame clinico completo: <strong>ECG a riposo e sotto sforzo</strong>,
+                <strong> spirometria</strong>, <strong>esame delle urine</strong>, <strong>analisi della composizione corporea</strong>
+                e valutazione antropometrica. Questo protocollo va ben oltre il semplice calcolo dell'IMC e permette di
+                identificare patologie cardiache silenti, rischi metabolici e squilibri nella composizione corporea.
+              </p>
+              <p>
+                La <strong>FMSI (Federazione Medico Sportiva Italiana)</strong>, fondata nel 1929, &egrave; il punto di riferimento
+                mondiale per la medicina dello sport. I suoi protocolli sono adottati come <strong>gold standard</strong> da
+                federazioni sportive internazionali e comitati olimpici di tutto il mondo. Gli <strong>Istituti di Medicina
+                dello Sport</strong> sono presenti in ogni regione italiana e offrono valutazioni della composizione corporea
+                che rendono l'IMC completamente superfluo per gli atleti.
+              </p>
+              <p>
+                L'<strong>Universit&agrave; degli Studi di Roma "Foro Italico"</strong> (ex IUSM) &egrave; una delle pi&ugrave; prestigiose
+                istituzioni al mondo per la formazione in scienze motorie e medicina dello sport. Il <strong>CONI
+                (Comitato Olimpico Nazionale Italiano)</strong>, insieme alla FMSI, stabilisce gli standard di composizione
+                corporea per ogni disciplina olimpica, standard che non si basano sull'IMC ma su
+                <strong> plicometria, bioimpedenziometria e DEXA scan</strong>.
+              </p>
             </div>
           </div>
 
@@ -217,7 +311,7 @@ const IMCSportivo = () => {
               <div className="p-3 rounded-xl bg-success/10">
                 <Target className="w-6 h-6 text-success" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Alternative all'IMC per sportivi</h2>
+              <h2 className="text-2xl font-display font-bold">Alternative all'IMC: protocolli FMSI e CONI</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -225,29 +319,34 @@ const IMCSportivo = () => {
                   <tr className="border-b-2 border-border">
                     <th className="text-left py-3 px-4 font-bold">Metodo</th>
                     <th className="text-left py-3 px-4 font-bold">Vantaggi</th>
-                    <th className="text-left py-3 px-4 font-bold">Valori di riferimento</th>
+                    <th className="text-left py-3 px-4 font-bold">Standard FMSI/CONI</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 font-bold">FFMI</td>
-                    <td className="py-3 px-4">Considera solo la massa magra</td>
+                    <td className="py-3 px-4">Considera solo la massa magra, ideale per confronti tra atleti</td>
                     <td className="py-3 px-4">18-25 naturale</td>
                   </tr>
                   <tr className="border-b border-border/50">
-                    <td className="py-3 px-4 font-bold">Massa grassa (%)</td>
-                    <td className="py-3 px-4">Misurazione diretta del grasso corporeo</td>
-                    <td className="py-3 px-4">Uomini: 10-20% | Donne: 18-28%</td>
+                    <td className="py-3 px-4 font-bold">Plicometria</td>
+                    <td className="py-3 px-4">Misura diretta dello spessore del grasso sottocutaneo (7 pliche)</td>
+                    <td className="py-3 px-4">Uomini: 6-15% | Donne: 14-25% (atleti)</td>
                   </tr>
                   <tr className="border-b border-border/50">
-                    <td className="py-3 px-4 font-bold">Circonferenza vita</td>
-                    <td className="py-3 px-4">Indicatore semplice del grasso addominale</td>
-                    <td className="py-3 px-4">Uomini: &lt;94 cm | Donne: &lt;80 cm</td>
+                    <td className="py-3 px-4 font-bold">Bioimpedenziometria (BIA)</td>
+                    <td className="py-3 px-4">Analisi della composizione corporea tramite impedenza bioelettrica</td>
+                    <td className="py-3 px-4">Presente nella visita medico-sportiva</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 px-4 font-bold">DEXA Scan</td>
+                    <td className="py-3 px-4">Composizione corporea precisa, massa ossea, distribuzione del grasso</td>
+                    <td className="py-3 px-4">Gold standard CONI per atleti olimpici</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-bold">DEXA Scan</td>
-                    <td className="py-3 px-4">Composizione corporea precisa</td>
-                    <td className="py-3 px-4">Gold standard per gli sportivi</td>
+                    <td className="py-3 px-4 font-bold">Circonferenza vita</td>
+                    <td className="py-3 px-4">Indicatore semplice del grasso viscerale</td>
+                    <td className="py-3 px-4">Uomini: &lt;94 cm | Donne: &lt;80 cm</td>
                   </tr>
                 </tbody>
               </table>
@@ -306,7 +405,7 @@ const IMCSportivo = () => {
               </table>
             </div>
             <p className="text-xs text-muted-foreground mt-4">
-              Nota: Un FFMI superiore a 25 è raggiungibile naturalmente per alcuni individui geneticamente dotati, ma è raro.
+              Nota: Un FFMI superiore a 25 &egrave; raggiungibile naturalmente per alcuni individui geneticamente dotati, ma &egrave; raro.
             </p>
           </div>
 
@@ -316,28 +415,36 @@ const IMCSportivo = () => {
               <div className="p-3 rounded-xl bg-orange-500/10">
                 <Activity className="w-6 h-6 text-orange-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">IMC e sport: quello che devi sapere</h2>
+              <h2 className="text-2xl font-display font-bold">IMC e sport in Italia: tutto quello che devi sapere</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Il <strong>calcolo dell'IMC per sportivi</strong> fornisce spesso risultati fuorvianti. Che tu pratichi
-                <strong> bodybuilding</strong>, <strong>CrossFit</strong>, <strong>rugby</strong> o qualsiasi altro
-                sport di forza, il tuo <strong>IMC da atleta</strong> sarà probabilmente sovrastimato.
+                Il <strong>calcolo dell'IMC per sportivi</strong> in Italia &egrave; una pratica ormai superata dalla
+                <strong> medicina dello sport italiana</strong>, la pi&ugrave; avanzata al mondo. La <strong>FMSI</strong>
+                (Federazione Medico Sportiva Italiana) raccomanda da decenni metodi pi&ugrave; precisi per valutare
+                la composizione corporea degli atleti, dalla <strong>Serie A</strong> al ciclismo professionistico.
               </p>
               <p>
-                L'<strong>IMC nel bodybuilding</strong> è particolarmente distorto: un bodybuilder naturale può facilmente
-                raggiungere un IMC di 27-28 pur essendo definito. L'<strong>IMC dei bodybuilder</strong> professionisti supera
-                spesso 30, classificato come "obeso" quando la percentuale di grasso è minima.
+                La <strong>visita medico-sportiva</strong>, obbligatoria in Italia per tutti gli atleti agonisti,
+                include test che vanno ben oltre l'IMC: ECG sotto sforzo, spirometria, analisi della composizione
+                corporea. Questo sistema unico al mondo, regolato dal <strong>D.M. 18 febbraio 1982</strong>,
+                ha salvato migliaia di vite identificando cardiopatie silenti e ha reso il semplice
+                <strong> IMC sportivo</strong> uno strumento inadeguato per la valutazione dell'atleta italiano.
               </p>
               <p>
-                Per gli sportivi, è preferibile utilizzare la <strong>percentuale di massa grassa</strong>, l'<strong>FFMI</strong>
-                (Indice di Massa Magra) o la semplice <strong>circonferenza della vita</strong>. Questi indicatori sono più pertinenti
-                per valutare la composizione corporea e il reale stato di salute.
+                Per gli <strong>sportivi italiani</strong>, che si tratti di calciatori di <strong>Serie A</strong>,
+                ciclisti del <strong>Giro d'Italia</strong>, rugbisti della <strong>Nazionale</strong> o pallanuotisti,
+                l'approccio corretto &egrave; quello del <strong>CONI</strong>: utilizzare FFMI, plicometria,
+                bioimpedenziometria o DEXA scan. L'<strong>IMC muscolare</strong> risulter&agrave; sempre pi&ugrave; alto
+                di quanto il reale stato di salute suggerisca, ed &egrave; per questo che la FMSI non lo utilizza
+                come indicatore primario nella valutazione degli atleti.
               </p>
               <p>
-                <strong>L'IMC è accurato per gli sportivi</strong>? No. <strong>Perché l'IMC non funziona per le persone muscolose</strong>?
-                Perché considera solo il peso totale, non la composizione corporea. Un <strong>IMC muscolare</strong> risulterà sempre
-                più alto di quanto il reale stato di salute suggerisca.
+                <strong>L'IMC &egrave; accurato per gli sportivi italiani</strong>? No. Se pratichi sport a livello agonistico,
+                il tuo <strong>certificato medico sportivo</strong> contiene gi&agrave; informazioni infinitamente pi&ugrave; utili.
+                Se ti alleni a livello amatoriale, chiedi al tuo medico dello sport una <strong>valutazione della composizione
+                corporea</strong> durante la visita medico-sportiva: &egrave; un tuo diritto e un'eccellenza del sistema
+                sanitario italiano.
               </p>
             </div>
           </div>
@@ -346,10 +453,10 @@ const IMCSportivo = () => {
           <div className="glass-card p-8">
             <h2 className="text-2xl font-display font-bold mb-6 text-center">Scopri anche</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <a href="/it/imc" className="block p-4 rounded-xl border border-border hover:border-orange-500/50 transition-colors text-center">
+              <Link to="/it/imc" className="block p-4 rounded-xl border border-border hover:border-orange-500/50 transition-colors text-center">
                 <p className="font-bold">Calcolo IMC</p>
                 <p className="text-sm text-muted-foreground">Calcolatore IMC generale</p>
-              </a>
+              </Link>
               <a href="/it/imc-uomo" className="block p-4 rounded-xl border border-border hover:border-orange-500/50 transition-colors text-center">
                 <p className="font-bold">IMC Uomo</p>
                 <p className="text-sm text-muted-foreground">Calcolo IMC per uomini</p>

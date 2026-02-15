@@ -54,7 +54,7 @@ const BMIFAQDe = () => {
             Häufig gestellte Fragen
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">BMI FAQ</span>
+            <span className="gradient-text">BMI FAQ</span> : Häufige Fragen zum Body-Mass-Index
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Antworten auf die häufigsten Fragen zum Body-Mass-Index

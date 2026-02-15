@@ -19,7 +19,7 @@ const GesundheitGewicht = () => {
             Gesundheit und Wohlbefinden
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-success">Gesundheit und Gewicht</span>: Vollständiger Leitfaden
+            <span className="text-success">Gesundheit & Gewicht</span> : Ratgeber für Wohlbefinden
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Die Beziehung zwischen Gewicht, BMI und allgemeiner Gesundheit verstehen

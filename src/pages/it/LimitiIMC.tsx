@@ -18,7 +18,7 @@ const LimitiIMC = () => {
             Analisi Critica
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">Limiti dell'IMC</span>: Cosa l'IMC Non Rivela
+            <span className="text-warning">Limiti dell'IMC</span> : Cosa l'Indice Non Rivela
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Scoprite perché l'IMC non è sempre affidabile e quali alternative esistono

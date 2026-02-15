@@ -18,7 +18,7 @@ const BMIGrenzen = () => {
             Kritische Analyse
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">Grenzen des BMI</span>: Was der BMI nicht verrät
+            <span className="text-warning">Grenzen des BMI</span> : Was der BMI Nicht Verrät
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Verstehen Sie, warum der BMI nicht immer zuverlässig ist und welche Alternativen es gibt

@@ -19,7 +19,7 @@ const SanteEtPoids = () => {
             Santé et bien-être
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-success">Santé et Poids</span> : Guide complet
+            <span className="text-success">Santé et Poids</span> : Guide Nutrition et Poids Idéal
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprendre la relation entre poids, IMC et santé globale

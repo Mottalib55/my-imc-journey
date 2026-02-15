@@ -88,7 +88,7 @@ const BMIChangjianwenti = () => {
             常见问题
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">BMI常见问题：关于BMI的一切</span>
+            <span className="gradient-text">BMI常见问题</span>：关于BMI的所有问题解答
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             关于身体质量指数（BMI）最常见问题的详细解答

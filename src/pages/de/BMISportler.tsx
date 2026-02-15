@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, CheckCircle2 } from "lucide-react";
+import { Dumbbell, AlertTriangle, Target, Scale, Activity, TrendingUp, CheckCircle2, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
 
 const BMISportler = () => {
@@ -51,10 +52,10 @@ const BMISportler = () => {
             BMI für Sportler
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-orange-500">BMI für Sportler</span>: Warum er in die Irre führt
+            <span className="text-orange-500">BMI für Sportler</span> : Warum der BMI bei Athleten versagt
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Warum der BMI bei muskulösen Menschen nicht funktioniert und welche Alternativen es gibt
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Warum der BMI die meisten Bundesliga-Spieler als "übergewichtig" einstuft — und was die Deutsche Sporthochschule Köln stattdessen empfiehlt.
           </p>
         </header>
 
@@ -66,7 +67,9 @@ const BMISportler = () => {
               <h3 className="font-bold text-destructive mb-2">Warnung: Der BMI ist für Sportler irreführend</h3>
               <p className="text-muted-foreground">
                 Der BMI unterscheidet nicht zwischen <strong>Muskelmasse</strong> und <strong>Fettmasse</strong>.
-                Ein muskulöser Sportler kann einen „übergewichtigen" oder „adipösen" BMI haben und dennoch kerngesund sein.
+                Ein muskulöser Sportler kann einen "übergewichtigen" oder "adipösen" BMI haben und dennoch kerngesund sein.
+                Die <strong>Deutsche Sporthochschule Köln (DSHS)</strong> und das <strong>Bundesinstitut für Sportwissenschaft (BISp)</strong> empfehlen
+                für Leistungssportler alternative Messverfahren wie die Körperfettanalyse oder den FFMI.
               </p>
             </div>
           </div>
@@ -127,6 +130,7 @@ const BMISportler = () => {
             </div>
             <p className="text-muted-foreground mb-4">
               Der FFMI ist ein besserer Indikator für Sportler, da er die fettfreie Masse berücksichtigt.
+              Die <strong>DSHS Köln</strong> und die <strong>Olympiastützpunkte</strong> verwenden den FFMI als Ergänzung zur Leistungsdiagnostik.
             </p>
             <div className="bg-muted/30 rounded-xl p-4 text-center">
               <p className="text-sm text-muted-foreground mb-2">Geschätzter FFMI (bei 15% Körperfett)</p>
@@ -151,67 +155,154 @@ const BMISportler = () => {
             <div className="text-muted-foreground space-y-4">
               <p>
                 Der <strong>BMI für Sportler</strong> ist problematisch, weil die Formel keinen Unterschied zwischen
-                Muskelgewicht und Fettgewicht macht. <strong>Muskeln sind jedoch dichter als Fett</strong>:
-                Bei gleichem Volumen wiegen sie mehr.
+                Muskelgewicht und Fettgewicht macht. <strong>Muskeln sind dichter als Fett</strong>:
+                Bei gleichem Volumen wiegen sie deutlich mehr. Die <strong>Deutsche Sporthochschule Köln (DSHS)</strong>,
+                weltweit eine der führenden Einrichtungen für Sportwissenschaft, hat dies in zahlreichen
+                Studien belegt.
               </p>
               <p>
-                Ein Bodybuilder, der 180 cm groß ist und 100 kg wiegt, hat einen <strong>BMI von 30,9</strong> (adipös),
-                auch wenn er nur <strong>10% Körperfett</strong> hat und kerngesund ist.
+                In der <strong>Bundesliga</strong> hätten laut BMI-Klassifikation viele Spieler "Übergewicht",
+                obwohl sie Hochleistungssportler mit niedrigem Körperfettanteil sind. Das
+                <strong> Bundesinstitut für Sportwissenschaft (BISp)</strong> empfiehlt daher für die
+                Leistungsdiagnostik von Kaderathleten alternative Messverfahren.
               </p>
             </div>
           </div>
 
-          {/* Examples */}
+          {/* Famous athlete examples - DACH athletes */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-orange-500/10">
                 <Dumbbell className="w-6 h-6 text-orange-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Praxisbeispiele</h2>
+              <h2 className="text-2xl font-display font-bold">Deutsche Spitzensportler und ihr BMI</h2>
             </div>
+            <p className="text-muted-foreground mb-6">
+              Diese Beispiele zeigen, wie absurd die BMI-Einstufung bei Profisportlern sein kann.
+              Von "adipös" bis "Normalgewicht" — der BMI sagt bei Athleten wenig über die tatsächliche Fitness aus.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-muted/30 rounded-xl p-6 border-l-4 border-red-500">
+                <h4 className="font-bold mb-1">Robert Harting</h4>
+                <p className="text-xs text-orange-500 font-medium mb-3">Diskuswurf / Olympiasieger 2012</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Größe: 2m01</li>
+                  <li>Gewicht: 126 kg</li>
+                  <li>BMI: ~31,2</li>
+                  <li className="text-red-500 font-bold">Einstufung: "Adipositas Grad I"</li>
+                  <li>Tatsächlich: Olympiasieger und Weltmeister, Topathlet</li>
+                </ul>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6 border-l-4 border-yellow-500">
+                <h4 className="font-bold mb-1">Manuel Neuer</h4>
+                <p className="text-xs text-orange-500 font-medium mb-3">Torwart / FC Bayern München</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Größe: 1m93</li>
+                  <li>Gewicht: 92 kg</li>
+                  <li>BMI: ~24,7</li>
+                  <li className="text-yellow-500 font-bold">Einstufung: fast "Übergewicht"</li>
+                  <li>Tatsächlich: Welttorhüter, exzellente Fitness</li>
+                </ul>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6 border-l-4 border-green-500">
+                <h4 className="font-bold mb-1">Leon Goretzka</h4>
+                <p className="text-xs text-orange-500 font-medium mb-3">Mittelfeld / FC Bayern München</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Größe: 1m89</li>
+                  <li>Gewicht: 82 kg</li>
+                  <li>BMI: ~23,0</li>
+                  <li className="text-green-500 font-bold">Einstufung: "Normalgewicht"</li>
+                  <li>Tatsächlich: Hochmuskulös, intensives Krafttraining</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground mt-4">
+              Fazit: Nur Goretzka fällt in den "normalen" BMI-Bereich, obwohl alle drei Spitzensportler in hervorragender körperlicher Verfassung sind.
+              Der BMI kann die Körperzusammensetzung von Athleten schlicht nicht korrekt abbilden.
+            </p>
+          </div>
+
+          {/* Sport-specific BMI ranges - German sports */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-orange-500/10">
+                <Activity className="w-6 h-6 text-orange-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Typische BMI-Werte nach Sportart in Deutschland</h2>
+            </div>
+            <p className="text-muted-foreground mb-6">
+              Je nach Sportart unterscheiden sich die typischen BMI-Bereiche erheblich. Diese Werte stammen aus
+              Erhebungen an <strong>Olympiastützpunkten</strong> und Studien der <strong>DSHS Köln</strong>.
+            </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">Rugby-Spieler</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Größe: 1,80 m</li>
-                  <li>• Gewicht: 100 kg</li>
-                  <li>• BMI: 30,9 („adipös")</li>
-                  <li>• Körperfett: ~15%</li>
-                  <li>• Tatsächlich: Hervorragende Fitness</li>
-                </ul>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-2xl">⚽</span>
+                  <h4 className="font-bold">Fußball (Bundesliga)</h4>
+                </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex-1 bg-muted/50 rounded-full h-3 overflow-hidden">
+                    <div className="bg-green-500 h-full rounded-full" style={{ width: "45%" }} />
+                  </div>
+                  <span className="text-sm font-bold text-orange-500">BMI 22-25</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Die meisten Bundesliga-Profis liegen knapp unter der "Übergewicht"-Grenze.
+                  Hoher Ausdauer- und Kraftanteil bei geringem Körperfett.
+                </p>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">Marathon-Läufer</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Größe: 1,75 m</li>
-                  <li>• Gewicht: 62 kg</li>
-                  <li>• BMI: 20,2 („normal")</li>
-                  <li>• Körperfett: ~8%</li>
-                  <li>• BMI hier eher zutreffend</li>
-                </ul>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-2xl">🤾</span>
+                  <h4 className="font-bold">Handball (Bundesliga, Olympiasieger)</h4>
+                </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex-1 bg-muted/50 rounded-full h-3 overflow-hidden">
+                    <div className="bg-yellow-500 h-full rounded-full" style={{ width: "60%" }} />
+                  </div>
+                  <span className="text-sm font-bold text-orange-500">BMI 26-30</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Handballspieler sind groß und schwer. Deutsche Olympiasieger wie die Mannschaft von 2024 haben
+                  BMI-Werte, die als "Übergewicht" gelten — bei Top-Athletik.
+                </p>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">Bodybuilding</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• BMI typischerweise 28-35</li>
-                  <li>• Körperfett: 8-15%</li>
-                  <li>• Ausgezeichneter Gesundheitszustand</li>
-                  <li>• BMI sagt „adipös" = Fehlalarm</li>
-                </ul>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-2xl">🎿</span>
+                  <h4 className="font-bold">Biathlon / Wintersport</h4>
+                </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex-1 bg-muted/50 rounded-full h-3 overflow-hidden">
+                    <div className="bg-blue-500 h-full rounded-full" style={{ width: "42%" }} />
+                  </div>
+                  <span className="text-sm font-bold text-orange-500">BMI 22-24</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Ausdauersportler wie Biathleten haben tendenziell niedrigere BMI-Werte.
+                  Deutschland und Österreich dominieren im Biathlon-Weltcup mit schlanken, ausdauernden Athleten.
+                </p>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
-                <h4 className="font-bold mb-3">CrossFit / Kraftsport</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• BMI typischerweise 26-30</li>
-                  <li>• Körperfett: 12-18%</li>
-                  <li>• Hohe sportliche Leistung</li>
-                  <li>• BMI nicht aussagekräftig</li>
-                </ul>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-2xl">🏋️</span>
+                  <h4 className="font-bold">Kraftsport / Gewichtheben</h4>
+                </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex-1 bg-muted/50 rounded-full h-3 overflow-hidden">
+                    <div className="bg-red-500 h-full rounded-full" style={{ width: "80%" }} />
+                  </div>
+                  <span className="text-sm font-bold text-orange-500">BMI 28-38</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Im Kraftsport und Gewichtheben sind extrem hohe BMI-Werte normal.
+                  Viele deutsche Gewichtheber würden laut BMI als "stark adipös" gelten — bei exzellenter Gesundheit.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Alternatives */}
+          {/* Alternatives - referencing DSHS and BISp */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-success/10">
@@ -219,11 +310,16 @@ const BMISportler = () => {
               </div>
               <h2 className="text-2xl font-display font-bold">Alternativen zum BMI für Sportler</h2>
             </div>
+            <p className="text-muted-foreground mb-6">
+              Die <strong>Deutsche Sporthochschule Köln (DSHS)</strong> und das <strong>Bundesinstitut für Sportwissenschaft (BISp)</strong> empfehlen
+              folgende Methoden zur Körperzusammensetzungsanalyse bei Athleten:
+            </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b-2 border-border">
                     <th className="text-left py-3 px-4 font-bold">Methode</th>
+                    <th className="text-left py-3 px-4 font-bold">Empfohlen von</th>
                     <th className="text-left py-3 px-4 font-bold">Vorteile</th>
                     <th className="text-left py-3 px-4 font-bold">Richtwerte</th>
                   </tr>
@@ -231,23 +327,27 @@ const BMISportler = () => {
                 <tbody className="text-muted-foreground">
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 font-bold">FFMI</td>
+                    <td className="py-3 px-4">DSHS Köln</td>
                     <td className="py-3 px-4">Berücksichtigt nur fettfreie Masse</td>
                     <td className="py-3 px-4">18-25 natürlich</td>
                   </tr>
                   <tr className="border-b border-border/50">
-                    <td className="py-3 px-4 font-bold">Körperfettanteil</td>
-                    <td className="py-3 px-4">Direkte Messung des Fettanteils</td>
+                    <td className="py-3 px-4 font-bold">Körperfettanteil (BIA)</td>
+                    <td className="py-3 px-4">Olympiastützpunkte</td>
+                    <td className="py-3 px-4">Direkte Messung des Fettanteils per Bioimpedanz</td>
                     <td className="py-3 px-4">Männer: 10-20% | Frauen: 18-28%</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 font-bold">Taillenumfang</td>
-                    <td className="py-3 px-4">Einfacher Indikator für Bauchfett</td>
+                    <td className="py-3 px-4">DGSP</td>
+                    <td className="py-3 px-4">Einfacher Indikator für viszerales Fett</td>
                     <td className="py-3 px-4">Männer: &lt;94 cm | Frauen: &lt;80 cm</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-bold">DEXA-Scan</td>
-                    <td className="py-3 px-4">Präzise Körperzusammensetzung</td>
-                    <td className="py-3 px-4">Goldstandard für Sportler</td>
+                    <td className="py-3 px-4">BISp / Olympiastützpunkte</td>
+                    <td className="py-3 px-4">Präzise Körperzusammensetzung, Goldstandard</td>
+                    <td className="py-3 px-4">Individuell nach Sportart</td>
                   </tr>
                 </tbody>
               </table>
@@ -307,38 +407,124 @@ const BMISportler = () => {
             </div>
             <p className="text-xs text-muted-foreground mt-4">
               Hinweis: Ein FFMI über 25 ist natürlich für einige genetische Ausnahmen erreichbar, aber selten.
+              Die DSHS Köln hat in ihrer Forschung bestätigt, dass ein FFMI von 25 die Obergrenze für die allermeisten Natursportler darstellt.
             </p>
+          </div>
+
+          {/* Sportmedizin in Deutschland - NEW section */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-orange-500/10">
+                <Globe className="w-6 h-6 text-orange-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Sportmedizin in Deutschland</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                Deutschland verfügt über ein weltweit einzigartiges System zur sportmedizinischen Betreuung
+                von Athleten. Der BMI spielt in der professionellen Leistungsdiagnostik eine untergeordnete
+                Rolle — stattdessen setzen Experten auf präzise Messverfahren zur Körperzusammensetzung.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
+              <div className="bg-muted/30 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <h4 className="font-bold">Deutsche Sporthochschule Köln (DSHS)</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Die DSHS ist die einzige reine Sportuniversität in Deutschland und eine der
+                  führenden Einrichtungen weltweit. Ihre Forschung zur Körperzusammensetzung von
+                  Athleten hat maßgeblich dazu beigetragen, die Grenzen des BMI bei Sportlern
+                  wissenschaftlich zu dokumentieren. Die DSHS empfiehlt BIA-Messungen und DEXA-Scans
+                  als Alternative zum BMI.
+                </p>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <h4 className="font-bold">Olympiastützpunkte</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Das Netzwerk der 13 Olympiastützpunkte in Deutschland bietet Kaderathleten
+                  umfassende Leistungsdiagnostik. Zur Körperzusammensetzungsanalyse kommen dort
+                  DEXA-Scans, Hautfaltenmessungen und BIA zum Einsatz — der BMI wird allenfalls als
+                  grober Anhaltspunkt betrachtet und nicht als Gesundheitsindikator für Sportler verwendet.
+                </p>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <h4 className="font-bold">DGSP (Deutsche Gesellschaft für Sportmedizin und Prävention)</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Die DGSP ist die führende sportmedizinische Fachgesellschaft im deutschsprachigen Raum.
+                  Sie legt Leitlinien für die sportärztliche Untersuchung fest und empfiehlt, den BMI
+                  bei Sportlern immer durch ergänzende Messungen der Körperzusammensetzung zu
+                  relativieren. Der Taillenumfang und der Körperfettanteil sind laut DGSP bessere
+                  Indikatoren für die Gesundheit aktiver Menschen.
+                </p>
+              </div>
+              <div className="bg-muted/30 rounded-xl p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <h4 className="font-bold">Betriebssport und Sportvereine</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Deutschland hat mit über 87.000 Sportvereinen und rund 27 Millionen Mitgliedern das
+                  dichteste Vereinsnetz weltweit. Der Betriebssport hat eine lange Tradition:
+                  Viele Unternehmen bieten ihren Mitarbeitern sportmedizinische Check-ups an, bei denen
+                  die Körperzusammensetzung gemessen wird — nicht nur der BMI. Zudem fördert
+                  <strong> §20 SGB V</strong> Gesundheitskurse: Krankenkassen bezuschussen Fitness- und
+                  Sportprogramme mit bis zu 150 Euro pro Kurs, bis zu zwei Kurse jährlich.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Link back to main BMI page */}
+          <div className="text-center">
+            <Link to="/de/bmi" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
+              <Scale className="w-5 h-5" />
+              Zum BMI-Rechner
+            </Link>
           </div>
 
           {/* SEO Content */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-orange-500/10">
-                <Activity className="w-6 h-6 text-orange-500" />
+                <Globe className="w-6 h-6 text-orange-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">BMI und Sportler: Was Sie wissen müssen</h2>
+              <h2 className="text-2xl font-display font-bold">BMI und Sport: Was deutsche Sportmedizin empfiehlt</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Die <strong>BMI-Berechnung für Sportler</strong> liefert oft irreführende Ergebnisse. Egal ob Sie
-                <strong> Bodybuilding</strong>, <strong>CrossFit</strong>, <strong>Rugby</strong> oder andere
-                Kraftsportarten betreiben – Ihr <strong>BMI für Sportler</strong> wird wahrscheinlich zu hoch ausfallen.
+                Die <strong>Deutsche Sporthochschule Köln (DSHS)</strong> gilt als weltweit führende Institution
+                in der Sportwissenschaft und hat in zahlreichen Studien nachgewiesen, dass der <strong>BMI für
+                Sportler</strong> kein valides Maß für die Gesundheit darstellt. Ob Fußball-Bundesliga, Handball
+                oder Wintersport — der <strong>BMI bei Athleten</strong> führt regelmäßig zu Fehlklassifikationen.
               </p>
               <p>
-                Der <strong>BMI bei Bodybuildern</strong> ist besonders verzerrt: Ein natürlicher Bodybuilder kann
-                problemlos einen BMI von 27-28 erreichen und dabei schlank sein. Der <strong>BMI bei Gewichthebern</strong>
-                liegt oft über 30, wird als „adipös" eingestuft, obwohl der Körperfettanteil minimal ist.
+                Das <strong>Bundesinstitut für Sportwissenschaft (BISp)</strong> finanziert Forschungsprojekte
+                zur Leistungsdiagnostik und empfiehlt für Kaderathleten die Körperfettanalyse mittels
+                DEXA-Scan oder bioelektrischer Impedanzanalyse (BIA). Die <strong>Olympiastützpunkte</strong> in
+                Berlin, München, Leipzig und weiteren Standorten setzen diese Verfahren routinemäßig ein.
               </p>
               <p>
-                Für Sportler sind <strong>Körperfettanteil</strong>, <strong>FFMI</strong>
-                (Fettfreie-Masse-Index) oder einfacher <strong>Taillenumfang</strong> besser geeignet. Diese Indikatoren
-                sind relevanter für die Bewertung Ihrer Körperzusammensetzung und Ihres tatsächlichen Gesundheitszustands.
+                Die <strong>DGSP (Deutsche Gesellschaft für Sportmedizin und Prävention)</strong> hat in ihren
+                Leitlinien klargestellt, dass der BMI allein bei sportlich aktiven Menschen nicht als
+                Gesundheitsindikator herangezogen werden sollte. Stattdessen empfehlen deutsche Sportmediziner
+                eine Kombination aus <strong>Körperfettanteil</strong>, <strong>FFMI</strong>,
+                <strong> Taillenumfang</strong> und gegebenenfalls einem <strong>DEXA-Scan</strong>.
               </p>
               <p>
-                <strong>Ist der BMI für Sportler genau</strong>? Nein. <strong>Warum funktioniert der BMI nicht bei
-                muskulösen Menschen</strong>? Weil er nur das Gesamtgewicht berücksichtigt, nicht die Zusammensetzung.
-                Ein <strong>muskulöser BMI</strong> wird immer höher ausfallen, als der tatsächliche Gesundheitszustand
-                vermuten lässt.
+                Für Breitensportler in den über 87.000 deutschen <strong>Sportvereinen</strong> gilt: Lassen Sie
+                Ihren BMI nicht überinterpretieren. Nutzen Sie die Möglichkeiten der <strong>§20 SGB V</strong>-Förderung,
+                um einen von der Krankenkasse bezuschussten Gesundheitskurs zu besuchen, bei dem oft auch eine
+                professionelle Körperzusammensetzungsanalyse angeboten wird. Die <strong>BMI-Berechnung</strong> ist
+                ein erster Anhaltspunkt — aber bei <strong>BMI und Sport</strong> zeigen sich die Grenzen dieser
+                einfachen Formel besonders deutlich.
               </p>
             </div>
           </div>

@@ -54,7 +54,7 @@ const DomandeFrequentiIMC = () => {
             Domande Frequenti
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">FAQ sull'IMC</span>
+            <span className="gradient-text">FAQ IMC</span> : Domande Frequenti sull'IMC
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Risposte alle domande più frequenti sull'Indice di Massa Corporea

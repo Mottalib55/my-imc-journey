@@ -1,13 +1,13 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 const BMIMaenner = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(80);
-  const [height, setHeight] = useState(178);
+  const [weight, setWeight] = useState(85);
+  const [height, setHeight] = useState(180);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightInM = h / 100;
@@ -46,10 +46,10 @@ const BMIMaenner = () => {
             BMI-Rechner für Männer
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-blue-500">BMI für Männer</span>: Berechnen Sie Ihren Index
+            <span className="text-blue-500">BMI für Männer</span> : BMI-Rechner und Idealgewicht
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            BMI-Rechner mit personalisierten Ratschlägen für Männer und männliche Körperzusammensetzung
+            In Deutschland sind 67% der Männer übergewichtig oder adipös (RKI/DEGS-Studie). BMI-Rechner mit Referenzen von RKI, DGEM und der Deutschen Sporthochschule Köln.
           </p>
         </header>
 
@@ -109,14 +109,20 @@ const BMIMaenner = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Der <strong>BMI bei Männern</strong> wird auf die gleiche Weise berechnet wie bei Frauen, aber die Interpretation kann unterschiedlich sein.
-                Männer haben von Natur aus <strong>mehr Muskelmasse</strong> und einen <strong>niedrigeren Körperfettanteil</strong>
-                (15-20% gegenüber 20-25% bei Frauen).
+                Laut der <strong>RKI-Studie „Gesundheit in Deutschland aktuell" (GEDA)</strong> sind <strong>67% der deutschen Männer</strong> übergewichtig oder adipös.
+                Der <strong>durchschnittliche deutsche Mann</strong> ist <strong>1,80 m</strong> groß, wiegt <strong>85 kg</strong> und hat einen
+                <strong> BMI von 26,3</strong> – damit liegt er bereits im Bereich Übergewicht.
               </p>
               <p>
-                Ein Mann kann einen <strong>höheren BMI</strong> haben und trotzdem bei ausgezeichneter Gesundheit sein, wenn er regelmäßig
-                trainiert oder Krafttraining macht. Deshalb ist der <strong>Taillenumfang</strong> oft ein besserer Indikator für Männer:
-                Er sollte <strong>94 cm</strong> (mäßiges Risiko) oder <strong>102 cm</strong> (hohes Risiko) nicht überschreiten.
+                Männer haben von Natur aus <strong>mehr Muskelmasse</strong> und einen <strong>niedrigeren Körperfettanteil</strong>
+                (15-20% gegenüber 20-25% bei Frauen). Laut <strong>DGE-Leitlinien</strong> sollte der <strong>Taillenumfang</strong> bei Männern
+                <strong> 94 cm</strong> (mäßiges Risiko) bzw. <strong>102 cm</strong> (hohes Risiko) nicht überschreiten.
+              </p>
+              <p>
+                Im <strong>DACH-Vergleich</strong> liegt Deutschland (67%) vor <strong>Österreich</strong> (65% übergewichtige Männer),
+                während die <strong>Schweiz</strong> mit nur <strong>52%</strong> deutlich besser abschneidet. In Deutschland ist die
+                <strong> Betriebssport-Kultur</strong> weit verbreitet – viele Unternehmen fördern aktiv die Fitness ihrer Mitarbeiter,
+                was einen positiven Einfluss auf den BMI haben kann.
               </p>
             </div>
           </div>
@@ -135,7 +141,7 @@ const BMIMaenner = () => {
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">Kategorie</th>
                     <th className="text-left py-3 px-4 font-semibold">BMI</th>
-                    <th className="text-left py-3 px-4 font-semibold">Beispiel (1,80 m)</th>
+                    <th className="text-left py-3 px-4 font-semibold">Beispiel (1,80 m, Durchschnitt DE)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -186,12 +192,12 @@ const BMIMaenner = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { height: "1,65 m", min: 50, max: 68, ideal: 60 },
-                { height: "1,70 m", min: 53, max: 72, ideal: 64 },
+                { height: "1,72 m", min: 55, max: 74, ideal: 65 },
                 { height: "1,75 m", min: 57, max: 76, ideal: 67 },
-                { height: "1,80 m", min: 60, max: 81, ideal: 71 },
-                { height: "1,85 m", min: 63, max: 85, ideal: 75 },
-                { height: "1,90 m", min: 67, max: 90, ideal: 79 },
+                { height: "1,78 m", min: 59, max: 79, ideal: 70 },
+                { height: "1,80 m (Durchschn.)", min: 60, max: 81, ideal: 71 },
+                { height: "1,84 m", min: 63, max: 84, ideal: 74 },
+                { height: "1,88 m", min: 65, max: 88, ideal: 78 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-blue-500">{item.height}</span>
@@ -215,19 +221,19 @@ const BMIMaenner = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span><strong>Krafttraining</strong> erhöht die Muskelmasse und damit den BMI</span>
+                  <span><strong>DOSB (Deutscher Olympischer Sportbund)</strong>: 27 Millionen Mitglieder in Sportvereinen</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>Ein muskulöser Mann kann einen <strong>BMI von 27-28</strong> ohne überschüssiges Fett haben</span>
+                  <span><strong>Fußball</strong> ist die beliebteste Sportart deutscher Männer, gefolgt von Turnen und Tennis</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>Kombinieren Sie <strong>Cardio und Kraft</strong> für optimale Balance</span>
+                  <span><strong>DGE empfiehlt 150 Min. moderate Aktivität</strong> pro Woche</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>Streben Sie mindestens <strong>150 Min. moderate Aktivität</strong> pro Woche an</span>
+                  <span><strong>Betriebssport</strong>: viele Unternehmen bieten vergünstigte Fitnessprogramme</span>
                 </li>
               </ul>
             </div>
@@ -242,21 +248,53 @@ const BMIMaenner = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span><strong>Bauchfett</strong> erhöht kardiovaskuläre Risiken</span>
+                  <span><strong>Herz-Kreislauf-Erkrankungen</strong>: Todesursache Nr. 1 bei deutschen Männern (Destatis)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>Nach <strong>40</strong> verlangsamt sich der Stoffwechsel deutlich</span>
+                  <span>Ab <strong>35</strong>: Gesundheits-Check-up alle 3 Jahre (GKV-Leistung)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span><strong>Testosteron</strong> nimmt mit dem Alter ab und fördert Fettzunahme</span>
+                  <span><strong>Diabetes Typ 2</strong> betrifft 9% der deutschen Männer über 40 (RKI)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>Jährliche Gesundheitskontrolle <strong>nach 50 empfohlen</strong></span>
+                  <span><strong>PSA-Test</strong> zur Prostatakrebs-Vorsorge ab 45 (Kassenleistung)</span>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          {/* German Health System */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-blue-500/10">
+                <Globe className="w-6 h-6 text-blue-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">BMI und das deutsche Gesundheitssystem</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                <strong>Krankenkassen</strong> übernehmen in Deutschland die Kosten für <strong>Ernährungsberatung</strong> bei ärztlicher Verordnung –
+                mit geringer Zuzahlung. Dies ist besonders relevant für Männer mit einem BMI über 25, die ihre Ernährung professionell umstellen möchten.
+              </p>
+              <p>
+                Nach <strong>§20 SGB V</strong> haben Versicherte Anspruch auf <strong>Präventionskurse</strong> – bis zu 2 pro Jahr werden von der
+                Krankenkasse bezuschusst, darunter auch Programme zur Gewichtsreduktion und Bewegungsförderung.
+              </p>
+              <p>
+                Einige Krankenkassen bieten <strong>DMP (Disease Management Programme)</strong> speziell für <strong>Adipositas</strong> an,
+                die eine strukturierte Begleitung bei der Gewichtsabnahme ermöglichen.
+              </p>
+              <p>
+                Für Männer mit einem <strong>BMI über 35</strong> können <strong>Rehabilitationskuren (Kur)</strong> über die
+                <strong> Deutsche Rentenversicherung</strong> beantragt werden – ein wichtiger Baustein der stationären Behandlung.
+              </p>
+              <p>
+                <strong>Bariatrische Chirurgie</strong> wird in Deutschland bei einem <strong>BMI ab 40</strong> oder ab
+                <strong> BMI 35 mit Begleiterkrankungen</strong> (z.B. Diabetes, Bluthochdruck) von den Krankenkassen genehmigt.
+              </p>
             </div>
           </div>
 
@@ -266,23 +304,25 @@ const BMIMaenner = () => {
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <Activity className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Alles über den männlichen BMI</h2>
+              <h2 className="text-2xl font-display font-bold">BMI für Männer in Deutschland, Österreich und der Schweiz</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Der <strong>BMI-Rechner für Männer</strong> ist wichtig für die Bewertung Ihrer <strong>männlichen Körperzusammensetzung</strong>.
-                Ob Sie nach Ihrem <strong>idealen BMI für Männer</strong> suchen oder prüfen möchten, ob Sie ein
-                <strong> gesundes Gewicht für Männer</strong> haben, unser <strong>BMI-Rechner für Männer</strong> gibt Ihnen sofortige Antworten.
+                Der <strong>BMI-Rechner für Männer</strong> basiert auf Daten des <strong>Robert Koch-Instituts (RKI)</strong>, der
+                <strong> Deutschen Gesellschaft für Ernährungsmedizin (DGEM)</strong> und der <strong>Bundeszentrale für gesundheitliche
+                Aufklärung (BZgA)</strong>. Für einen Mann mit <strong>1,80 m</strong> liegt das <strong>Idealgewicht bei etwa 71 kg</strong>,
+                was einem BMI von 21,9 entspricht.
               </p>
               <p>
-                Der <strong>durchschnittliche BMI für Männer</strong> variiert je nach Alter und Aktivitätsniveau. Ein <strong>normaler BMI für Männer</strong>
-                liegt zwischen 20 und 25. Für einen Mann mit <strong>1,78 m</strong> liegt das <strong>Idealgewicht</strong> bei etwa
-                70 kg. Für einen <strong>1,83 m großen Mann</strong> sind es etwa 74 kg.
+                Im <strong>DACH-Vergleich</strong> zeigen sich deutliche Unterschiede: In <strong>Deutschland</strong> sind 67% der Männer übergewichtig,
+                in <strong>Österreich</strong> 65% und in der <strong>Schweiz</strong> nur 52%. Die <strong>Deutsche Sporthochschule Köln</strong> betont,
+                dass neben dem BMI auch der Körperfettanteil und die Fitness entscheidend sind.
               </p>
               <p>
-                <strong>Welchen BMI sollte ich als Mann haben</strong>? Der ideale Bereich liegt bei 20-25, aber sportliche Männer können höher liegen.
-                Der <strong>BMI für Männer über 50</strong> kann leicht höhere Werte tolerieren (bis zu 27) ohne großes Risiko.
-                Der Schlüssel ist die Aufrechterhaltung regelmäßiger körperlicher Aktivität und ausgewogener Ernährung.
+                Laut <strong>Destatis</strong> und dem <strong>RKI</strong> steigt der durchschnittliche BMI deutscher Männer mit dem Alter:
+                20-29 Jahre (BMI 24,5), 30-39 Jahre (BMI 26,1), 40-49 Jahre (BMI 27,0), 50+ Jahre (BMI 27,8).
+                Der <strong>BMI für Männer über 50</strong> kann leicht höhere Werte tolerieren (bis zu 27) ohne erhöhtes Risiko,
+                sofern regelmäßige Bewegung und eine ausgewogene Ernährung beibehalten werden.
               </p>
             </div>
           </div>

@@ -7,19 +7,26 @@
   </defs>
   <!-- Background -->
   <rect width="512" height="512" rx="96" fill="url(#bg)"/>
-  <!-- Gauge arc - underweight (blue) -->
-  <path d="M 110 320 A 170 170 0 0 1 160 190" stroke="#60a5fa" stroke-width="36" fill="none" stroke-linecap="round"/>
-  <!-- Gauge arc - normal (green) -->
-  <path d="M 170 180 A 170 170 0 0 1 342 180" stroke="#4ade80" stroke-width="36" fill="none" stroke-linecap="round"/>
-  <!-- Gauge arc - overweight (yellow) -->
-  <path d="M 352 190 A 170 170 0 0 1 390 268" stroke="#facc15" stroke-width="36" fill="none" stroke-linecap="round"/>
-  <!-- Gauge arc - obese (red) -->
-  <path d="M 395 280 A 170 170 0 0 1 402 320" stroke="#f87171" stroke-width="36" fill="none" stroke-linecap="round"/>
-  <!-- Needle pointing to normal range -->
-  <line x1="256" y1="330" x2="235" y2="185" stroke="white" stroke-width="12" stroke-linecap="round"/>
-  <!-- Center dot -->
-  <circle cx="256" cy="330" r="22" fill="white"/>
-  <!-- Small person silhouette below gauge -->
-  <circle cx="256" cy="400" r="16" fill="white" opacity="0.9"/>
-  <path d="M 256 416 L 256 460 M 236 436 L 276 436 M 244 480 L 256 460 L 268 480" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <!-- Gauge: underweight (blue) -->
+  <path d="M 100 280 A 175 175 0 0 1 150 172" stroke="#60a5fa" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <!-- Gauge: normal (green) -->
+  <path d="M 162 158 A 175 175 0 0 1 350 158" stroke="#4ade80" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <!-- Gauge: overweight (yellow) -->
+  <path d="M 362 172 A 175 175 0 0 1 400 250" stroke="#fbbf24" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <!-- Gauge: obese (red) -->
+  <path d="M 405 262 A 175 175 0 0 1 412 280" stroke="#f87171" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <!-- Running person - head -->
+  <circle cx="240" cy="310" r="25" fill="white"/>
+  <!-- Running person - torso -->
+  <line x1="243" y1="335" x2="254" y2="395" stroke="white" stroke-width="13" stroke-linecap="round"/>
+  <!-- Running person - arm forward -->
+  <path d="M 248 358 L 292 330" stroke="white" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <!-- Running person - arm back -->
+  <path d="M 248 364 L 208 385" stroke="white" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <!-- Running person - leg forward -->
+  <path d="M 254 395 L 222 442 L 208 470" stroke="white" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Running person - leg back -->
+  <path d="M 254 395 L 292 438 L 314 462" stroke="white" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart (health) -->
+  <path d="M 308 335 C 308 326, 320 320, 327 328 C 334 320, 346 326, 346 335 C 346 350, 327 362, 327 362 C 327 362, 308 350, 308 335 Z" fill="#f472b6"/>
 </svg>

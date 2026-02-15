@@ -18,7 +18,7 @@ const LimitacoesIMC = () => {
             As limitações do IMC
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">Limitações do IMC</span> : O que ele não diz
+            <span className="text-warning">Limitações do IMC</span> : O que o IMC Não Revela
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Por que o IMC não é um indicador perfeito e quando ele pode ser enganoso

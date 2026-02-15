@@ -19,7 +19,7 @@ const SwasthyaVajan = () => {
             स्वास्थ्य और कल्याण
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-success">स्वास्थ्य और वजन</span> : संपूर्ण मार्गदर्शिका
+            <span className="text-success">स्वास्थ्य और वजन</span> : संपूर्ण कल्याण मार्गदर्शिका
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             वजन, बीएमआई और समग्र स्वास्थ्य के बीच संबंध को समझें

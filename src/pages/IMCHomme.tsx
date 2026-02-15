@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { BMICalculator } from "@/components/BMICalculator";
 import { BMIGauge } from "@/components/BMIGauge";
 import { BMIDetails } from "@/components/BMIDetails";
-import { User, Dumbbell, Target, Heart, Scale, TrendingUp, Activity, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { User, Dumbbell, Target, Heart, Scale, TrendingUp, Activity, AlertTriangle, CheckCircle2, Globe, BookOpen } from "lucide-react";
 
 const IMCHomme = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -34,10 +34,10 @@ const IMCHomme = () => {
             Calculateur spécial hommes
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-blue-500">IMC Homme</span> : Calculez votre indice
+            <span className="text-blue-500">IMC Homme</span> : Calcul IMC Masculin et Poids Idéal
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Calculateur d'IMC adapté aux hommes avec des conseils personnalisés selon votre profil masculin
+            En France, <strong>47% des hommes sont en surpoids ou obèses</strong> (Santé Publique France, ObÉpi-Roche 2023). Calculateur d'IMC adapté au profil masculin français avec des références HAS et INSERM.
           </p>
         </header>
 
@@ -64,14 +64,15 @@ const IMCHomme = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                L'<strong>IMC homme</strong> se calcule de la même manière que pour les femmes : poids divisé par la taille au carré.
-                Cependant, l'interprétation peut varier car les hommes ont naturellement une <strong>masse musculaire plus importante</strong>
-                et un <strong>taux de graisse corporelle plus bas</strong> (15-20% contre 20-25% chez les femmes).
+                L'<strong>IMC homme</strong> se calcule par la formule poids ÷ taille². Selon l'<strong>étude ObÉpi-Roche 2023</strong>,
+                l'IMC moyen des hommes français est de <strong>25,8</strong>, légèrement au-dessus du seuil de surpoids.
+                La taille moyenne masculine en France est de <strong>1,78 m</strong> pour un poids moyen de <strong>81 kg</strong>.
               </p>
               <p>
-                Un homme peut avoir un <strong>IMC élevé</strong> tout en étant en excellente santé s'il pratique la musculation
-                ou un sport intensif. C'est pourquoi le <strong>tour de taille</strong> est souvent un meilleur indicateur
-                pour les hommes : il ne devrait pas dépasser <strong>94 cm</strong> (risque modéré) ou <strong>102 cm</strong> (risque élevé).
+                Les hommes ont naturellement une <strong>masse musculaire plus importante</strong> (15-20% de graisse corporelle
+                contre 20-25% chez les femmes), ce qui peut fausser l'interprétation de l'IMC. La <strong>HAS</strong> (Haute
+                Autorité de Santé) recommande de compléter l'IMC par la mesure du <strong>tour de taille</strong> :
+                il ne devrait pas dépasser <strong>94 cm</strong> (risque modéré) ou <strong>102 cm</strong> (risque élevé selon l'OMS).
               </p>
             </div>
           </div>
@@ -90,7 +91,7 @@ const IMCHomme = () => {
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">Catégorie</th>
                     <th className="text-left py-3 px-4 font-semibold">IMC</th>
-                    <th className="text-left py-3 px-4 font-semibold">Exemple (1m80)</th>
+                    <th className="text-left py-3 px-4 font-semibold">Exemple (1m78, moyenne FR)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -100,7 +101,7 @@ const IMCHomme = () => {
                       Maigreur
                     </td>
                     <td className="py-3 px-4">&lt; 18,5</td>
-                    <td className="py-3 px-4">&lt; 60 kg</td>
+                    <td className="py-3 px-4">&lt; 59 kg</td>
                   </tr>
                   <tr className="border-b border-border/50 bg-success/5">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -108,7 +109,7 @@ const IMCHomme = () => {
                       Poids normal
                     </td>
                     <td className="py-3 px-4">18,5 - 24,9</td>
-                    <td className="py-3 px-4">60 - 81 kg</td>
+                    <td className="py-3 px-4">59 - 79 kg</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -116,7 +117,7 @@ const IMCHomme = () => {
                       Surpoids
                     </td>
                     <td className="py-3 px-4">25 - 29,9</td>
-                    <td className="py-3 px-4">81 - 97 kg</td>
+                    <td className="py-3 px-4">79 - 95 kg</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -124,7 +125,7 @@ const IMCHomme = () => {
                       Obésité
                     </td>
                     <td className="py-3 px-4">≥ 30</td>
-                    <td className="py-3 px-4">&gt; 97 kg</td>
+                    <td className="py-3 px-4">&gt; 95 kg</td>
                   </tr>
                 </tbody>
               </table>
@@ -141,12 +142,12 @@ const IMCHomme = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { height: "1m65", min: 50, max: 68, ideal: 60 },
-                { height: "1m70", min: 53, max: 72, ideal: 64 },
+                { height: "1m68", min: 52, max: 70, ideal: 62 },
+                { height: "1m72", min: 55, max: 74, ideal: 65 },
                 { height: "1m75", min: 57, max: 76, ideal: 67 },
-                { height: "1m80", min: 60, max: 81, ideal: 71 },
-                { height: "1m85", min: 63, max: 85, ideal: 75 },
-                { height: "1m90", min: 67, max: 90, ideal: 79 },
+                { height: "1m78 (moy. FR)", min: 59, max: 79, ideal: 70 },
+                { height: "1m82", min: 61, max: 83, ideal: 73 },
+                { height: "1m86", min: 64, max: 86, ideal: 76 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-blue-500">{item.height}</span>
@@ -215,24 +216,96 @@ const IMCHomme = () => {
             </div>
           </div>
 
-          {/* SEO Content for Men */}
+          {/* Santé masculine en France : les chiffres clés */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-blue-500/10">
+                <Globe className="w-6 h-6 text-blue-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Santé masculine en France : les chiffres clés</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                Selon l'enquête <strong>ObÉpi-Roche 2023</strong> et les données de <strong>Santé Publique France</strong>,
+                la situation des hommes français est préoccupante : <strong>36% sont en surpoids</strong> (IMC 25-30) et
+                <strong> 17% sont obèses</strong> (IMC ≥ 30). Les hommes sont plus touchés que les femmes (47% vs 44% en surpoids/obésité).
+              </p>
+              <p>
+                Les <strong>disparités régionales</strong> sont marquées : le nord de la France (Hauts-de-France, Grand Est) affiche
+                des taux de surpoids masculin supérieurs à <strong>52%</strong>, tandis que l'Île-de-France et l'Occitanie restent
+                autour de <strong>42%</strong>. Les catégories socio-professionnelles jouent aussi un rôle : les ouvriers ont un
+                IMC moyen de <strong>26,3</strong> contre <strong>25,1</strong> chez les cadres (INSERM, CONSTANCES).
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mt-4">
+                <div className="p-4 bg-blue-500/5 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-blue-500">25,8</div>
+                  <div className="text-sm mt-1">IMC moyen hommes FR</div>
+                </div>
+                <div className="p-4 bg-warning/5 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-warning">47%</div>
+                  <div className="text-sm mt-1">en surpoids ou obèses</div>
+                </div>
+                <div className="p-4 bg-destructive/5 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-destructive">1,78 m</div>
+                  <div className="text-sm mt-1">taille moyenne masculine</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Parcours de soins en France */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-blue-500/10">
+                <BookOpen className="w-6 h-6 text-blue-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Surpoids masculin : le parcours de soins en France</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                La <strong>HAS</strong> (Haute Autorité de Santé) a défini un parcours de soins spécifique pour les hommes
+                en surpoids ou obèses. Le <strong>médecin traitant</strong> est le premier interlocuteur et peut orienter vers :
+              </p>
+              <ul className="space-y-3 ml-4">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Nutritionniste ou diététicien</strong> : consultations remboursées à 70% par la Sécurité Sociale sur prescription médicale (bilan initial + suivi)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Programme PNNS « Manger Bouger »</strong> : recommandations adaptées aux hommes actifs, incluant les besoins caloriques de 2 200-2 600 kcal/jour</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>APA (Activité Physique Adaptée)</strong> : prescrite sur ordonnance depuis 2016 (décret « Sport sur ordonnance »), remboursée par certaines mutuelles</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Chirurgie bariatrique</strong> : prise en charge à 100% par l'Assurance Maladie pour un IMC ≥ 40, ou ≥ 35 avec comorbidités (après 6-12 mois de suivi pluridisciplinaire)</span>
+                </li>
+              </ul>
+              <p>
+                Le <strong>bilan de santé gratuit</strong> de la Sécurité Sociale (examen de prévention en santé) est disponible
+                tous les 5 ans et inclut IMC, tour de taille, bilan lipidique et glycémie à jeun — particulièrement recommandé
+                pour les hommes de plus de <strong>40 ans</strong> avec un IMC supérieur à 25.
+              </p>
+            </div>
+          </div>
+
+          {/* SEO Content enrichi */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <Activity className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Tout savoir sur l'IMC masculin</h2>
+              <h2 className="text-2xl font-display font-bold">Tout savoir sur l'IMC masculin en France</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
                 Le <strong>calcul IMC homme</strong> est essentiel pour évaluer votre <strong>corpulence masculine</strong>.
-                Que vous cherchiez à connaître votre <strong>IMC homme idéal</strong> ou à vérifier si vous êtes en
-                <strong> surpoids homme</strong>, notre <strong>calculateur IMC homme</strong> vous donne une réponse instantanée.
-              </p>
-              <p>
-                L'<strong>indice de masse corporelle homme</strong> se situe idéalement entre 20 et 25. Un <strong>IMC homme normal</strong>
-                correspond à un <strong>poids santé homme</strong> qui varie selon votre taille. Pour un homme de <strong>1m75</strong>,
-                le <strong>poids idéal homme</strong> est d'environ 67 kg. Pour un homme de <strong>1m80</strong>, il est d'environ 71 kg.
+                Pour un homme français moyen de <strong>1m78</strong>, le <strong>poids idéal</strong> se situe entre
+                <strong> 59 et 79 kg</strong> (IMC 18,5 à 24,9). L'IMC moyen observé en France est de <strong>25,8</strong>,
+                soit légèrement en surpoids.
               </p>
               <p>
                 Le <strong>calcul du poids idéal homme</strong> prend en compte votre morphologie. Les hommes de type
@@ -241,9 +314,10 @@ const IMCHomme = () => {
                 atteindre 27-28 chez les pratiquants de musculation intensive.
               </p>
               <p>
-                Pour les hommes de plus de <strong>50 ans</strong>, l'<strong>IMC homme 50 ans</strong> peut être légèrement
-                plus élevé (jusqu'à 27) sans risque majeur. L'<strong>IMC homme 60 ans</strong> suit la même logique,
-                l'important étant de maintenir une activité physique régulière et une alimentation équilibrée.
+                L'<strong>INSERM</strong> a démontré que le risque cardiovasculaire chez les hommes français augmente
+                significativement dès un IMC de <strong>27</strong>. Pour les hommes de plus de <strong>50 ans</strong>,
+                l'<strong>IMC homme 50 ans</strong> peut tolérer un léger surpoids (jusqu'à 27) si le tour de taille
+                reste inférieur à <strong>94 cm</strong> et que le bilan lipidique est normal.
               </p>
             </div>
           </div>

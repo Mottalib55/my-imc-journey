@@ -1,13 +1,13 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles } from "lucide-react";
+import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 const IMCMulherPt = () => {
   const [bmi, setBmi] = useState<number | null>(null);
   const [weight, setWeight] = useState(65);
-  const [height, setHeight] = useState(165);
+  const [height, setHeight] = useState(161);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightInM = h / 100;
@@ -46,10 +46,10 @@ const IMCMulherPt = () => {
             Calculadora IMC para Mulheres
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-pink-500">IMC Mulher</span>: Calcule seu Indice
+            <span className="text-pink-500">IMC Mulher</span> : Calculadora IMC Feminino e Peso
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Calculadora de IMC com conselhos personalizados para cada fase da vida de uma mulher
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            No Brasil, 62,6% das mulheres estão com sobrepeso ou obesidade (VIGITEL 2023). Calculadora IMC com referências ABESO, VIGITEL e Guia Alimentar Brasileiro.
           </p>
         </header>
 
@@ -105,18 +105,22 @@ const IMCMulherPt = () => {
               <div className="p-3 rounded-xl bg-pink-500/10">
                 <Users className="w-6 h-6 text-pink-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Entendendo o IMC em Mulheres</h2>
+              <h2 className="text-2xl font-display font-bold">Entendendo o IMC em Mulheres Brasileiras e Portuguesas</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                O <strong>IMC feminino</strong> e calculado da mesma forma que para homens, mas a interpretacao difere ligeiramente.
-                Mulheres naturalmente tem uma <strong>porcentagem de gordura corporal mais alta</strong> (20-25% vs 15-20% para homens),
-                o que e completamente normal e necessario para o funcionamento hormonal adequado.
+                Segundo o <strong>VIGITEL 2023</strong> (Ministério da Saúde), <strong>62,6% das mulheres brasileiras</strong> estão com sobrepeso ou obesidade,
+                sendo <strong>24,4% obesas</strong>. Em <strong>Portugal</strong>, cerca de <strong>55% das mulheres</strong> apresentam sobrepeso ou obesidade (DGS).
+                A mulher brasileira média mede <strong>1,61 m</strong> e pesa <strong>65 kg</strong> (IBGE).
               </p>
               <p>
-                A <strong>circunferencia da cintura ideal</strong> para uma mulher nao deve exceder <strong>80 cm</strong>
-                (risco moderado) ou <strong>88 cm</strong> (risco alto). Este indicador e frequentemente mais relevante
-                que apenas o IMC, pois mede a gordura abdominal, que e mais perigosa para a saude.
+                Existem diferenças regionais significativas no Brasil: a região <strong>Sul apresenta 27,1% de obesidade feminina</strong>,
+                enquanto o <strong>Norte registra 19,3%</strong>. Fatores socioeconômicos, culturais e de acesso a alimentação saudável explicam essas variações.
+              </p>
+              <p>
+                A <strong>circunferência da cintura</strong> é um indicador complementar essencial segundo a <strong>ABESO</strong>:
+                acima de <strong>80 cm</strong> indica risco cardiovascular moderado, e acima de <strong>88 cm</strong> indica risco alto.
+                Este indicador mede a gordura abdominal visceral, mais perigosa para a saúde do que a gordura subcutânea.
               </p>
             </div>
           </div>
@@ -135,7 +139,7 @@ const IMCMulherPt = () => {
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">Categoria</th>
                     <th className="text-left py-3 px-4 font-semibold">IMC</th>
-                    <th className="text-left py-3 px-4 font-semibold">Exemplo (1,65m)</th>
+                    <th className="text-left py-3 px-4 font-semibold">Exemplo (1,61 m, média BR)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -145,7 +149,7 @@ const IMCMulherPt = () => {
                       Abaixo do peso
                     </td>
                     <td className="py-3 px-4">&lt; 18,5</td>
-                    <td className="py-3 px-4">&lt; 50 kg</td>
+                    <td className="py-3 px-4">&lt; 48 kg</td>
                   </tr>
                   <tr className="border-b border-border/50 bg-success/5">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -153,7 +157,7 @@ const IMCMulherPt = () => {
                       Peso normal
                     </td>
                     <td className="py-3 px-4">18,5 - 24,9</td>
-                    <td className="py-3 px-4">50 - 68 kg</td>
+                    <td className="py-3 px-4">48 - 65 kg</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -161,7 +165,7 @@ const IMCMulherPt = () => {
                       Sobrepeso
                     </td>
                     <td className="py-3 px-4">25 - 29,9</td>
-                    <td className="py-3 px-4">68 - 81 kg</td>
+                    <td className="py-3 px-4">65 - 78 kg</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -169,7 +173,7 @@ const IMCMulherPt = () => {
                       Obesidade
                     </td>
                     <td className="py-3 px-4">≥ 30</td>
-                    <td className="py-3 px-4">&gt; 81 kg</td>
+                    <td className="py-3 px-4">&gt; 78 kg</td>
                   </tr>
                 </tbody>
               </table>
@@ -186,12 +190,12 @@ const IMCMulherPt = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { height: "1,55 m", min: 44, max: 60, ideal: 53 },
-                { height: "1,60 m", min: 47, max: 64, ideal: 56 },
-                { height: "1,65 m", min: 50, max: 68, ideal: 60 },
-                { height: "1,70 m", min: 53, max: 72, ideal: 64 },
-                { height: "1,75 m", min: 57, max: 76, ideal: 67 },
-                { height: "1,80 m", min: 60, max: 81, ideal: 71 },
+                { height: "1,53 m", min: 43, max: 58, ideal: 51 },
+                { height: "1,57 m", min: 46, max: 61, ideal: 54 },
+                { height: "1,61 m (média BR)", min: 48, max: 65, ideal: 57 },
+                { height: "1,64 m", min: 50, max: 67, ideal: 59 },
+                { height: "1,68 m", min: 52, max: 70, ideal: 62 },
+                { height: "1,72 m", min: 55, max: 74, ideal: 65 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-pink-500">{item.height}</span>
@@ -219,15 +223,15 @@ const IMCMulherPt = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span>A <strong>retencao de liquidos</strong> e normal antes da menstruacao</span>
+                  <span><strong>SOP afeta 15% das brasileiras</strong> (FEBRASGO), dificultando o controle de peso</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span>Pese-se sempre no <strong>mesmo momento</strong> do ciclo</span>
+                  <span>Pese-se sempre no <strong>mesmo momento</strong> do ciclo para comparações precisas</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span>A <strong>menopausa</strong> muda os padroes de distribuicao de gordura</span>
+                  <span>A <strong>transição menopáusica no Brasil</strong> ocorre em média aos <strong>48 anos</strong>, alterando a distribuição de gordura</span>
                 </li>
               </ul>
             </div>
@@ -242,21 +246,77 @@ const IMCMulherPt = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>O IMC <strong>nao se aplica</strong> durante a gravidez</span>
+                  <span><strong>SUS</strong>: pré-natal completo gratuito com monitoramento de peso em todas as UBS</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>Ganho de peso recomendado: <strong>11-16 kg</strong> (IMC normal)</span>
+                  <span><strong>Diabetes gestacional</strong>: afeta <strong>18% das gestantes brasileiras</strong> (FEBRASGO)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>Consulte seu <strong>ginecologista</strong> para acompanhamento personalizado</span>
+                  <span>Ganho de peso recomendado: <strong>11-16 kg</strong> (IMC normal pré-gestacional)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>A perda de peso pos-parto leva <strong>tempo</strong> - seja paciente</span>
+                  <span><strong>Programa Mãe Coruja</strong> (Pernambuco) e outros programas estaduais de acompanhamento materno</span>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          {/* Cultura do Corpo Feminino no Brasil */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-amber-500/10">
+                <AlertTriangle className="w-6 h-6 text-amber-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Cultura do Corpo Feminino no Brasil</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                O Brasil possui uma cultura única de <strong>"culto ao corpo"</strong> que impacta diretamente a saúde mental e física das mulheres.
+                O país é <strong>1º lugar mundial em cirurgias plásticas femininas</strong> segundo a ISAPS (International Society of Aesthetic Plastic Surgery),
+                refletindo a pressão estética intensa sobre o corpo feminino.
+              </p>
+              <p>
+                Essa pressão contribui para o aumento de <strong>transtornos alimentares</strong> como anorexia e bulimia,
+                especialmente entre mulheres jovens de 15 a 29 anos. O uso excessivo de redes sociais amplifica a comparação corporal
+                e a insatisfação com a autoimagem.
+              </p>
+              <p>
+                O movimento <strong>body positive</strong> vem ganhando força no Brasil, aliado a campanhas como o <strong>Outubro Rosa</strong>,
+                que promovem uma relação mais saudável com o corpo. A evolução dos <strong>padrões de beleza</strong> — do "corpo violão"
+                ao body positive — representa uma mudança cultural importante. O IMC deve ser usado como ferramenta de saúde,
+                nunca como meta estética.
+              </p>
+            </div>
+          </div>
+
+          {/* O SUS e a Saúde da Mulher */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-pink-500/10">
+                <Globe className="w-6 h-6 text-pink-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">O SUS e a Saúde da Mulher</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                O <strong>Sistema Único de Saúde (SUS)</strong> oferece atendimento integral à saúde da mulher, incluindo
+                <strong> mamografia gratuita</strong> a partir dos 40 anos, exame de <strong>Papanicolaou</strong> e
+                <strong> acompanhamento nutricional</strong> via NASF (Núcleo Ampliado de Saúde da Família).
+                Esses serviços são essenciais para a prevenção e promoção da saúde feminina em todas as faixas de IMC.
+              </p>
+              <p>
+                Para mulheres com <strong>obesidade grau III</strong> (IMC ≥ 40) ou grau II (IMC ≥ 35) com comorbidades,
+                o SUS disponibiliza a <strong>cirurgia bariátrica</strong> gratuitamente, após avaliação multidisciplinar
+                de pelo menos 2 anos. É um dos maiores programas públicos de cirurgia bariátrica do mundo.
+              </p>
+              <p>
+                O <strong>"Programa Saúde da Mulher"</strong> do Ministério da Saúde integra ações de planejamento familiar,
+                saúde reprodutiva, prevenção do câncer de mama e colo de útero, e orientação nutricional.
+                Em Portugal, o <strong>SNS</strong> (Serviço Nacional de Saúde) oferece serviços semelhantes através da DGS (Direção-Geral da Saúde).
+              </p>
             </div>
           </div>
 
@@ -270,14 +330,14 @@ const IMCMulherPt = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Durante a <strong>menopausa</strong>, as mudancas hormonais favorecem o ganho de peso, especialmente na
-                area abdominal. O metabolismo desacelera e a massa muscular diminui naturalmente.
-                Portanto e normal ganhar alguns quilos apos os 50.
+                Durante a <strong>menopausa</strong>, as mudanças hormonais favorecem o ganho de peso, especialmente na
+                área abdominal. O metabolismo desacelera e a massa muscular diminui naturalmente.
+                Portanto é normal ganhar alguns quilos após os 50.
               </p>
               <p>
-                Para manter um <strong>IMC saudavel apos os 50</strong> ou <strong>IMC apos os 60</strong>,
-                foque em uma dieta rica em <strong>proteinas</strong> e <strong>calcio</strong>,
-                e mantenha atividade fisica regular incluindo <strong>treino de forca</strong>.
+                Para manter um <strong>IMC saudável após os 50</strong> ou <strong>IMC após os 60</strong>,
+                foque em uma dieta rica em <strong>proteínas</strong> e <strong>cálcio</strong>,
+                e mantenha atividade física regular incluindo <strong>treino de força</strong>.
               </p>
             </div>
           </div>
@@ -292,26 +352,27 @@ const IMCMulherPt = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                A <strong>calculadora de IMC para mulheres</strong> e uma ferramenta essencial para avaliar sua <strong>composicao corporal feminina</strong>.
-                Se voce esta procurando seu <strong>IMC ideal para mulheres</strong> ou verificar seu <strong>peso saudavel para mulheres</strong>,
-                nossa <strong>calculadora IMC feminina</strong> da respostas instantaneas e personalizadas.
+                A <strong>calculadora de IMC para mulheres</strong> é uma ferramenta essencial para avaliar sua <strong>composição corporal feminina</strong>.
+                Baseada nas referências da <strong>ABESO</strong> (Associação Brasileira para o Estudo da Obesidade),
+                dos dados do <strong>VIGITEL</strong> (Ministério da Saúde) e das diretrizes da <strong>FEBRASGO</strong>,
+                nossa calculadora oferece respostas instantâneas e contextualizadas para a realidade brasileira e portuguesa.
               </p>
               <p>
-                O <strong>IMC ideal para mulheres</strong> esta entre 19 e 24. Um <strong>IMC normal para mulheres</strong>
-                corresponde a um peso que varia por altura. Para uma mulher de <strong>1,60 m</strong>,
-                o <strong>peso ideal</strong> e aproximadamente 56 kg. Para uma mulher de <strong>1,65 m</strong>, e aproximadamente 60 kg.
+                O <strong>IMC ideal para mulheres</strong> está entre 19 e 24. Para a mulher brasileira média de <strong>1,61 m</strong> (IBGE),
+                o <strong>peso ideal</strong> é aproximadamente 57 kg. O <strong>Guia Alimentar para a População Brasileira</strong>
+                recomenda uma alimentação baseada em alimentos in natura e minimamente processados para manter um peso saudável.
               </p>
               <p>
-                <strong>Qual deve ser meu IMC mulher</strong>? A faixa saudavel e 18,5-24,9, mas mulheres atleticas podem estar ligeiramente mais altas.
-                O <strong>IMC para mulheres acima de 40</strong> permanece numericamente igual, mas a composicao corporal muda.
-                O <strong>IMC para mulheres acima de 50</strong> pode tolerar alguns quilos extras - foque em manter-se ativa.
+                <strong>Qual deve ser meu IMC mulher</strong>? A faixa saudável é 18,5-24,9, mas mulheres atléticas podem estar ligeiramente acima.
+                O <strong>IMC para mulheres acima de 40</strong> permanece numericamente igual, mas a composição corporal muda.
+                Consulte dados da <strong>DGS Portugal</strong> e do <strong>Ministério da Saúde do Brasil</strong> para orientações atualizadas.
               </p>
             </div>
           </div>
         </div>
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
-          <p>© 2024 Calculadora IMC para Mulheres - Ferramenta Informativa</p>
+          <p>© 2024 Calculadora IMC para Mulheres — Fontes: ABESO, VIGITEL, FEBRASGO, IBGE, Ministério da Saúde, DGS Portugal</p>
         </footer>
       </div>
     </div>

@@ -18,7 +18,7 @@ const SihaWazn = () => {
             الصحة والعافية
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-success">الصحة والوزن</span>: دليل شامل
+            <span className="text-success">الصحة والوزن</span> : دليل شامل للوزن الصحي
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             فهم العلاقة بين الوزن ومؤشر كتلة الجسم والصحة العامة

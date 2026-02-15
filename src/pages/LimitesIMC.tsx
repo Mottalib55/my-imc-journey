@@ -18,10 +18,10 @@ const LimitesIMC = () => {
             Les limites de l'IMC
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">Limites de l'IMC</span> : Ce qu'il ne dit pas
+            <span className="text-warning">Limites de l'IMC</span> : Ce que l'Indice ne Dit Pas
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pourquoi l'IMC n'est pas un indicateur parfait et quand il peut être trompeur
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Ce que la HAS, l'INSERM et l'ANSES disent des limites de l'IMC — et pourquoi le tour de taille est indispensable en France
           </p>
         </header>
 
@@ -30,10 +30,12 @@ const LimitesIMC = () => {
           <div className="flex items-start gap-4">
             <AlertTriangle className="w-6 h-6 text-warning flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-bold text-warning mb-2">L'IMC est un outil de dépistage, pas un diagnostic</h3>
+              <h3 className="font-bold text-warning mb-2">L'IMC est un outil de dépistage, pas un diagnostic — position officielle de la HAS</h3>
               <p className="text-muted-foreground">
-                Créé en 1832 par Adolphe Quetelet, l'IMC a été conçu pour des études statistiques de population,
-                pas pour évaluer la santé individuelle. Il présente plusieurs limitations importantes.
+                Créé en 1832 par le mathématicien belge <strong>Adolphe Quetelet</strong>, l'IMC a été conçu pour des études
+                statistiques de population, pas pour évaluer la santé individuelle. La <strong>HAS</strong> (Haute Autorité de Santé)
+                et l'<strong>INSERM</strong> soulignent qu'il doit toujours être complété par le <strong>tour de taille</strong>
+                et un <strong>bilan métabolique</strong>.
               </p>
             </div>
           </div>
@@ -55,7 +57,7 @@ const LimitesIMC = () => {
                   <div>
                     <h4 className="font-bold">La composition corporelle</h4>
                     <p className="text-sm text-muted-foreground">
-                      L'IMC ne distingue pas le muscle de la graisse. 1 kg de muscle = 1 kg de graisse pour l'IMC.
+                      L'IMC ne distingue pas le muscle de la graisse. L'INSEP montre que Teddy Riner (IMC ~39) est classé « obèse morbide » alors qu'il est au sommet de sa forme.
                     </p>
                   </div>
                 </div>
@@ -64,7 +66,7 @@ const LimitesIMC = () => {
                   <div>
                     <h4 className="font-bold">La répartition des graisses</h4>
                     <p className="text-sm text-muted-foreground">
-                      La graisse abdominale est plus dangereuse que la graisse sous-cutanée. L'IMC ne le voit pas.
+                      La graisse viscérale (abdominale) est la plus dangereuse pour le risque cardiovasculaire. La HAS recommande le tour de taille en complément car l'IMC ne voit pas cette répartition.
                     </p>
                   </div>
                 </div>
@@ -82,9 +84,9 @@ const LimitesIMC = () => {
                 <div className="flex items-start gap-3">
                   <XCircle className="w-5 h-5 text-destructive mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-bold">L'état de santé métabolique</h4>
+                    <h4 className="font-bold">L'état de santé métabolique (TOFI)</h4>
                     <p className="text-sm text-muted-foreground">
-                      Une personne mince peut avoir un mauvais profil métabolique (cholestérol, glycémie).
+                      Concept étudié par l'INSERM : les « TOFI » (Thin Outside, Fat Inside) ont un IMC normal mais un profil métabolique dégradé (cholestérol, glycémie, stéatose hépatique).
                     </p>
                   </div>
                 </div>
@@ -125,7 +127,7 @@ const LimitesIMC = () => {
                   <h4 className="font-bold">Sportifs et athlètes</h4>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  La masse musculaire élevée donne un IMC "surpoids" ou "obésité" alors que le taux de graisse est minimal.
+                  En France, les rugbymen du Top 14 ont un IMC de 30-35 (« obèse ») avec seulement 12-18% de masse grasse. L'INSEP utilise la DXA, pas l'IMC.
                 </p>
                 <Link to="/imc-sportif" className="text-primary text-sm font-medium hover:underline mt-2 inline-block">
                   En savoir plus →
@@ -138,7 +140,7 @@ const LimitesIMC = () => {
                   <h4 className="font-bold">Enfants et adolescents</h4>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Les seuils adultes ne s'appliquent pas. Il faut utiliser les courbes de corpulence adaptées à l'âge et au sexe.
+                  Le carnet de santé français utilise les courbes IOTF, pas l'IMC adulte. Le rebond d'adiposité (normalement vers 6 ans) est un marqueur clé suivi par les pédiatres et la PMI.
                 </p>
                 <Link to="/imc-enfant" className="text-primary text-sm font-medium hover:underline mt-2 inline-block">
                   En savoir plus →
@@ -151,7 +153,7 @@ const LimitesIMC = () => {
                   <h4 className="font-bold">Personnes âgées</h4>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  La perte de masse musculaire (sarcopénie) peut masquer un excès de graisse. Un IMC "normal" peut être trompeur.
+                  La sarcopénie (perte musculaire liée à l'âge) masque l'excès de graisse. L'INSERM recommande pour les seniors un IMC optimal légèrement plus élevé (22-27) et un suivi de la masse musculaire.
                 </p>
               </div>
 
@@ -161,7 +163,7 @@ const LimitesIMC = () => {
                   <h4 className="font-bold">Femmes enceintes</h4>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  La prise de poids est normale et souhaitable pendant la grossesse. L'IMC pré-grossesse sert de référence.
+                  Le CNGOF recommande de calculer l'IMC avant la grossesse pour adapter le suivi. Prise de poids recommandée en France : 11-16 kg (IMC normal), 7-11 kg (surpoids), 5-9 kg (obésité).
                 </p>
                 <Link to="/imc-femme" className="text-primary text-sm font-medium hover:underline mt-2 inline-block">
                   En savoir plus →
@@ -196,7 +198,7 @@ const LimitesIMC = () => {
               <div className="p-3 rounded-xl bg-success/10">
                 <CheckCircle2 className="w-6 h-6 text-success" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Alternatives et compléments à l'IMC</h2>
+              <h2 className="text-2xl font-display font-bold">Alternatives recommandées par la HAS</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -208,10 +210,10 @@ const LimitesIMC = () => {
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
-                  <tr className="border-b border-border/50">
-                    <td className="py-3 px-4 font-medium">Tour de taille</td>
-                    <td className="py-3 px-4">Graisse abdominale (viscérale)</td>
-                    <td className="py-3 px-4">&lt;94 cm (H) / &lt;80 cm (F)</td>
+                  <tr className="border-b border-border/50 bg-success/5">
+                    <td className="py-3 px-4 font-medium">Tour de taille (HAS)</td>
+                    <td className="py-3 px-4">Graisse abdominale — recommandé par la HAS en 1ère intention</td>
+                    <td className="py-3 px-4">&lt;94 cm (H) / &lt;80 cm (F) modéré ; &lt;102 / &lt;88 élevé</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 font-medium">Rapport taille/hanche</td>
@@ -233,10 +235,15 @@ const LimitesIMC = () => {
                     <td className="py-3 px-4">Masse maigre (pour sportifs)</td>
                     <td className="py-3 px-4">18-25 (naturel)</td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-border/50">
                     <td className="py-3 px-4 font-medium">Impédancemétrie</td>
-                    <td className="py-3 px-4">Eau, muscle, graisse, os</td>
+                    <td className="py-3 px-4">Eau, muscle, graisse, os — disponible en pharmacie en France</td>
                     <td className="py-3 px-4">Varie selon appareil</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4 font-medium">DXA (INSEP, CHU)</td>
+                    <td className="py-3 px-4">Référence médicale — absorptiométrie biphotonique</td>
+                    <td className="py-3 px-4">Prescrit par médecin, CHU/INSEP</td>
                   </tr>
                 </tbody>
               </table>
@@ -276,24 +283,100 @@ const LimitesIMC = () => {
             </div>
           </div>
 
-          {/* SEO Content */}
+          {/* TOFI et obèse métaboliquement sain */}
           <div className="glass-card p-8">
-            <h2 className="text-2xl font-display font-bold mb-6">Comprendre les limites de l'IMC</h2>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-warning/10">
+                <Globe className="w-6 h-6 text-warning" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Le paradoxe TOFI et l'obèse métaboliquement sain</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-5 rounded-xl bg-warning/5 border border-warning/20">
+                <h4 className="font-bold mb-3">TOFI : mince mais malade</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Le concept <strong>TOFI</strong> (Thin Outside, Fat Inside), étudié par l'INSERM, désigne des personnes
+                  avec un IMC normal (18,5-24,9) mais une accumulation de graisse viscérale. En France, on estime que
+                  <strong> 10-15% des personnes</strong> à IMC « normal » ont en réalité un profil métabolique dégradé :
+                  résistance à l'insuline, stéatose hépatique, dyslipidémie.
+                </p>
+                <p className="text-sm text-warning font-medium">
+                  Le tour de taille permet de les identifier : &gt;94 cm (H) ou &gt;80 cm (F) même avec un IMC normal.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl bg-info/5 border border-info/20">
+                <h4 className="font-bold mb-3">MHO : obèse mais en bonne santé ?</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  À l'inverse, le concept d'<strong>obèse métaboliquement sain</strong> (MHO — Metabolically Healthy Obese)
+                  décrit des personnes avec un IMC ≥ 30 mais sans anomalie métabolique. Des études de l'INSERM montrent
+                  que ce statut est souvent <strong>transitoire</strong> : 30-50% des MHO développent des complications
+                  métaboliques dans les 5-10 ans.
+                </p>
+                <p className="text-sm text-info font-medium">
+                  La HAS recommande quand même un suivi régulier pour les personnes obèses, même sans comorbidité actuelle.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Position de l'ANSES */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-primary/10">
+                <Scale className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Position des autorités sanitaires françaises</h2>
+            </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Les <strong>limites de l'IMC</strong> sont nombreuses et bien documentées par la communauté scientifique.
-                Cet <strong>IMC critique</strong> ne doit pas être interprété seul. Les <strong>défauts de l'IMC</strong>
-                incluent l'incapacité à différencier masse grasse et masse maigre.
+                En France, trois institutions encadrent l'utilisation de l'IMC :
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="p-4 rounded-xl bg-muted/30">
+                  <h4 className="font-bold text-sm mb-2">HAS</h4>
+                  <p className="text-sm">
+                    Recommande l'IMC comme <strong>outil de dépistage de 1ère ligne</strong>, toujours complété par
+                    le tour de taille. Ne doit pas être utilisé seul pour décider d'un traitement.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl bg-muted/30">
+                  <h4 className="font-bold text-sm mb-2">INSERM</h4>
+                  <p className="text-sm">
+                    Mène des recherches sur les <strong>limites de l'IMC</strong> : TOFI, obèse métaboliquement sain,
+                    rôle de la génétique et de l'épigénétique dans la composition corporelle.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl bg-muted/30">
+                  <h4 className="font-bold text-sm mb-2">ANSES</h4>
+                  <p className="text-sm">
+                    Alerte sur les <strong>régimes restrictifs basés sur l'IMC seul</strong> (rapport 2010). Recommande
+                    un rééquilibrage alimentaire progressif encadré, pas de régime draconien.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* SEO Content */}
+          <div className="glass-card p-8">
+            <h2 className="text-2xl font-display font-bold mb-6">Limites de l'IMC : ce que disent la HAS et l'INSERM</h2>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                Les <strong>limites de l'IMC</strong> sont bien documentées par la <strong>HAS</strong>, l'<strong>INSERM</strong>
+                et l'<strong>ANSES</strong> en France. L'IMC, inventé par <strong>Adolphe Quetelet</strong> en 1832,
+                ne distingue pas la masse grasse de la masse maigre. C'est pourquoi les rugbymen du <strong>Top 14</strong>
+                sont classés « obèses » par l'IMC alors que l'<strong>INSEP</strong> les mesure en parfaite condition physique.
               </p>
               <p>
-                <strong>Pourquoi l'IMC est imparfait</strong> ? Car il s'agit d'un simple ratio mathématique.
-                Les <strong>problèmes de l'IMC</strong> sont particulièrement visibles chez les sportifs,
-                enfants et personnes âgées. L'<strong>IMC fiable ou pas</strong> dépend du contexte d'utilisation.
+                La HAS recommande de toujours compléter l'IMC par le <strong>tour de taille</strong> et un <strong>bilan métabolique</strong>.
+                Le phénomène <strong>TOFI</strong> (mince dehors, gras dedans) touche 10-15% des Français à IMC « normal ».
+                À l'inverse, certains « <strong>obèses métaboliquement sains</strong> » ont des bilans sanguins normaux — mais
+                l'INSERM montre que ce statut est souvent transitoire.
               </p>
               <p>
-                Les <strong>alternatives à l'IMC</strong> comme le tour de taille ou le taux de masse grasse
-                offrent une vision plus complète. <strong>L'IMC est-il fiable</strong> pour tout le monde ?
-                Non, mais combiné à d'autres indicateurs, il reste un outil de dépistage utile.
+                En France, les <strong>alternatives à l'IMC</strong> incluent la <strong>DXA</strong> (CHU, INSEP), l'<strong>impédancemétrie</strong>
+                (pharmacies), le <strong>FFMI</strong> (sportifs), et le <strong>rapport taille/hanche</strong>. Le <strong>bilan de
+                santé gratuit</strong> de la Sécurité Sociale (tous les 5 ans) inclut déjà l'IMC et le tour de taille.
               </p>
             </div>
           </div>

@@ -19,7 +19,7 @@ const HealthWeight = () => {
             Health and wellness
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-success">Health and Weight</span>: Complete guide
+            <span className="text-success">Health & Weight</span> : Guide to Healthy Living
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Understanding the relationship between weight, BMI and overall health

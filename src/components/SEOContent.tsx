@@ -25,12 +25,19 @@ export const SEOContent = () => {
           </h2>
         </div>
 
-        <div className="prose prose-gray dark:prose-invert max-w-none">
+        <div className="prose prose-gray dark:prose-invert max-w-none space-y-4">
           <p className="text-lg text-muted-foreground leading-relaxed">
             L'<strong>IMC</strong>, ou <strong>Indice de Masse Corporelle</strong> (en anglais <em>BMI - Body Mass Index</em>),
             est un indicateur permettant d'évaluer la <strong>corpulence</strong> d'une personne. Utilisé par les professionnels
             de santé du monde entier, ce <strong>calcul du poids idéal</strong> permet de déterminer si une personne est en
             situation de <strong>maigreur</strong>, de <strong>poids normal</strong>, de <strong>surpoids</strong> ou d'<strong>obésité</strong>.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            En France, selon l'étude <strong>ObÉpi-Roche 2023</strong>, <strong>17 % des adultes sont obèses</strong> et
+            près de <strong>47 % sont en surpoids ou obèses</strong>. L'IMC moyen des Français est de <strong>25,4 kg/m²</strong>,
+            juste au-dessus du seuil de surpoids. Ces chiffres ont doublé en 25 ans, faisant de l'obésité un enjeu
+            majeur de <strong>santé publique en France</strong>. L'<strong>INSERM</strong>, la <strong>HAS</strong> (Haute Autorité de Santé)
+            et <strong>Santé Publique France</strong> utilisent l'IMC comme indicateur de référence dans leurs recommandations.
           </p>
         </div>
       </div>
@@ -58,10 +65,10 @@ export const SEOContent = () => {
           </div>
 
           <p>
-            Par exemple, pour une personne mesurant <strong>1,75 m</strong> et pesant <strong>70 kg</strong> :
+            Par exemple, pour un homme français moyen mesurant <strong>1,78 m</strong> et pesant <strong>77 kg</strong> :
           </p>
           <p className="font-medium text-foreground">
-            IMC = 70 ÷ (1,75 × 1,75) = 70 ÷ 3,0625 = <strong>22,86</strong>
+            IMC = 77 ÷ (1,78 × 1,78) = 77 ÷ 3,1684 = <strong>24,3</strong>
           </p>
           <p>
             Cette personne a un <strong>IMC normal</strong>, indiquant un <strong>poids santé</strong>.
@@ -293,6 +300,174 @@ export const SEOContent = () => {
               <li>• Pratiquez une activité qui vous <strong>plaît</strong></li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      {/* PNNS & Manger Bouger */}
+      <div className="glass-card p-8 md:p-10">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-3 rounded-xl bg-success/10">
+            <CheckCircle2 className="w-6 h-6 text-success" />
+          </div>
+          <h2 className="text-2xl font-display font-bold">
+            Le PNNS et « Manger Bouger » : la stratégie française
+          </h2>
+        </div>
+
+        <div className="text-muted-foreground space-y-4">
+          <p>
+            La France se distingue par son <strong>Programme National Nutrition Santé (PNNS)</strong>, lancé en 2001
+            et renouvelé en <strong>PNNS 4 (2019-2023)</strong>. Ce programme, porté par <strong>Santé Publique France</strong>,
+            définit les repères nutritionnels officiels sous la marque <strong>« Manger Bouger »</strong>.
+          </p>
+          <p>
+            Les recommandations françaises se distinguent par leur approche culturelle unique : plutôt que d'interdire,
+            elles encouragent le <strong>plaisir de manger</strong> en respectant les traditions culinaires françaises.
+            Le PNNS recommande notamment :
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-2">
+            <li><strong>5 fruits et légumes par jour</strong> — le repère le plus connu des Français</li>
+            <li><strong>Augmenter les légumineuses</strong> (lentilles, pois chiches) — insuffisamment consommées en France</li>
+            <li><strong>Limiter la charcuterie</strong> à 150 g/semaine — spécificité française vu la tradition charcutière</li>
+            <li><strong>Favoriser le fait-maison</strong> et limiter les aliments <strong>ultra-transformés</strong> (score NOVA)</li>
+            <li><strong>30 minutes d'activité physique par jour</strong> — le « Bouger » de Manger Bouger</li>
+          </ul>
+          <p>
+            Le <strong>Nutri-Score</strong>, créé en France en 2017 par le Pr Serge Hercberg, est devenu un modèle
+            d'<strong>étiquetage nutritionnel</strong> adopté dans plusieurs pays européens. Ce logo à 5 couleurs (A à E)
+            aide les consommateurs à comparer la qualité nutritionnelle des produits et contribue indirectement au
+            maintien d'un <strong>IMC sain</strong>.
+          </p>
+        </div>
+      </div>
+
+      {/* Remboursement Sécu & Parcours de soins */}
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="glass-card p-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 rounded-xl bg-primary/10">
+              <Users className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-display font-bold">
+              Prise en charge de l'obésité par la Sécurité Sociale
+            </h3>
+          </div>
+          <div className="text-muted-foreground space-y-3 text-sm">
+            <p>
+              En France, l'obésité (IMC ≥ 30) est reconnue comme une <strong>maladie chronique</strong> par la HAS.
+              La <strong>Sécurité Sociale</strong> et les <strong>mutuelles</strong> prennent en charge :
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span><strong>Consultations diététiques</strong> prescrites par le médecin traitant</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span><strong>Chirurgie bariatrique</strong> (sleeve, bypass) si IMC ≥ 40, ou ≥ 35 avec comorbidités</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span><strong>Cures thermales</strong> (Brides-les-Bains, Eugénie-les-Bains) sur prescription</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span><strong>Programme ETP</strong> (Éducation Thérapeutique du Patient) en centre spécialisé</span>
+              </li>
+            </ul>
+            <p>
+              Depuis 2023, le dispositif <strong>« Mission : retrouver son équilibre »</strong> permet aux personnes
+              obèses de bénéficier d'un parcours coordonné avec nutritionniste, psychologue et coach sportif.
+            </p>
+          </div>
+        </div>
+
+        <div className="glass-card p-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 rounded-xl bg-accent/10">
+              <HelpCircle className="w-6 h-6 text-accent" />
+            </div>
+            <h3 className="text-xl font-display font-bold">
+              Nutritionniste vs Diététicien : qui consulter ?
+            </h3>
+          </div>
+          <div className="text-muted-foreground space-y-3 text-sm">
+            <p>
+              En France, la distinction est importante et souvent source de confusion :
+            </p>
+            <div className="bg-muted/30 rounded-lg p-4 space-y-3">
+              <div>
+                <p className="font-semibold text-foreground">Médecin nutritionniste</p>
+                <p>
+                  <strong>Médecin</strong> (6 ans d'études + spécialisation). Peut prescrire des examens, des médicaments
+                  et des bilans sanguins. Consultations <strong>remboursées par la Sécu</strong> (secteur 1 : 26,50 €).
+                  Recommandé si IMC &gt; 30 ou pathologies associées.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">Diététicien-nutritionniste</p>
+                <p>
+                  Professionnel de santé avec BTS ou DUT (Bac+2/3). Ne prescrit pas de médicaments.
+                  Consultations <strong>non remboursées</strong> par la Sécu (30-60 € en moyenne),
+                  mais certaines mutuelles les prennent en charge. Idéal pour un <strong>rééquilibrage alimentaire</strong>.
+                </p>
+              </div>
+            </div>
+            <p>
+              <strong>Attention aux « coaches nutrition »</strong> non diplômés : seuls les diététiciens et médecins
+              nutritionnistes sont habilités à donner des conseils nutritionnels en France.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Le paradoxe français */}
+      <div className="glass-card p-8 md:p-10">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-3 rounded-xl bg-warning/10">
+            <Activity className="w-6 h-6 text-warning" />
+          </div>
+          <h2 className="text-2xl font-display font-bold">
+            Le paradoxe français : pourquoi les Français restent plus minces
+          </h2>
+        </div>
+
+        <div className="text-muted-foreground space-y-4">
+          <p>
+            Le <strong>« French Paradox »</strong> désigne le fait que les Français ont un taux d'obésité
+            parmi les plus bas d'Europe occidentale (<strong>17 %</strong>, contre 26 % au Royaume-Uni et 42 % aux États-Unis),
+            malgré une cuisine riche en beurre, fromage et vin. Plusieurs facteurs expliquent ce phénomène :
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-muted/20 rounded-lg p-4">
+              <h4 className="font-semibold text-foreground mb-2">Culture des repas</h4>
+              <p className="text-sm">
+                Les Français mangent à <strong>heures fixes</strong>, assis à table, avec des portions plus petites.
+                Le grignotage reste moins répandu qu'aux États-Unis. Le repas est un moment <strong>social et convivial</strong>.
+              </p>
+            </div>
+            <div className="bg-muted/20 rounded-lg p-4">
+              <h4 className="font-semibold text-foreground mb-2">Cantine scolaire</h4>
+              <p className="text-sm">
+                La France est le seul pays où la <strong>cantine scolaire</strong> est encadrée par la loi :
+                menus équilibrés sur 20 repas, limitation des fritures, produits frais obligatoires.
+                Les enfants apprennent à manger <strong>varié</strong> dès le plus jeune âge.
+              </p>
+            </div>
+            <div className="bg-muted/20 rounded-lg p-4">
+              <h4 className="font-semibold text-foreground mb-2">Cuisine méditerranéenne du Sud</h4>
+              <p className="text-sm">
+                Le sud de la France bénéficie de la <strong>diète méditerranéenne</strong> : huile d'olive, légumes,
+                poisson, herbes de Provence. Les régions PACA et Occitanie ont les <strong>taux d'obésité les plus bas</strong>.
+              </p>
+            </div>
+          </div>
+          <p>
+            Cependant, ce paradoxe s'érode : les <strong>disparités régionales</strong> se creusent. Les Hauts-de-France
+            et l'Outre-mer affichent des taux d'obésité proches de <strong>24-26 %</strong>, contre seulement
+            <strong>14 %</strong> en Île-de-France. L'augmentation de la <strong>consommation d'aliments ultra-transformés</strong>
+            menace cet avantage historique.
+          </p>
         </div>
       </div>
 

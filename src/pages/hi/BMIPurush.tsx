@@ -1,13 +1,13 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { User, Dumbbell, Target, Heart, Scale, Activity, AlertTriangle, CheckCircle2, BookOpen } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 const BMIPurush = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(80);
-  const [height, setHeight] = useState(178);
+  const [weight, setWeight] = useState(68);
+  const [height, setHeight] = useState(167);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightInM = h / 100;
@@ -44,13 +44,13 @@ const BMIPurush = () => {
         <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-500 text-sm font-medium mb-6">
             <User className="w-4 h-4" />
-            पुरुषों के लिए BMI
+            भारतीय पुरुषों के लिए BMI
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-blue-500">पुरुषों के लिए BMI</span>: अपना सूचकांक जानें
+            <span className="text-blue-500">भारतीय पुरुषों के लिए BMI कैलकुलेटर</span> — ICMR एशियाई मानक
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            पुरुषों के शारीरिक संरचना के अनुसार व्यक्तिगत सलाह के साथ BMI कैलकुलेटर
+            भारत में 13.5 करोड़ पुरुष मोटापे से ग्रस्त हैं (ICMR/NFHS-5)। भारतीय पुरुषों के लिए एशियाई BMI कटऑफ आवश्यक है: अधिक वजन 23 से शुरू होता है, 25 से नहीं। ICMR, NIN और FSSAI दिशानिर्देशों के अनुसार BMI कैलकुलेटर।
           </p>
         </header>
 
@@ -100,44 +100,45 @@ const BMIPurush = () => {
 
         {/* सामग्री */}
         <div className="space-y-8">
-          {/* पुरुषों में BMI को समझना */}
+          {/* भारतीय पुरुषों में BMI को समझना */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <User className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">पुरुषों में BMI को समझना</h2>
+              <h2 className="text-2xl font-display font-bold">भारतीय पुरुषों में BMI को समझना</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                <strong>पुरुषों का BMI</strong> महिलाओं की तरह ही गणना किया जाता है: वजन को लंबाई के वर्ग से विभाजित किया जाता है।
-                हालांकि, व्याख्या भिन्न हो सकती है क्योंकि पुरुषों में स्वाभाविक रूप से <strong>अधिक मांसपेशी द्रव्यमान</strong>
-                और <strong>कम शरीर वसा प्रतिशत</strong> (15-20% बनाम महिलाओं में 20-25%) होता है।
+                <strong>NFHS-5 के अनुसार</strong>, 22.9% भारतीय पुरुष अधिक वजन वाले हैं (WHO मानक BMI &ge; 25 के अनुसार)।
+                लेकिन <strong>ICMR एशियाई कटऑफ</strong> (BMI &ge; 23) के अनुसार यह आंकड़ा <strong>40% से अधिक</strong> हो जाता है।
+                यह अंतर इसलिए महत्वपूर्ण है क्योंकि भारतीय पुरुषों में पश्चिमी पुरुषों की तुलना में <strong>कम BMI पर ही चयापचय संबंधी
+                जटिलताएं</strong> विकसित होती हैं।
               </p>
               <p>
-                एक पुरुष का <strong>BMI अधिक</strong> हो सकता है फिर भी वह उत्कृष्ट स्वास्थ्य में हो सकता है यदि वह
-                नियमित व्यायाम या शक्ति प्रशिक्षण करता है। इसीलिए <strong>कमर की परिधि</strong> पुरुषों के लिए अक्सर
-                एक बेहतर संकेतक होती है: यह <strong>94 cm</strong> (मध्यम जोखिम) या <strong>102 cm</strong> (उच्च जोखिम)
-                से अधिक नहीं होनी चाहिए।
+                <strong>औसत भारतीय पुरुष</strong> की लंबाई 1.67 मीटर और वजन 68 किलोग्राम है। ICMR के अनुसार, भारतीय पुरुषों के लिए
+                <strong> कमर की परिधि 90 cm से कम</strong> होनी चाहिए (WHO का मानक 94 cm है)। यह कम सीमा इसलिए है क्योंकि
+                <strong> भारतीय पुरुषों में समान BMI पर यूरोपीय पुरुषों की तुलना में अधिक आंतरिक (विसेरल) चर्बी</strong> होती है (ICMR अध्ययन)।
               </p>
             </div>
           </div>
 
-          {/* पुरुषों के लिए BMI तालिका */}
+          {/* भारतीय पुरुषों के लिए BMI तालिका — WHO बनाम ICMR */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <Scale className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">पुरुषों के लिए BMI तालिका</h2>
+              <h2 className="text-2xl font-display font-bold">भारतीय पुरुषों के लिए BMI तालिका — WHO बनाम ICMR</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">श्रेणी</th>
-                    <th className="text-left py-3 px-4 font-semibold">BMI</th>
-                    <th className="text-left py-3 px-4 font-semibold">उदाहरण (180 cm)</th>
+                    <th className="text-left py-3 px-4 font-semibold">WHO मानक</th>
+                    <th className="text-left py-3 px-4 font-semibold">ICMR एशियाई मानक</th>
+                    <th className="text-left py-3 px-4 font-semibold">उदाहरण (167 cm)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -147,7 +148,8 @@ const BMIPurush = () => {
                       कम वजन
                     </td>
                     <td className="py-3 px-4">&lt; 18.5</td>
-                    <td className="py-3 px-4">&lt; 60 kg</td>
+                    <td className="py-3 px-4">&lt; 18.5</td>
+                    <td className="py-3 px-4">&lt; 52 kg</td>
                   </tr>
                   <tr className="border-b border-border/50 bg-success/5">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -155,7 +157,8 @@ const BMIPurush = () => {
                       सामान्य
                     </td>
                     <td className="py-3 px-4">18.5 - 24.9</td>
-                    <td className="py-3 px-4">60 - 81 kg</td>
+                    <td className="py-3 px-4">18.5 - 22.9</td>
+                    <td className="py-3 px-4">52 - 64 kg (ICMR)</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -163,7 +166,8 @@ const BMIPurush = () => {
                       अधिक वजन
                     </td>
                     <td className="py-3 px-4">25 - 29.9</td>
-                    <td className="py-3 px-4">81 - 97 kg</td>
+                    <td className="py-3 px-4">23 - 24.9</td>
+                    <td className="py-3 px-4">64 - 70 kg (ICMR)</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -171,29 +175,36 @@ const BMIPurush = () => {
                       मोटापा
                     </td>
                     <td className="py-3 px-4">&ge; 30</td>
-                    <td className="py-3 px-4">&gt; 97 kg</td>
+                    <td className="py-3 px-4">&ge; 25</td>
+                    <td className="py-3 px-4">&gt; 70 kg (ICMR)</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <div className="mt-4 p-4 bg-warning/10 border border-warning/30 rounded-xl flex items-start gap-3">
+              <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
+              <p className="text-sm font-medium text-warning">
+                ICMR भारतीय पुरुषों के लिए 23 पर अधिक वजन और 25 पर मोटापा मानता है — WHO के 25/30 मानक भारतीयों के लिए अपर्याप्त हैं।
+              </p>
+            </div>
           </div>
 
-          {/* लंबाई के अनुसार आदर्श वजन */}
+          {/* लंबाई के अनुसार आदर्श वजन — ICMR मानक */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <Target className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">लंबाई के अनुसार पुरुषों का आदर्श वजन</h2>
+              <h2 className="text-2xl font-display font-bold">लंबाई के अनुसार भारतीय पुरुषों का आदर्श वजन (ICMR)</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { height: "165 cm", min: 50, max: 68, ideal: 60 },
-                { height: "170 cm", min: 53, max: 72, ideal: 64 },
-                { height: "175 cm", min: 57, max: 76, ideal: 67 },
-                { height: "180 cm", min: 60, max: 81, ideal: 71 },
-                { height: "185 cm", min: 63, max: 85, ideal: 75 },
-                { height: "190 cm", min: 67, max: 90, ideal: 79 },
+                { height: "160 cm", min: 47, max: 59, ideal: 54 },
+                { height: "163 cm", min: 49, max: 61, ideal: 56 },
+                { height: "167 cm (भारतीय औसत)", min: 52, max: 64, ideal: 59 },
+                { height: "170 cm", min: 53, max: 66, ideal: 61 },
+                { height: "173 cm", min: 55, max: 68, ideal: 63 },
+                { height: "176 cm", min: 57, max: 71, ideal: 65 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-blue-500">{item.height}</span>
@@ -205,31 +216,31 @@ const BMIPurush = () => {
             </div>
           </div>
 
-          {/* पुरुषों के लिए सुझाव */}
+          {/* भारतीय पुरुषों के लिए सुझाव */}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="glass-card p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 rounded-xl bg-success/10">
                   <Dumbbell className="w-6 h-6 text-success" />
                 </div>
-                <h3 className="text-xl font-display font-bold">खेल और मांसपेशियां</h3>
+                <h3 className="text-xl font-display font-bold">व्यायाम और शारीरिक गतिविधि</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span><strong>शक्ति प्रशिक्षण</strong> मांसपेशियों का द्रव्यमान और इसलिए BMI बढ़ाता है</span>
+                  <span><strong>योग और प्राणायाम:</strong> भारतीय पुरुषों के लिए शारीरिक और मानसिक संतुलन का सर्वोत्तम साधन</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>एक मांसल पुरुष का <strong>BMI 27-28</strong> हो सकता है बिना अतिरिक्त वसा के</span>
+                  <span><strong>क्रिकेट</strong> भारत का सबसे लोकप्रिय खेल है लेकिन नियमित व्यायाम का विकल्प नहीं है</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>सर्वोत्तम संतुलन के लिए <strong>कार्डियो और शक्ति प्रशिक्षण</strong> को मिलाएं</span>
+                  <span><strong>ICMR की सिफारिश:</strong> प्रतिदिन 45 मिनट तेज चलना भारतीय पुरुषों के लिए आवश्यक है</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span>प्रति सप्ताह न्यूनतम <strong>150 मिनट मध्यम गतिविधि</strong> का लक्ष्य रखें</span>
+                  <span>केवल <strong>10% भारतीय पुरुष</strong> WHO की शारीरिक गतिविधि सिफारिशों को पूरा करते हैं</span>
                 </li>
               </ul>
             </div>
@@ -239,57 +250,99 @@ const BMIPurush = () => {
                 <div className="p-3 rounded-xl bg-warning/10">
                   <Heart className="w-6 h-6 text-warning" />
                 </div>
-                <h3 className="text-xl font-display font-bold">पुरुषों का स्वास्थ्य</h3>
+                <h3 className="text-xl font-display font-bold">भारतीय पुरुषों का स्वास्थ्य</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span><strong>पेट की चर्बी</strong> हृदय रोग के जोखिम को बढ़ाती है</span>
+                  <span>भारत <strong>'मधुमेह की विश्व राजधानी'</strong>: 7.7 करोड़ पुरुष प्रभावित (ICMR)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span><strong>40 वर्ष</strong> के बाद चयापचय काफी धीमा हो जाता है</span>
+                  <span><strong>हृदय रोग</strong> 40 वर्ष से कम उम्र के भारतीय पुरुषों में तेजी से बढ़ रहा है</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span><strong>टेस्टोस्टेरोन</strong> उम्र के साथ कम होता है, जिससे वसा बढ़ती है</span>
+                  <span><strong>तंबाकू सेवन:</strong> 42.4% भारतीय पुरुष तंबाकू का उपयोग करते हैं (GATS India)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
-                  <span>50 वर्ष के बाद <strong>वार्षिक स्वास्थ्य जांच</strong> की सिफारिश की जाती है</span>
+                  <span>BMI <strong>23 से ऊपर</strong> होने पर भारतीय पुरुषों में मधुमेह का खतरा दोगुना हो जाता है (ICMR)</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* पुरुषों के BMI के बारे में पूरी जानकारी */}
+          {/* आयुर्वेद और पुरुष शारीरिक संरचना */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-blue-500/10">
+                <BookOpen className="w-6 h-6 text-blue-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">आयुर्वेद और पुरुष शारीरिक संरचना</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                <strong>आयुर्वेदिक प्रकृति</strong> (शरीर का प्रकार) के अनुसार प्रत्येक पुरुष की वजन प्रवृत्ति भिन्न होती है।
+                आधुनिक BMI निगरानी के साथ आयुर्वेदिक ज्ञान को जोड़कर भारतीय पुरुष अपने स्वास्थ्य को बेहतर समझ सकते हैं:
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 my-4">
+                <div className="p-4 bg-muted/30 rounded-xl">
+                  <h4 className="font-semibold text-blue-500 mb-2">वात प्रकृति</h4>
+                  <p className="text-sm">स्वाभाविक रूप से दुबला-पतला, BMI कम रहता है, एक्टोमॉर्फ शरीर। वजन बढ़ाना कठिन होता है। अनियमित भूख और तेज चयापचय।</p>
+                </div>
+                <div className="p-4 bg-muted/30 rounded-xl">
+                  <h4 className="font-semibold text-blue-500 mb-2">पित्त प्रकृति</h4>
+                  <p className="text-sm">मध्यम शरीर, मेसोमॉर्फ, एथलेटिक बनावट। संतुलित BMI रहता है। तीव्र भूख और अच्छा पाचन।</p>
+                </div>
+                <div className="p-4 bg-muted/30 rounded-xl">
+                  <h4 className="font-semibold text-blue-500 mb-2">कफ प्रकृति</h4>
+                  <p className="text-sm">भारी शरीर, एंडोमॉर्फ, वजन आसानी से बढ़ता है। BMI अधिक रहने की प्रवृत्ति। धीमा चयापचय और मजबूत शरीर।</p>
+                </div>
+              </div>
+              <p>
+                <strong>आयुर्वेदिक आहार सिफारिशें:</strong> पुरुषों को अपनी प्रकृति के अनुसार भोजन करना चाहिए। कफ प्रकृति के पुरुषों को हल्का
+                और गर्म भोजन, वात प्रकृति के पुरुषों को पौष्टिक और स्निग्ध भोजन, और पित्त प्रकृति के पुरुषों को शीतल और संतुलित भोजन लेना चाहिए।
+              </p>
+              <p>
+                <strong>अग्नि (पाचन शक्ति) को मजबूत रखना पुरुषों के वजन प्रबंधन की कुंजी है।</strong> आयुर्वेद के अनुसार, कमजोर अग्नि
+                आम (विषाक्त पदार्थ) उत्पन्न करती है जो मोटापे का मूल कारण है। नियमित भोजन समय, ताजा भोजन और मसालों का सही
+                उपयोग अग्नि को प्रबल रखता है।
+              </p>
+            </div>
+          </div>
+
+          {/* भारतीय पुरुषों के BMI के बारे में पूरी जानकारी — SEO */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-blue-500/10">
                 <Activity className="w-6 h-6 text-blue-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">पुरुषों के BMI के बारे में पूरी जानकारी</h2>
+              <h2 className="text-2xl font-display font-bold">भारतीय पुरुषों के BMI के बारे में पूरी जानकारी</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                <strong>पुरुषों के लिए BMI कैलकुलेटर</strong> आपकी <strong>शारीरिक संरचना</strong> का मूल्यांकन करने के लिए आवश्यक है।
-                चाहे आप अपना <strong>आदर्श BMI</strong> जानना चाहते हों या यह जांचना चाहते हों कि आपका
-                <strong> वजन स्वस्थ</strong> है या नहीं, हमारा <strong>BMI कैलकुलेटर</strong> आपको तुरंत उत्तर देता है।
+                <strong>भारतीय पुरुषों के लिए BMI कैलकुलेटर</strong> WHO मानकों के बजाय <strong>ICMR एशियाई कटऑफ</strong> पर
+                आधारित होना चाहिए। ICMR (भारतीय चिकित्सा अनुसंधान परिषद), NIN हैदराबाद (राष्ट्रीय पोषण संस्थान), और FSSAI
+                (भारतीय खाद्य सुरक्षा और मानक प्राधिकरण) सभी भारतीय पुरुषों के लिए <strong>23 पर अधिक वजन और 25 पर मोटापा</strong> की
+                सिफारिश करते हैं — WHO के 25/30 मानक नहीं।
               </p>
               <p>
-                <strong>पुरुषों का औसत BMI</strong> उम्र और गतिविधि स्तर के अनुसार भिन्न होता है। <strong>पुरुषों के लिए सामान्य BMI</strong>
-                {" "}20 से 25 के बीच होता है। <strong>175 cm</strong> लंबे पुरुष के लिए <strong>आदर्श वजन</strong> लगभग 67 kg है।
-                <strong> 180 cm</strong> लंबे पुरुष के लिए यह लगभग 71 kg है।
+                NFHS-5 (राष्ट्रीय परिवार स्वास्थ्य सर्वेक्षण) के अनुसार भारत में <strong>"दोहरा बोझ"</strong> की स्थिति है: एक ओर
+                कुपोषण और कम वजन (BMI &lt; 18.5 — ग्रामीण क्षेत्रों में 16% पुरुष), दूसरी ओर शहरी क्षेत्रों में तेजी से बढ़ता
+                मोटापा (ICMR कटऑफ 23 के अनुसार 40%+ पुरुष)। WHO दक्षिण-पूर्व एशिया भी भारत के लिए कम BMI सीमाओं की
+                पुष्टि करता है।
               </p>
               <p>
-                <strong>पुरुषों के लिए आदर्श BMI कितना होना चाहिए</strong>? आदर्श सीमा 20-25 है, लेकिन खिलाड़ी पुरुषों में यह अधिक हो सकता है।
-                <strong> 50 वर्ष से अधिक उम्र के पुरुषों</strong> का BMI थोड़ा अधिक (27 तक) हो सकता है बिना किसी बड़े जोखिम के।
-                महत्वपूर्ण यह है कि नियमित शारीरिक गतिविधि और संतुलित पोषण बनाए रखें।
+                <strong>167 cm</strong> लंबे भारतीय पुरुष (राष्ट्रीय औसत) के लिए <strong>ICMR के अनुसार आदर्श वजन</strong> 52-64 kg
+                (BMI 18.5-22.9) है। <strong>BMI 23 से ऊपर</strong> होने पर मधुमेह, हृदय रोग और उच्च रक्तचाप का खतरा
+                काफी बढ़ जाता है। भारतीय पुरुषों में <strong>एशियाई BMI कटऑफ</strong> (अधिक वजन 23, मोटापा 25) का उपयोग
+                करना जीवनरक्षक हो सकता है।
               </p>
               <p>
-                <strong>आदर्श वजन की गणना</strong> आपकी शारीरिक बनावट को ध्यान में रखती है। <strong>दुबले-पतले</strong> (एक्टोमॉर्फ)
-                पुरुषों का BMI स्वाभाविक रूप से कम होगा, जबकि <strong>मांसल</strong> (मेसोमॉर्फ) पुरुषों का BMI बिना किसी स्वास्थ्य
-                समस्या के अधिक हो सकता है। गहन शक्ति प्रशिक्षण करने वाले पुरुषों का <strong>खिलाड़ी BMI</strong> 27-28 तक पहुंच सकता है।
+                <strong>संदर्भ:</strong> ICMR दिशानिर्देश, NIN हैदराबाद, FSSAI पोषण मानक, NFHS-5 (2019-21), WHO South-East Asia Regional Office,
+                GATS India (Global Adult Tobacco Survey)। भारतीय पुरुषों के लिए <strong>एशियाई BMI मानक (23/25)</strong> पश्चिमी मानकों (25/30)
+                से अधिक सटीक और सुरक्षित हैं।
               </p>
             </div>
           </div>
@@ -316,7 +369,7 @@ const BMIPurush = () => {
 
         {/* फुटर */}
         <footer className="text-center mt-16 text-sm text-muted-foreground">
-          <p>&copy; 2024 पुरुषों के लिए BMI कैलकुलेटर</p>
+          <p>&copy; 2024 भारतीय पुरुषों के लिए BMI कैलकुलेटर — ICMR एशियाई मानक</p>
         </footer>
       </div>
     </div>

@@ -1,13 +1,13 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles } from "lucide-react";
+import { Users, Heart, Target, Baby, Scale, AlertTriangle, CheckCircle2, Sparkles, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 const IMCMaraa = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(65);
-  const [height, setHeight] = useState(165);
+  const [weight, setWeight] = useState(72);
+  const [height, setHeight] = useState(160);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightInM = h / 100;
@@ -15,14 +15,24 @@ const IMCMaraa = () => {
     setBmi(calculatedBmi);
   }, []);
 
-  useEffect(() => { calculateBMI(weight, height); }, []);
+  useEffect(() => {
+    calculateBMI(weight, height);
+  }, []);
 
-  const handleWeightChange = (value: number[]) => { setWeight(value[0]); calculateBMI(value[0], height); };
-  const handleHeightChange = (value: number[]) => { setHeight(value[0]); calculateBMI(weight, value[0]); };
+  const handleWeightChange = (value: number[]) => {
+    setWeight(value[0]);
+    calculateBMI(value[0], height);
+  };
+
+  const handleHeightChange = (value: number[]) => {
+    setHeight(value[0]);
+    calculateBMI(weight, value[0]);
+  };
 
   return (
     <div className="min-h-screen bg-background" dir="rtl">
       <Header />
+
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-pink-500/5 blur-3xl animate-float" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
@@ -32,13 +42,13 @@ const IMCMaraa = () => {
         <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 text-pink-500 text-sm font-medium mb-6">
             <Users className="w-4 h-4" />
-            حاسبة مؤشر كتلة الجسم للنساء
+            حاسبة مؤشر كتلة الجسم للنساء العربيات
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-pink-500">مؤشر كتلة الجسم للنساء</span>: احسبي مؤشرك
+            <span className="text-pink-500">مؤشر كتلة الجسم للمرأة العربية</span> : حاسبة BMI للنساء
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            حاسبة مؤشر كتلة الجسم مع نصائح مخصصة لكل مرحلة من حياة المرأة
+            في العالم العربي، أكثر من 65% من النساء يعانين من زيادة الوزن أو السمنة (منظمة الصحة العالمية - المكتب الإقليمي لشرق المتوسط 2023). حاسبة مؤشر كتلة الجسم بمراجع من WHO EMRO والهيئات الصحية العربية.
           </p>
         </header>
 
@@ -48,6 +58,7 @@ const IMCMaraa = () => {
               <Scale className="w-5 h-5 text-pink-500" />
               أدخلي قياساتك
             </h2>
+
             <div className="space-y-8">
               <div>
                 <div className="flex justify-between items-center mb-4">
@@ -56,6 +67,7 @@ const IMCMaraa = () => {
                 </div>
                 <Slider value={[weight]} onValueChange={handleWeightChange} min={35} max={150} step={1} className="py-4" />
               </div>
+
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <label className="text-sm font-medium">الطول</label>
@@ -65,6 +77,7 @@ const IMCMaraa = () => {
               </div>
             </div>
           </div>
+
           <BMIGauge bmi={bmi} />
         </div>
 
@@ -74,12 +87,44 @@ const IMCMaraa = () => {
               <div className="p-3 rounded-xl bg-pink-500/10">
                 <Users className="w-6 h-6 text-pink-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">فهم مؤشر كتلة الجسم للنساء</h2>
+              <h2 className="text-2xl font-display font-bold">فهم مؤشر كتلة الجسم للنساء في العالم العربي</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
-              <p>يُحسب <strong>مؤشر كتلة الجسم للنساء</strong> بنفس الطريقة المستخدمة للرجال، لكن التفسير يختلف قليلاً. تتمتع النساء بطبيعتهن بـ<strong>نسبة دهون أعلى</strong> (20-25% مقابل 15-20% للرجال)، وهذا طبيعي تماماً وضروري لوظائف الهرمونات.</p>
-              <p><strong>محيط الخصر المثالي</strong> للمرأة يجب ألا يتجاوز <strong>80 سم</strong> (خطر معتدل) أو <strong>88 سم</strong> (خطر مرتفع). هذا المؤشر غالباً أكثر صلة من مؤشر كتلة الجسم وحده.</p>
+              <p>
+                يسجّل <strong>العالم العربي أعلى معدلات سمنة النساء عالمياً</strong> وفقاً لمنظمة الصحة العالمية (WHO). تتمتع النساء بطبيعتهن بـ<strong>نسبة دهون أعلى</strong> (20-25% مقابل 15-20% للرجال)، وهذا ضروري لوظائف الهرمونات والصحة الإنجابية.
+              </p>
+              <p>
+                <strong>إحصائيات السمنة عند النساء العربيات:</strong> الكويت: 48% من النساء يعانين من السمنة (الأعلى عالمياً) — السعودية: 44% من النساء يعانين من السمنة — مصر: 42% من النساء يعانين من السمنة — الإمارات: 39% من النساء يعانين من السمنة.
+              </p>
+              <p>
+                <strong>متوسط قياسات المرأة العربية:</strong> الطول 160 سم، الوزن 72 كغ. بالنسبة لـ<strong>محيط الخصر</strong>، حددت منظمة الصحة العالمية (المكتب الإقليمي لشرق المتوسط) أن <strong>80 سم</strong> يمثل خطراً معتدلاً و<strong>88 سم</strong> يمثل خطراً مرتفعاً للأمراض المزمنة.
+              </p>
             </div>
+          </div>
+
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-pink-500/10">
+                <Scale className="w-6 h-6 text-pink-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">جدول مؤشر كتلة الجسم للنساء (160 سم — متوسط عربي)</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                { category: "نقص الوزن (أقل من 18.5)", range: "< 47 كغ", color: "text-blue-500" },
+                { category: "وزن طبيعي (18.5 - 24.9)", range: "47 - 64 كغ", color: "text-success" },
+                { category: "زيادة في الوزن (25 - 29.9)", range: "64 - 77 كغ", color: "text-warning" },
+                { category: "سمنة (30 أو أكثر)", range: "> 77 كغ", color: "text-destructive" },
+              ].map((item) => (
+                <div key={item.category} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
+                  <span className={`font-semibold ${item.color}`}>{item.category}</span>
+                  <span className="text-muted-foreground font-bold">{item.range}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              * مثال لامرأة طولها 160 سم (متوسط عربي). القيم محسوبة وفقاً لتصنيف منظمة الصحة العالمية (WHO EMRO).
+            </p>
           </div>
 
           <div className="glass-card p-8">
@@ -87,20 +132,22 @@ const IMCMaraa = () => {
               <div className="p-3 rounded-xl bg-pink-500/10">
                 <Target className="w-6 h-6 text-pink-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">الوزن المثالي للنساء حسب الطول</h2>
+              <h2 className="text-2xl font-display font-bold">الوزن المثالي للنساء العربيات حسب الطول</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { height: "155 سم", min: 44, max: 60, ideal: 53 },
-                { height: "160 سم", min: 47, max: 64, ideal: 56 },
-                { height: "165 سم", min: 50, max: 68, ideal: 60 },
-                { height: "170 سم", min: 53, max: 72, ideal: 64 },
-                { height: "175 سم", min: 57, max: 76, ideal: 67 },
-                { height: "180 سم", min: 60, max: 81, ideal: 71 },
+                { height: "152 سم", min: 43, max: 58, ideal: 51 },
+                { height: "156 سم", min: 45, max: 61, ideal: 54 },
+                { height: "160 سم (متوسط)", min: 47, max: 64, ideal: 56 },
+                { height: "164 سم", min: 50, max: 67, ideal: 59 },
+                { height: "168 سم", min: 52, max: 70, ideal: 62 },
+                { height: "172 سم", min: 55, max: 74, ideal: 65 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-pink-500">{item.height}</span>
-                  <span className="text-muted-foreground">{item.min} - {item.max} كغ <span className="text-success">(مثالي: {item.ideal} كغ)</span></span>
+                  <span className="text-muted-foreground">
+                    {item.min} - {item.max} كغ <span className="text-success">(مثالي: {item.ideal} كغ)</span>
+                  </span>
                 </div>
               ))}
             </div>
@@ -112,13 +159,25 @@ const IMCMaraa = () => {
                 <div className="p-3 rounded-xl bg-purple-500/10">
                   <Sparkles className="w-6 h-6 text-purple-500" />
                 </div>
-                <h3 className="text-xl font-display font-bold">الدورة الهرمونية والوزن</h3>
+                <h3 className="text-xl font-display font-bold">الدورة الشهرية والوزن في المنطقة العربية</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" /><span>يمكن أن يتغير الوزن بمقدار <strong>1-3 كغ</strong> حسب الدورة الشهرية</span></li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" /><span><strong>احتباس الماء</strong> طبيعي قبل الدورة</span></li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" /><span>قيسي وزنك دائماً في <strong>نفس الفترة</strong> من دورتك</span></li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" /><span><strong>سن اليأس</strong> يغير أنماط توزيع الدهون</span></li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span>يمكن أن يتغير الوزن بمقدار <strong>1-3 كغ</strong> حسب الدورة الشهرية بسبب التغيرات الهرمونية</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>احتباس الماء</strong> طبيعي قبل الدورة — لا داعي للقلق من زيادة الميزان المؤقتة</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span>قيسي وزنك دائماً في <strong>نفس الفترة</strong> من دورتك للحصول على قراءة دقيقة</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>سن اليأس</strong> يغير أنماط توزيع الدهون — استشيري طبيبتك حول التعامل مع التغيرات الجسدية</span>
+                </li>
               </ul>
             </div>
 
@@ -127,13 +186,81 @@ const IMCMaraa = () => {
                 <div className="p-3 rounded-xl bg-pink-500/10">
                   <Baby className="w-6 h-6 text-pink-500" />
                 </div>
-                <h3 className="text-xl font-display font-bold">الحمل ومؤشر كتلة الجسم</h3>
+                <h3 className="text-xl font-display font-bold">المتابعة الطبية للحامل في المنظومة الصحية العربية</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2"><AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" /><span>مؤشر كتلة الجسم <strong>لا ينطبق</strong> أثناء الحمل</span></li>
-                <li className="flex items-start gap-2"><AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" /><span>زيادة الوزن الموصى بها: <strong>11-16 كغ</strong> (مؤشر طبيعي)</span></li>
-                <li className="flex items-start gap-2"><AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" /><span>استشيري <strong>طبيبة النساء</strong> للمتابعة الشخصية</span></li>
-                <li className="flex items-start gap-2"><AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" /><span>فقدان الوزن بعد الولادة يستغرق <strong>وقتاً</strong> - تحلي بالصبر</span></li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <span>مؤشر كتلة الجسم <strong>لا ينطبق</strong> أثناء الحمل — توصيات وزارة الصحة السعودية للرعاية قبل الولادة</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <span>زيادة الوزن الموصى بها: <strong>11-16 كغ</strong> (مؤشر طبيعي) حسب إرشادات الصحة الخليجية</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>السكري الحملي</strong> يصيب 18-24% من الحوامل في دول الخليج — نسبة أعلى من المعدل العالمي</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <span>استشيري <strong>طبيبة النساء والتوليد</strong> للمتابعة الشخصية وفحص سكري الحمل بانتظام</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-xl bg-pink-500/10">
+                  <Heart className="w-6 h-6 text-pink-500" />
+                </div>
+                <h3 className="text-xl font-display font-bold">تحديات صحة المرأة العربية والوزن</h3>
+              </div>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>نمط الحياة الخامل</strong> بين النساء العربيات يساهم في ارتفاع معدلات السمنة مع محدودية خيارات الرياضة في الأماكن المفتوحة</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>العوامل الثقافية:</strong> المناسبات الاجتماعية والاحتفالات التقليدية الغنية بالسعرات الحرارية كالأفراح والعزائم</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>رؤية 2030:</strong> تمكين المرأة السعودية من ممارسة الرياضة — فتح الأندية الرياضية النسائية والمرافق الرياضية</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>نمو الصالات الرياضية النسائية</strong> في دول الخليج — خيارات متزايدة للمرأة العربية لممارسة النشاط البدني</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-xl bg-purple-500/10">
+                  <Sparkles className="w-6 h-6 text-purple-500" />
+                </div>
+                <h3 className="text-xl font-display font-bold">الحجاب والنشاط البدني</h3>
+              </div>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>الملابس الرياضية المحتشمة</strong> تشهد نمواً كبيراً في الأسواق — خيارات متعددة من علامات عالمية ومحلية</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>المرافق الرياضية المغلقة</strong> المخصصة للنساء في دول الخليج توفر بيئة مريحة لممارسة الرياضة</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>هيئة الرياضة السعودية:</strong> برامج مخصصة لتشجيع النساء على ممارسة النشاط البدني والرياضات المختلفة</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>السباحة والمشي والبيلاتس</strong> من أكثر الرياضات شعبية بين النساء العربيات في الأندية المغلقة</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -143,30 +270,41 @@ const IMCMaraa = () => {
               <div className="p-3 rounded-xl bg-pink-500/10">
                 <Heart className="w-6 h-6 text-pink-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">مؤشر كتلة الجسم وسن اليأس</h2>
+              <h2 className="text-2xl font-display font-bold">مؤشر كتلة الجسم وسن اليأس عند المرأة العربية</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
-              <p>خلال <strong>سن اليأس</strong>، تعزز التغيرات الهرمونية زيادة الوزن خاصة في منطقة البطن. يتباطأ الأيض وتنخفض كتلة العضلات بشكل طبيعي. لذلك من الطبيعي اكتساب بعض الكيلوغرامات بعد سن الخمسين.</p>
-              <p>للحفاظ على <strong>مؤشر كتلة جسم صحي بعد 50</strong>، ركزي على نظام غذائي غني بـ<strong>البروتين</strong> و<strong>الكالسيوم</strong>، وحافظي على نشاط بدني منتظم يشمل <strong>تمارين القوة</strong>.</p>
+              <p>
+                خلال <strong>سن اليأس</strong>، تعزز التغيرات الهرمونية زيادة الوزن خاصة في منطقة البطن. يتباطأ الأيض وتنخفض كتلة العضلات بشكل طبيعي. في المنطقة العربية، قد يتأخر اكتشاف هذه التغيرات بسبب قلة الوعي الصحي أحياناً.
+              </p>
+              <p>
+                للحفاظ على <strong>مؤشر كتلة جسم صحي بعد 50</strong>، ركزي على نظام غذائي غني بـ<strong>البروتين</strong> و<strong>الكالسيوم</strong> — التمر واللبن والأسماك مصادر ممتازة. حافظي على نشاط بدني منتظم يشمل <strong>تمارين القوة</strong> والمشي اليومي.
+              </p>
             </div>
           </div>
 
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-xl bg-pink-500/10">
-                <Activity className="w-6 h-6 text-pink-500" />
+              <div className="p-3 rounded-xl bg-purple-500/10">
+                <Globe className="w-6 h-6 text-purple-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">كل شيء عن مؤشر كتلة الجسم للنساء</h2>
+              <h2 className="text-2xl font-display font-bold">مؤشر كتلة الجسم للمرأة العربية: دليل شامل</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
-              <p><strong>حاسبة مؤشر كتلة الجسم للنساء</strong> أداة أساسية لتقييم <strong>تكوين الجسم الأنثوي</strong>. المؤشر المثالي للنساء بين 19 و 24.</p>
-              <p>بالنسبة لامرأة طولها <strong>165 سم</strong>، الوزن المثالي حوالي 60 كغ. بالنسبة لامرأة طولها <strong>170 سم</strong>، حوالي 64 كغ.</p>
+              <p>
+                <strong>حاسبة مؤشر كتلة الجسم للنساء العربيات</strong> ضرورية لتقييم <strong>تكوين الجسم</strong> مع مراعاة الخصائص الإقليمية. بالنسبة لامرأة عربية طولها <strong>160 سم</strong> (المتوسط العربي)، الوزن المثالي حوالي 56 كغ مع مؤشر كتلة جسم بين 18.5 و24.9.
+              </p>
+              <p>
+                <strong>مثال عملي:</strong> امرأة عربية طولها 160 سم ووزنها 72 كغ — مؤشر كتلة الجسم = 28.1 (زيادة في الوزن). الهدف الصحي: الوصول إلى 56-64 كغ عبر نظام غذائي متوازن ونشاط بدني منتظم.
+              </p>
+              <p>
+                <strong>المراجع والمصادر:</strong> منظمة الصحة العالمية — المكتب الإقليمي لشرق المتوسط (WHO EMRO)، وزارة الصحة السعودية (Saudi MOH)، وزارة الصحة ووقاية المجتمع الإماراتية (UAE MOHAP)، هيئة الرياضة السعودية. جميع القيم بالنظام المتري (كغ وسم).
+              </p>
             </div>
           </div>
         </div>
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
-          <p>© 2024 حاسبة مؤشر كتلة الجسم للنساء - أداة إعلامية</p>
+          <p>© 2024 حاسبة مؤشر كتلة الجسم للنساء العربيات - أداة إعلامية | المراجع: WHO EMRO، وزارة الصحة السعودية، MOHAP الإمارات</p>
         </footer>
       </div>
     </div>

@@ -1,14 +1,14 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp } from "lucide-react";
+import { Calculator, Activity, Target, BookOpen, Scale, TrendingUp, Heart, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Slider } from "@/components/ui/slider";
 
 const BMIZh = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weightKg, setWeightKg] = useState(70);
-  const [heightCm, setHeightCm] = useState(170);
+  const [weightKg, setWeightKg] = useState(68);
+  const [heightCm, setHeightCm] = useState(169);
 
   const calculateBMI = useCallback((wKg: number, hCm: number) => {
     const heightInM = hCm / 100;
@@ -47,10 +47,10 @@ const BMIZh = () => {
             实时模拟器
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">计算您的BMI (Body Mass Index)</span>
+            <span className="gradient-text">免费BMI计算器在线</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            通过个性化建议计算您的身体质量指数
+            基于中国国家标准（WS/T 428-2013）与WHO双标准，精准评估您的身体质量指数
           </p>
         </header>
 
@@ -108,41 +108,96 @@ const BMIZh = () => {
 
         {/* 内容区域 */}
         <div className="space-y-8">
-          {/* 什么是BMI */}
+          {/* 中国背景下的BMI介绍 */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
                 <BookOpen className="w-6 h-6 text-primary" />
               </div>
-              <h2 className="text-2xl font-display font-bold">了解BMI</h2>
+              <h2 className="text-2xl font-display font-bold">中国人的BMI：为何更需关注？</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                <strong>BMI（身体质量指数）</strong>是一种简单的测量方法，通过您的身高和体重来评估
-                您是否处于健康体重范围内。<strong>BMI公式</strong>将您的体重（千克）除以
-                身高（米）的平方。
+                <strong>BMI（身体质量指数）</strong>是评估体重与身高关系的国际通用指标。
+                然而，对于中国人而言，BMI的意义远不止于一个简单的数字。根据<strong>中国疾病预防控制中心（CDC）</strong>的数据，
+                中国成年人的超重肥胖率已超过<strong>50%</strong>，超重和肥胖人口超过<strong>6亿</strong>，
+                尽管中国成年人的肥胖率（约16.4%）看似低于欧美国家，但由于庞大的人口基数，
+                这一比例所代表的绝对数字令人震惊。
               </p>
               <p>
-                <strong>BMI计算方法</strong>由比利时数学家阿道夫·凯特勒于19世纪30年代发明。
-                如今，它被全球医生和卫生组织广泛用作体重类别的快速筛查工具。
+                更值得警惕的是<strong>儿童青少年肥胖</strong>的急剧上升。过去三十年间，
+                中国6-17岁青少年的超重肥胖率从不到5%飙升至近20%。
+                城市化进程加速、久坐不动的生活方式、高热量饮食的普及以及学业压力导致的运动时间减少，
+                都是推动这一趋势的关键因素。
+              </p>
+              <p>
+                为应对这一公共卫生挑战，国务院发布了<strong>《"健康中国2030"规划纲要》</strong>，
+                将控制超重肥胖率作为重要战略目标之一。<strong>中国营养学会</strong>发布的《中国居民膳食指南》
+                也为国民提供了科学的饮食建议。同时，国家卫生健康委员会（NHC）持续推进
+                全民健康生活方式行动，倡导合理膳食与科学运动。
+              </p>
+              <p>
+                尤为重要的是，研究表明<strong>中国人及东亚人群在较低的BMI水平下，
+                就已经面临较高的心血管疾病、2型糖尿病和代谢综合征风险</strong>。
+                这正是中国制定独立于WHO标准的BMI分类标准的科学依据——
+                中国标准将超重起点定为24（而非WHO的25），肥胖起点定为28（而非WHO的30）。
               </p>
             </div>
           </div>
 
-          {/* BMI分类 */}
+          {/* 中国BMI标准：24/28分界点 */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-red-500/10">
+                <AlertTriangle className="w-6 h-6 text-red-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">中国BMI标准：24/28分界点</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                2013年，中华人民共和国卫生行业标准<strong>《WS/T 428-2013 成人体重判定》</strong>正式发布实施，
+                确立了适用于中国成年人的BMI分类标准。这一标准与WHO的国际标准存在关键差异，
+                其核心在于将<strong>超重分界点从25降至24，肥胖分界点从30降至28</strong>。
+              </p>
+              <p>
+                <strong>为什么中国标准更严格？</strong>这并非随意制定，而是基于大量中国人群流行病学研究的科学结论。
+                多项涉及数十万中国受试者的前瞻性队列研究发现：
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li><strong>体脂分布差异：</strong>中国人及东亚人群倾向于在腹部（内脏）积累更多脂肪，即所谓的"中心性肥胖"或"苹果型身材"。内脏脂肪与胰岛素抵抗、炎症反应和心血管疾病风险的关联远强于皮下脂肪。</li>
+                <li><strong>相同BMI下更高的体脂率：</strong>在相同BMI水平下，中国人的体脂百分比通常比白种人高3-5个百分点。这意味着BMI为24的中国人，其实际体脂水平可能相当于BMI为27-28的白种人。</li>
+                <li><strong>代谢风险提前出现：</strong>中国人群中，2型糖尿病、高血压、血脂异常等代谢疾病的风险在BMI 24左右即开始显著升高，而非WHO标准所界定的25。</li>
+                <li><strong>心血管疾病风险曲线：</strong>在BMI 28以上，中国人群的心血管事件发生率和全因死亡率的增长斜率明显陡于西方人群。</li>
+              </ul>
+              <p>
+                因此，如果您是中国人或东亚裔，<strong>切勿仅以WHO标准自我安慰</strong>。
+                一个BMI为25的中国成年人，按中国标准已经属于超重，需要引起重视并采取行动。
+                中国标准的24/28分界点更能准确反映中国人群的实际健康风险。
+              </p>
+              <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-4 mt-4">
+                <p className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4" />
+                  重要提示：中国国家标准WS/T 428-2013规定，BMI 24-27.9为超重，BMI 28及以上为肥胖。建议中国居民以此标准为主要参考。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* BMI分类对照表：WHO vs 中国标准 */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
                 <Target className="w-6 h-6 text-primary" />
               </div>
-              <h2 className="text-2xl font-display font-bold">BMI分类标准（WHO）</h2>
+              <h2 className="text-2xl font-display font-bold">BMI分类标准对照：WHO vs 中国</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b-2 border-border">
                     <th className="text-left py-3 px-4 font-bold">分类</th>
-                    <th className="text-left py-3 px-4 font-bold">BMI范围</th>
+                    <th className="text-left py-3 px-4 font-bold">WHO国际标准</th>
+                    <th className="text-left py-3 px-4 font-bold">中国标准（WS/T 428-2013）</th>
                     <th className="text-left py-3 px-4 font-bold">健康风险</th>
                   </tr>
                 </thead>
@@ -153,6 +208,7 @@ const BMIZh = () => {
                       体重过轻
                     </td>
                     <td className="py-3 px-4">&lt; 18.5</td>
+                    <td className="py-3 px-4">&lt; 18.5</td>
                     <td className="py-3 px-4 text-info">营养不良风险</td>
                   </tr>
                   <tr className="border-b border-border/50 bg-success/5">
@@ -161,42 +217,54 @@ const BMIZh = () => {
                       正常体重
                     </td>
                     <td className="py-3 px-4">18.5 - 24.9</td>
+                    <td className="py-3 px-4 font-semibold">18.5 - 23.9</td>
                     <td className="py-3 px-4 text-success">低风险</td>
                   </tr>
-                  <tr className="border-b border-border/50">
+                  <tr className="border-b border-border/50 bg-warning/5">
                     <td className="py-3 px-4 flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-warning" />
                       超重
                     </td>
-                    <td className="py-3 px-4">25 - 29.9</td>
+                    <td className="py-3 px-4">25.0 - 29.9</td>
+                    <td className="py-3 px-4 font-semibold">24.0 - 27.9</td>
                     <td className="py-3 px-4 text-warning">较高风险</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-destructive" />
-                      肥胖（一级）
+                      肥胖（I级）
                     </td>
-                    <td className="py-3 px-4">30 - 34.9</td>
+                    <td className="py-3 px-4">30.0 - 34.9</td>
+                    <td className="py-3 px-4 font-semibold">28.0 - 31.9</td>
                     <td className="py-3 px-4 text-destructive">高风险</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-destructive" />
-                      肥胖（二级）
+                      肥胖（II级）
                     </td>
-                    <td className="py-3 px-4">35 - 39.9</td>
+                    <td className="py-3 px-4">35.0 - 39.9</td>
+                    <td className="py-3 px-4 font-semibold">32.0 - 36.9</td>
                     <td className="py-3 px-4 text-destructive">非常高风险</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-destructive" />
-                      肥胖（三级）
+                      肥胖（III级）
                     </td>
-                    <td className="py-3 px-4">≥ 40</td>
+                    <td className="py-3 px-4">&ge; 40</td>
+                    <td className="py-3 px-4 font-semibold">&ge; 37</td>
                     <td className="py-3 px-4 text-destructive">极高风险</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+            <div className="bg-muted/30 rounded-xl p-4 mt-4">
+              <p className="text-sm text-muted-foreground">
+                <strong>注意：</strong>中国标准的正常体重上限为23.9（WHO为24.9），超重起点为24.0（WHO为25.0），
+                肥胖起点为28.0（WHO为30.0）。BMI处于24.0-24.9之间的中国成年人，
+                按WHO标准属于正常范围，但按中国标准已属于超重。建议中国居民优先参考中国国家标准。
+              </p>
             </div>
           </div>
 
@@ -211,12 +279,79 @@ const BMIZh = () => {
             <div className="text-muted-foreground space-y-4">
               <p><strong>BMI公式</strong>非常简单：</p>
               <div className="bg-muted/30 rounded-xl p-6 text-center">
-                <p className="text-2xl font-bold text-primary">BMI = 体重 (kg) ÷ 身高² (m)</p>
+                <p className="text-2xl font-bold text-primary">BMI = 体重 (kg) / 身高² (m)</p>
               </div>
               <p>
-                例如，如果您的体重为70公斤，身高为1.75米：<br />
-                BMI = 70 ÷ (1.75 × 1.75) = 70 ÷ 3.0625 = <strong>22.9</strong>
+                以中国成年人平均体型为例——体重68公斤，身高1.69米：<br />
+                BMI = 68 / (1.69 x 1.69) = 68 / 2.8561 = <strong>23.8</strong>
               </p>
+              <p>
+                这个结果（23.8）在<strong>WHO标准</strong>下属于正常范围（18.5-24.9），
+                但在<strong>中国标准</strong>下已接近超重分界点（24.0）。
+                这正好说明了为什么中国人需要更关注自己的BMI变化——
+                看似"正常"的BMI，按中国标准可能已经需要注意体重管理。
+              </p>
+            </div>
+          </div>
+
+          {/* 中医体质与体重管理 */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-emerald-500/10">
+                <Heart className="w-6 h-6 text-emerald-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">中医体质与体重管理</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                中国拥有数千年的传统医学智慧。<strong>中医学</strong>从整体观念出发，
+                将人的体质分为<strong>九种基本类型</strong>，每种体质对体重的影响各不相同。
+                将中医体质辨识与现代BMI评估相结合，可以为中国人提供更个性化的体重管理方案。
+              </p>
+
+              <h3 className="text-lg font-bold text-foreground mt-6">九种体质与肥胖倾向</h3>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li><strong>痰湿质（Phlegm-dampness）：</strong>最容易发胖的体质类型。特征为体型偏胖、腹部松软、面部皮肤油腻、多汗。这类人群代谢功能相对偏低，脂肪容易堆积，需特别注意饮食清淡，减少油腻甜食，可多食薏米、冬瓜、荷叶等化痰祛湿食物。</li>
+                <li><strong>气虚质（Qi deficiency）：</strong>容易疲乏无力，说话声低，基础代谢偏低，易导致"虚胖"。建议适量食用黄芪、山药、大枣等补气食材，配合太极拳等温和运动。</li>
+                <li><strong>湿热质（Damp-heat）：</strong>面部油光，易生痤疮，体味较重。此体质也有一定肥胖倾向，需清热利湿，可食用绿豆、苦瓜、薏苡仁等。</li>
+                <li><strong>阳虚质（Yang deficiency）：</strong>怕冷，手脚不温，基础代谢率偏低，脂肪不易分解。建议食用温性食物如生姜、羊肉、桂圆，避免生冷。</li>
+                <li><strong>平和质（Balanced）：</strong>体态适中，精力充沛，是最理想的体质状态。维持均衡饮食和适量运动即可。</li>
+                <li><strong>阴虚质、血瘀质、气郁质、特禀质：</strong>这些体质类型虽然肥胖倾向不如痰湿质明显，但各有特殊的体重管理要点，需根据具体情况辨证施治。</li>
+              </ul>
+
+              <h3 className="text-lg font-bold text-foreground mt-6">食疗（食疗 Shi Liao）——以食为药</h3>
+              <p>
+                中医食疗强调<strong>"药食同源"</strong>——许多日常食材本身就具有调理身体的功效。
+                对于体重管理，中医推荐：
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li><strong>荷叶茶：</strong>被誉为"减肥茶"，具有清暑利湿、升发清阳的功效，有助于脂肪代谢。</li>
+                <li><strong>薏米红豆粥：</strong>健脾祛湿，尤其适合痰湿体质的肥胖人群。</li>
+                <li><strong>山楂陈皮水：</strong>消食化积、理气化痰，改善因饮食积滞引起的腹胀肥胖。</li>
+                <li><strong>冬瓜汤：</strong>利水消肿，热量极低，是理想的减重辅助食品。</li>
+                <li><strong>苦荞茶：</strong>富含芦丁等黄酮类化合物，有助于调节血糖和血脂。</li>
+              </ul>
+
+              <h3 className="text-lg font-bold text-foreground mt-6">太极拳与气功——动中求静的运动方式</h3>
+              <p>
+                与西方高强度运动不同，<strong>太极拳</strong>和<strong>气功</strong>讲究"动中有静、静中有动"，
+                通过缓慢柔和的动作与深呼吸，达到调节气血、疏通经络、改善代谢的效果。研究表明：
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li>每日练习太极拳30-60分钟，可显著改善胰岛素敏感性和血脂水平。</li>
+                <li>八段锦等传统功法有助于降低腰臀比和内脏脂肪面积。</li>
+                <li>太极拳的冥想属性有助于缓解压力性进食，从心理层面辅助体重管理。</li>
+                <li>对于中老年人群和不适合剧烈运动者，太极拳是安全有效的运动选择。</li>
+              </ul>
+
+              <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-4 mt-4">
+                <p className="text-sm text-muted-foreground">
+                  <strong>中西结合建议：</strong>建议将现代BMI评估作为"量化指标"，
+                  结合中医体质辨识作为"定性分析"，制定个性化的体重管理方案。
+                  BMI告诉您"是否需要管理"，中医体质帮您理解"如何管理"。
+                  两者互补，才能更好地服务于每个人的健康目标。
+                </p>
+              </div>
             </div>
           </div>
 
@@ -355,30 +490,36 @@ const BMIZh = () => {
 
           {/* SEO内容 */}
           <div className="glass-card p-8">
-            <h2 className="text-2xl font-display font-bold mb-6">深入了解您的身体质量指数</h2>
+            <h2 className="text-2xl font-display font-bold mb-6">中国居民BMI健康评估指南</h2>
             <div className="text-muted-foreground space-y-4">
               <p>
-                <strong>BMI计算器</strong>是了解您体重状况的重要工具。
-                无论您是在寻找<strong>免费的BMI计算器</strong>、想知道您的
-                <strong>理想BMI</strong>是多少，还是只想快速<strong>计算BMI</strong>，
-                我们的工具都能为您提供即时结果。
+                本<strong>BMI计算器</strong>特别针对中国用户进行了优化，同时展示
+                <strong>WHO国际标准</strong>和<strong>中国国家标准（WS/T 428-2013）</strong>的BMI分类，
+                帮助您更准确地了解自身健康状况。
+                根据<strong>中国疾病预防控制中心</strong>的研究，中国人群适用更严格的BMI分界点——
+                超重起点为24（非25），肥胖起点为28（非30）。
               </p>
               <p>
-                <strong>什么是健康的BMI</strong>？<strong>健康的BMI</strong>范围在18.5到24.9之间。
-                <strong>BMI对照表</strong>显示，<strong>正常的BMI</strong>表明您的体重
-                相对于身高处于健康范围。使用我们的<strong>BMI检测工具</strong>来了解您的当前状况。
+                <strong>中国营养学会</strong>在《中国居民膳食指南》中建议，
+                中国成年人应将BMI维持在<strong>18.5-23.9</strong>的正常范围内。
+                <strong>国家卫生健康委员会（NHC）</strong>作为<strong>《"健康中国2030"规划纲要》</strong>的
+                执行机构，持续推动全民体重管理意识的提升。
+                我们的BMI计算工具不仅提供即时的BMI数值计算，更结合了中国传统医学的体质辨识理念，
+                为您提供更全面、更本土化的健康评估视角。
               </p>
               <p>
-                这款<strong>身体质量指数计算器</strong>使用世界卫生组织（WHO）认可的标准<strong>BMI方程式</strong>。
-                虽然<strong>BMI量表</strong>非常实用，但请记住它并不考虑肌肉量、年龄或身体组成等因素。
-                建议您将BMI作为健康评估的参考指标之一，而非唯一依据。
+                中国传统饮食文化中蕴含着丰富的健康智慧——强调五谷为养、五菜为充、五果为助、五畜为益的膳食平衡原则，
+                这与现代营养学的均衡饮食理念不谋而合。
+                将<strong>BMI科学评估</strong>与传统养生智慧相结合，才能真正实现适合中国人体质特点的体重管理。
+                无论您是想<strong>计算BMI</strong>、了解<strong>BMI对照表</strong>，
+                还是寻找<strong>个性化的体重管理方案</strong>，本工具都能为您提供专业、可靠的参考。
               </p>
             </div>
           </div>
         </div>
 
         <footer className="text-center mt-16 text-sm text-muted-foreground">
-          <p>© 2024 BMI计算器</p>
+          <p>&copy; 2024 BMI计算器</p>
         </footer>
       </div>
     </div>

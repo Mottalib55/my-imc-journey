@@ -32,64 +32,60 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 const FAQIMC = () => {
   const faqs = [
     {
-      question: "Qu'est-ce que l'IMC exactement ?",
-      answer: "L'<strong>IMC (Indice de Masse Corporelle)</strong> est un indicateur qui permet d'estimer la corpulence d'une personne. Il se calcule en divisant le poids (en kg) par la taille au carré (en mètres). Formule : IMC = Poids / Taille². C'est un outil de dépistage rapide utilisé par les professionnels de santé."
+      question: "Qu'est-ce que l'IMC et comment le calcule-t-on en France ?",
+      answer: "L'<strong>IMC (Indice de Masse Corporelle)</strong> est l'indicateur de référence utilisé par la <strong>HAS</strong> (Haute Autorité de Santé) pour évaluer la corpulence. Formule : IMC = Poids (kg) / Taille² (m). Exemple pour un Français moyen : 77 kg / (1,78)² = <strong>24,3</strong>. En France, l'IMC moyen est de <strong>25,4</strong> selon l'enquête ObÉpi-Roche 2023. Utilisez notre <a href='/' class='text-primary hover:underline'>calculateur IMC gratuit</a>."
     },
     {
-      question: "Comment calculer son IMC ?",
-      answer: "Pour calculer votre IMC, divisez votre poids en kilogrammes par votre taille en mètres au carré. Par exemple, si vous pesez 70 kg et mesurez 1,75 m : IMC = 70 / (1,75 × 1,75) = 70 / 3,0625 = <strong>22,9</strong>. Vous pouvez aussi utiliser notre <a href='/' class='text-primary hover:underline'>calculateur IMC gratuit</a>."
+      question: "L'obésité est-elle remboursée par la Sécurité Sociale ?",
+      answer: "Oui, la prise en charge de l'obésité est <strong>partiellement remboursée</strong> en France. Les consultations chez un <strong>médecin nutritionniste</strong> sont remboursées à 70% sur prescription. Les consultations chez un <strong>diététicien libéral</strong> ne sont pas remboursées par la Sécu (sauf dans le cadre du dispositif « Mon Bilan Diététique »). La <strong>chirurgie bariatrique</strong> est prise en charge à 100% pour un IMC ≥ 40, ou ≥ 35 avec comorbidités, après 6-12 mois de suivi pluridisciplinaire."
     },
     {
-      question: "Quel est l'IMC idéal ?",
-      answer: "Selon l'OMS, un <strong>IMC normal</strong> se situe entre <strong>18,5 et 24,9</strong>. C'est la zone où les risques pour la santé sont les plus faibles. Cependant, l'IMC idéal peut varier selon l'âge, le sexe et l'activité physique. L'IMC optimal se situe souvent autour de 21-22."
+      question: "Quelle est la différence entre un nutritionniste et un diététicien en France ?",
+      answer: "Le <strong>médecin nutritionniste</strong> est un médecin (6 ans d'études + spécialisation) qui peut prescrire des médicaments et des examens. Ses consultations sont remboursées par la Sécu. Le <strong>diététicien</strong> est un professionnel de santé (BTS ou DUT) qui ne prescrit pas de médicaments. Ses consultations sont remboursées uniquement dans certains cadres (hôpital, dispositif « Mon Bilan Diététique » depuis 2024). Les deux sont compétents pour vous accompagner dans la gestion de votre poids."
     },
     {
-      question: "L'IMC est-il fiable ?",
-      answer: "L'IMC est un bon indicateur pour la population générale, mais il a des <strong>limites</strong>. Il ne distingue pas la masse musculaire de la masse grasse. Un sportif musclé peut avoir un IMC élevé sans excès de graisse. D'autres indicateurs comme le tour de taille ou le taux de masse grasse sont complémentaires. Voir notre page sur les <a href='/limites-imc' class='text-primary hover:underline'>limites de l'IMC</a>."
+      question: "Qu'est-ce que le PNNS « Manger Bouger » recommande pour l'IMC ?",
+      answer: "Le <strong>Programme National Nutrition Santé</strong> (PNNS) recommande pour maintenir un IMC sain : <strong>1)</strong> 5 fruits et légumes par jour, <strong>2)</strong> Limiter les aliments ultra-transformés (classés Nova 4), <strong>3)</strong> 30 minutes d'activité physique quotidienne, <strong>4)</strong> Limiter la sédentarité (écrans, position assise), <strong>5)</strong> Privilégier les féculents complets, <strong>6)</strong> Consommer du poisson 2 fois/semaine. Le site <strong>mangerbouger.fr</strong> propose des outils personnalisés."
     },
     {
-      question: "Quel IMC pour une femme ?",
-      answer: "L'IMC normal pour une femme est le même que pour un homme : <strong>18,5 à 24,9</strong>. Cependant, les femmes ont naturellement un taux de graisse plus élevé (20-25% vs 15-20% pour les hommes). Le tour de taille est souvent plus pertinent : il ne devrait pas dépasser 80 cm. Consultez notre page <a href='/imc-femme' class='text-primary hover:underline'>IMC Femme</a> pour plus de détails."
+      question: "L'IMC est-il le même pour tous les Français ?",
+      answer: "Non, des <strong>disparités régionales</strong> existent en France. Les <strong>Hauts-de-France</strong> ont le taux d'obésité le plus élevé (26%) contre <strong>13% en Île-de-France</strong> (ObÉpi-Roche 2023). Les catégories socio-professionnelles jouent aussi : les ouvriers ont un IMC moyen de <strong>26,3</strong> vs <strong>25,1</strong> chez les cadres (INSERM). Les DOM-TOM sont également plus touchés que la métropole."
     },
     {
-      question: "Quel IMC pour un homme ?",
-      answer: "L'IMC normal pour un homme se situe entre <strong>18,5 et 24,9</strong>. Les hommes musclés peuvent avoir un IMC plus élevé (jusqu'à 27-28) sans problème de santé. Le tour de taille est un indicateur complémentaire important : il ne devrait pas dépasser 94 cm. Voir notre page <a href='/imc-homme' class='text-primary hover:underline'>IMC Homme</a>."
+      question: "Peut-on faire du sport sur ordonnance pour réduire son IMC ?",
+      answer: "Oui ! Depuis le <strong>décret de 2016</strong> (« Sport sur ordonnance »), votre médecin peut prescrire de l'<strong>APA (Activité Physique Adaptée)</strong> si vous avez une ALD (Affection Longue Durée), dont l'obésité sévère. La loi de 2022 a élargi ce dispositif. Les séances sont encadrées par un <strong>enseignant APA</strong> (licence STAPS mention APA). Le remboursement varie selon les mutuelles et certaines collectivités locales (Paris, Lyon, Strasbourg)."
     },
     {
-      question: "Comment calculer l'IMC d'un enfant ?",
-      answer: "Le calcul est le même (poids/taille²), mais l'<strong>interprétation est différente</strong>. On n'utilise pas les seuils adultes (18,5/25/30). On utilise des courbes de corpulence qui tiennent compte de l'âge et du sexe. Un enfant doit être situé sur les courbes de percentiles. Consultez notre page <a href='/imc-enfant' class='text-primary hover:underline'>IMC Enfant</a>."
+      question: "Mon médecin traitant peut-il m'aider avec mon IMC ?",
+      answer: "Absolument. Le <strong>médecin traitant</strong> est le premier interlocuteur pour les questions de poids en France. Il peut : <strong>1)</strong> Calculer votre IMC et mesurer votre tour de taille, <strong>2)</strong> Prescrire un bilan sanguin (glycémie, cholestérol, triglycérides), <strong>3)</strong> Vous orienter vers un nutritionniste ou un CSO (Centre Spécialisé de l'Obésité), <strong>4)</strong> Prescrire du sport sur ordonnance. Le <strong>bilan de santé gratuit</strong> de la Sécu tous les 5 ans inclut aussi le calcul de l'IMC."
     },
     {
-      question: "Peut-on calculer l'IMC pendant la grossesse ?",
-      answer: "<strong>Non</strong>, l'IMC ne s'applique pas pendant la grossesse. La prise de poids est normale et nécessaire. L'IMC pré-grossesse sert de référence pour déterminer la prise de poids recommandée (11-16 kg pour un IMC normal). Consultez votre gynécologue pour un suivi personnalisé."
+      question: "Qu'est-ce que le « paradoxe français » et l'IMC ?",
+      answer: "Le <strong>paradoxe français</strong> fait référence au fait que les Français ont historiquement un taux d'obésité plus bas que les Américains ou les Britanniques malgré une alimentation riche (fromages, vin, charcuterie). Les explications incluent : <strong>portions plus petites</strong>, <strong>repas structurés</strong> (entrée-plat-dessert à heures fixes), alimentation variée, et <strong>culture gastronomique</strong> qui valorise la qualité sur la quantité. Cependant, ce paradoxe <strong>s'estompe</strong> : l'obésité en France a triplé en 30 ans (6% en 1997 → 17% en 2023)."
     },
     {
-      question: "L'IMC est-il le même pour les sportifs ?",
-      answer: "<strong>L'IMC est biaisé pour les sportifs</strong>. La formule ne distingue pas muscle et graisse. Un bodybuilder avec 10% de masse grasse peut avoir un IMC de 30+ (classé obèse). Pour les sportifs, préférez le <strong>FFMI</strong> (Fat-Free Mass Index), le taux de masse grasse ou le tour de taille. Voir notre page <a href='/imc-sportif' class='text-primary hover:underline'>IMC Sportif</a>."
+      question: "L'IMC du carnet de santé est-il fiable pour les enfants français ?",
+      answer: "Le <strong>carnet de santé français</strong> contient des <strong>courbes de corpulence</strong> mises à jour par l'INSERM et le PNNS. Ces courbes utilisent des percentiles et le <strong>rebond d'adiposité</strong> (normalement vers 6 ans) pour détecter précocement le surpoids. Elles sont fiables mais doivent être interprétées par un pédiatre. En France, <strong>17% des enfants</strong> sont en surpoids (étude Esteban, Santé Publique France). Voir notre page <a href='/imc-enfant' class='text-primary hover:underline'>IMC Enfant</a>."
     },
     {
-      question: "À partir de quel IMC est-on en surpoids ?",
-      answer: "On parle de <strong>surpoids</strong> à partir d'un IMC de <strong>25</strong>. Entre 25 et 29,9, c'est le surpoids (ou préobésité). À partir de 30, on parle d'obésité. Ces seuils sont définis par l'OMS et sont utilisés mondialement."
+      question: "Le Nutri-Score aide-t-il à maintenir un bon IMC ?",
+      answer: "Le <strong>Nutri-Score</strong> (classement A à E) est un outil d'aide au choix alimentaire développé en France par l'équipe du Pr Serge Hercberg (INSERM). Des études montrent qu'une alimentation guidée par le Nutri-Score est associée à un <strong>IMC plus bas</strong>. Depuis 2017, il est affiché volontairement sur les emballages en France. Privilégiez les produits notés <strong>A et B</strong>. Attention : le Nutri-Score compare des produits d'une même catégorie, il ne remplace pas un conseil nutritionnel."
     },
     {
-      question: "À partir de quel IMC est-on obèse ?",
-      answer: "L'<strong>obésité</strong> commence à un IMC de <strong>30</strong>. Elle se divise en trois classes : Classe I (30-34,9) = obésité modérée, Classe II (35-39,9) = obésité sévère, Classe III (≥40) = obésité morbide. Plus l'IMC est élevé, plus les risques de santé augmentent."
+      question: "Comment obtenir une chirurgie bariatrique en France ?",
+      answer: "En France, la <strong>chirurgie bariatrique</strong> (sleeve, bypass) est accessible pour un IMC ≥ 40 ou ≥ 35 avec comorbidités. Le parcours HAS comprend : <strong>1)</strong> Suivi pluridisciplinaire de 6-12 mois (nutritionniste, psychologue, endocrinologue), <strong>2)</strong> Accord du comité médico-chirurgical, <strong>3)</strong> Entente préalable de la CPAM. Prise en charge à <strong>100%</strong> par la Sécurité Sociale. Environ <strong>50 000 interventions</strong> sont réalisées chaque année en France."
     },
     {
-      question: "Comment perdre du poids efficacement ?",
-      answer: "Pour perdre du poids durablement : <strong>1)</strong> Créez un déficit calorique modéré (300-500 kcal/jour), <strong>2)</strong> Privilégiez une alimentation équilibrée riche en protéines, <strong>3)</strong> Pratiquez une activité physique régulière (cardio + musculation), <strong>4)</strong> Dormez suffisamment (7-8h), <strong>5)</strong> Soyez patient : visez 0,5-1 kg/semaine maximum."
+      question: "Les régimes sont-ils dangereux selon l'ANSES ?",
+      answer: "L'<strong>ANSES</strong> (Agence nationale de sécurité sanitaire) a publié un rapport alertant sur les <strong>dangers des régimes restrictifs</strong> : Dukan, Atkins, détox, jeûne prolongé... Ces régimes entraînent souvent un <strong>effet yo-yo</strong> (reprise du poids + déperdition musculaire) et peuvent causer des carences nutritionnelles. L'ANSES recommande plutôt un <strong>rééquilibrage alimentaire progressif</strong> encadré par un professionnel, conforme aux recommandations du PNNS."
     },
     {
-      question: "Le tour de taille est-il plus important que l'IMC ?",
-      answer: "Le tour de taille est un <strong>excellent complément</strong> à l'IMC. Il mesure la graisse abdominale (viscérale), qui est plus dangereuse pour la santé. Seuils recommandés : Hommes &lt;94 cm (risque modéré), &lt;102 cm (risque élevé). Femmes &lt;80 cm (risque modéré), &lt;88 cm (risque élevé)."
+      question: "Quel est l'IMC moyen des Français en 2024 ?",
+      answer: "Selon l'enquête <strong>ObÉpi-Roche 2023</strong> (la référence en France), l'IMC moyen des Français est de <strong>25,4</strong> (25,8 pour les hommes, 25,1 pour les femmes). <strong>47% de la population</strong> est en surpoids ou obèse. L'obésité touche <strong>17% des adultes</strong> (vs 8,3% en 1997). La France reste toutefois en dessous de la moyenne européenne (16% vs 23% pour l'UE)."
     },
     {
-      question: "L'IMC change-t-il avec l'âge ?",
-      answer: "La formule de l'IMC reste la même, mais son <strong>interprétation peut varier</strong>. Après 65 ans, un IMC légèrement plus élevé (jusqu'à 27) peut être protecteur. Avec l'âge, la masse musculaire diminue (sarcopénie), ce qui peut fausser l'IMC. Un suivi médical régulier est recommandé."
-    },
-    {
-      question: "Quelle est la différence entre IMC et BMI ?",
-      answer: "Il n'y a <strong>aucune différence</strong> ! IMC signifie <strong>Indice de Masse Corporelle</strong> (français) et BMI signifie <strong>Body Mass Index</strong> (anglais). C'est exactement le même indicateur avec la même formule et les mêmes seuils."
+      question: "Le tour de taille est-il plus fiable que l'IMC en France ?",
+      answer: "La <strong>HAS</strong> recommande de mesurer <strong>les deux</strong>. Le tour de taille mesure la graisse abdominale (viscérale), plus dangereuse que la graisse sous-cutanée. Seuils HAS : Hommes &lt;94 cm (modéré), &lt;102 cm (élevé). Femmes &lt;80 cm (modéré), &lt;88 cm (élevé). En France, <strong>41% des femmes et 48% des hommes</strong> dépassent les seuils de risque modéré (Santé Publique France)."
     }
   ];
 
@@ -108,10 +104,10 @@ const FAQIMC = () => {
             Questions fréquentes
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">FAQ IMC</span> : Toutes vos questions
+            <span className="gradient-text">FAQ IMC</span> : Réponses aux Questions sur l'IMC
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Réponses aux questions les plus fréquentes sur l'Indice de Masse Corporelle
+            Réponses aux questions des Français sur l'IMC, avec des références HAS, INSERM, PNNS et Sécurité Sociale
           </p>
         </header>
 

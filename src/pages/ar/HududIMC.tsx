@@ -17,7 +17,7 @@ const HududIMC = () => {
             حدود مؤشر كتلة الجسم
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">حدود مؤشر كتلة الجسم</span>: ما لا يخبرك به
+            <span className="text-warning">حدود مؤشر كتلة الجسم</span> : ما لا يخبرك به
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             لماذا لا يعتبر مؤشر كتلة الجسم مؤشراً مثالياً ومتى يمكن أن يكون مضللاً

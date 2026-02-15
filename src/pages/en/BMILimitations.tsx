@@ -18,7 +18,7 @@ const BMILimitations = () => {
             BMI Limitations
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">BMI Limitations</span>: What it doesn't tell
+            <span className="text-warning">BMI Limitations</span> : What BMI Doesn't Tell You
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Why BMI is not a perfect indicator and when it can be misleading

@@ -108,7 +108,7 @@ const BMIFAQ = () => {
             Frequently Asked Questions
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">BMI FAQ</span>: All your questions
+            <span className="gradient-text">BMI FAQ</span> : Common Questions About Body Mass Index
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Answers to the most frequently asked questions about Body Mass Index

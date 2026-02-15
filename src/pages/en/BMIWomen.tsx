@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { BMIGauge } from "@/components/BMIGauge";
-import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles } from "lucide-react";
+import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, Globe } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 const kgToLbs = (kg: number) => Math.round(kg * 2.20462);
@@ -12,8 +12,8 @@ const cmToFtIn = (cm: number) => {
 
 const BMIWomen = () => {
   const [bmi, setBmi] = useState<number | null>(null);
-  const [weight, setWeight] = useState(65);
-  const [height, setHeight] = useState(165);
+  const [weight, setWeight] = useState(70);
+  const [height, setHeight] = useState(163);
 
   const calculateBMI = useCallback((w: number, h: number) => {
     const heightM = h / 100;
@@ -52,10 +52,10 @@ const BMIWomen = () => {
             BMI Calculator for Women
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-pink-500">BMI for Women</span>: Calculate Your Index
+            <span className="text-pink-500">BMI for Women</span> : Female BMI Calculator & Chart
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            BMI calculator with personalized advice for every stage of a woman's life
+            In the US, 42% of women are obese (CDC, NHANES 2023). BMI calculator with guidelines from CDC, ACOG, NAMS, and NHS.
           </p>
         </header>
 
@@ -115,14 +115,23 @@ const BMIWomen = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                <strong>Female BMI</strong> is calculated the same way as for men, but interpretation differs slightly.
+                <strong>Female BMI</strong> is calculated the same way as for men, but interpretation differs significantly.
                 Women naturally have a <strong>higher body fat percentage</strong> (20-25% vs 15-20% for men),
-                which is completely normal and necessary for proper hormonal function.
+                which is completely normal and necessary for proper hormonal function. According to NHANES data,
+                the <strong>average BMI for US women is 26.5</strong>, while NHS Digital reports the
+                <strong> UK average at 27.1</strong> — both in the overweight range.
               </p>
               <p>
-                The <strong>ideal waist circumference</strong> for a woman shouldn't exceed <strong>80 cm</strong>
-                (31.5 inches - moderate risk) or <strong>88 cm</strong> (34.6 inches - high risk). This indicator
-                is often more relevant than BMI alone as it measures abdominal fat, which is more dangerous for health.
+                The <strong>average American woman</strong> stands <strong>5'4" (163 cm)</strong> tall and weighs
+                <strong> 170 lbs (77 kg)</strong>. The CDC defines a <strong>waist circumference above 35 inches (88 cm)</strong> as
+                high risk for women. This waist measurement is often more relevant than BMI alone, as it targets
+                visceral abdominal fat, which is more metabolically dangerous.
+              </p>
+              <p>
+                <strong>Racial disparities</strong> in obesity rates among US women are significant:
+                <strong> Black women 56.9%</strong>, <strong>Hispanic women 43.7%</strong>, and
+                <strong> White women 39.8%</strong> (CDC). These differences highlight the importance of
+                culturally sensitive approaches to weight management and healthcare access.
               </p>
             </div>
           </div>
@@ -141,7 +150,7 @@ const BMIWomen = () => {
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">Category</th>
                     <th className="text-left py-3 px-4 font-semibold">BMI</th>
-                    <th className="text-left py-3 px-4 font-semibold">Example (5'5" / 165cm)</th>
+                    <th className="text-left py-3 px-4 font-semibold">Example 5'4" / 163cm (US avg)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -159,7 +168,7 @@ const BMIWomen = () => {
                       Normal weight
                     </td>
                     <td className="py-3 px-4">18.5 - 24.9</td>
-                    <td className="py-3 px-4">50 - 68 kg (110-150 lbs)</td>
+                    <td className="py-3 px-4">50 - 66 kg (110-146 lbs)</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -167,7 +176,7 @@ const BMIWomen = () => {
                       Overweight
                     </td>
                     <td className="py-3 px-4">25 - 29.9</td>
-                    <td className="py-3 px-4">68 - 81 kg (150-179 lbs)</td>
+                    <td className="py-3 px-4">66 - 80 kg (146-176 lbs)</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -175,7 +184,7 @@ const BMIWomen = () => {
                       Obesity
                     </td>
                     <td className="py-3 px-4">≥ 30</td>
-                    <td className="py-3 px-4">&gt; 81 kg (179 lbs)</td>
+                    <td className="py-3 px-4">&gt; 80 kg (176 lbs)</td>
                   </tr>
                 </tbody>
               </table>
@@ -192,12 +201,12 @@ const BMIWomen = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                { height: "5'1\" (155cm)", min: 44, max: 60, ideal: 53 },
-                { height: "5'3\" (160cm)", min: 47, max: 64, ideal: 56 },
-                { height: "5'5\" (165cm)", min: 50, max: 68, ideal: 60 },
-                { height: "5'7\" (170cm)", min: 53, max: 72, ideal: 64 },
-                { height: "5'9\" (175cm)", min: 57, max: 76, ideal: 67 },
-                { height: "5'11\" (180cm)", min: 60, max: 81, ideal: 71 },
+                { height: "5'0\" (152cm)", min: 43, max: 58, ideal: 51 },
+                { height: "5'2\" (157cm)", min: 46, max: 62, ideal: 55 },
+                { height: "5'4\" (163cm, US avg)", min: 49, max: 66, ideal: 58 },
+                { height: "5'6\" (168cm)", min: 52, max: 70, ideal: 62 },
+                { height: "5'8\" (173cm)", min: 55, max: 75, ideal: 66 },
+                { height: "5'10\" (178cm)", min: 59, max: 79, ideal: 70 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-pink-500">{item.height}</span>
@@ -221,19 +230,19 @@ const BMIWomen = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span>Weight can vary by <strong>2-6 lbs</strong> depending on menstrual cycle</span>
+                  <span><strong>ACOG guidelines</strong> on BMI during reproductive years: weight can vary by <strong>2-6 lbs</strong> depending on menstrual cycle</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span><strong>Water retention</strong> is normal before your period</span>
+                  <span><strong>CDC recommends folic acid</strong> for all women of childbearing age regardless of BMI</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span>Always weigh yourself at the <strong>same point</strong> in your cycle</span>
+                  <span><strong>HRT and weight</strong>: NAMS position on menopause hormone therapy supports individualized approach based on BMI</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span><strong>Menopause</strong> changes fat distribution patterns</span>
+                  <span>Always weigh yourself at the <strong>same point</strong> in your cycle for consistent tracking</span>
                 </li>
               </ul>
             </div>
@@ -248,19 +257,19 @@ const BMIWomen = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>BMI <strong>does not apply</strong> during pregnancy</span>
+                  <span><strong>ACOG recommends</strong>: 25-35 lbs gain for normal BMI, 15-25 lbs for overweight, 11-20 lbs for obese</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>Recommended weight gain: <strong>25-35 lbs</strong> (normal BMI)</span>
+                  <span><strong>Gestational diabetes</strong> affects 10% of US pregnancies (CDC) — BMI screening is critical before conception</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>Consult your <strong>OB/GYN</strong> for personalized monitoring</span>
+                  <span><strong>WIC program</strong> provides free nutrition support for pregnant and postpartum women in the US</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
-                  <span>Postpartum weight loss takes <strong>time</strong> - be patient</span>
+                  <span>Consult your <strong>OB/GYN</strong> for personalized monitoring — postpartum weight loss takes <strong>time</strong></span>
                 </li>
               </ul>
             </div>
@@ -277,13 +286,56 @@ const BMIWomen = () => {
             <div className="text-muted-foreground space-y-4">
               <p>
                 During <strong>menopause</strong>, hormonal changes promote weight gain, especially in the
-                abdominal area. Metabolism slows down and muscle mass naturally decreases.
-                It's therefore normal to gain a few pounds after 50.
+                abdominal area. The <strong>North American Menopause Society (NAMS)</strong> notes that the
+                <strong> average US woman gains 5 lbs during the menopause transition</strong>. Metabolism slows
+                down and muscle mass naturally decreases, making weight management more challenging after 50.
+              </p>
+              <p>
+                <strong>Bone density screening</strong>: the USPSTF recommends a <strong>DEXA scan at age 65</strong> for
+                all women, or earlier for those with risk factors. Lower BMI is associated with higher osteoporosis
+                risk, while higher BMI increases cardiovascular and joint risks — finding the right balance is key.
               </p>
               <p>
                 To maintain a healthy <strong>BMI after 50</strong> or <strong>BMI after 60</strong>,
                 focus on a diet rich in <strong>protein</strong> and <strong>calcium</strong>,
                 and maintain regular physical activity including <strong>strength training</strong>.
+                The AHA recommends at least 150 minutes of moderate activity per week for postmenopausal women.
+              </p>
+            </div>
+          </div>
+
+          {/* Women's BMI & US Healthcare */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-pink-500/10">
+                <Globe className="w-6 h-6 text-pink-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Women's BMI & US Healthcare</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                The <strong>Affordable Care Act (ACA)</strong> mandates coverage for BMI screening and obesity
+                counseling as preventive services at no cost-sharing for women. This includes annual wellness
+                visits where BMI is assessed and nutrition counseling referrals for those with a BMI of 30 or above.
+              </p>
+              <p>
+                <strong>Medicaid coverage</strong> for obesity treatment varies significantly by state. Some states
+                cover bariatric surgery and intensive behavioral therapy, while others offer limited benefits.
+                State-level obesity rates also vary dramatically — from <strong>West Virginia at 41.6%</strong> to
+                <strong> Colorado at 24.2%</strong> — reflecting differences in access to care, food environments,
+                and socioeconomic factors.
+              </p>
+              <p>
+                <strong>PCOS (Polycystic Ovary Syndrome)</strong> affects <strong>6-12% of US women</strong> of
+                reproductive age and has a direct impact on BMI. Insulin resistance associated with PCOS makes
+                weight management more difficult, and even a 5-10% weight loss can significantly improve symptoms
+                according to the NIH.
+              </p>
+              <p>
+                <strong>Title IX implications</strong> for female athletes: collegiate and professional female athletes
+                face unique BMI-related pressures. The NCAA and sports medicine guidelines (ACSM) emphasize that
+                BMI alone should never be used to assess fitness or eligibility, as athletic women often have higher
+                muscle mass that skews BMI readings upward.
               </p>
             </div>
           </div>
@@ -300,17 +352,21 @@ const BMIWomen = () => {
               <p>
                 The <strong>BMI calculator for women</strong> is an essential tool for evaluating your <strong>female body composition</strong>.
                 Whether you're looking for your <strong>ideal BMI for women</strong> or checking your <strong>healthy weight for women</strong>,
-                our <strong>female BMI calculator</strong> gives you instant, personalized answers.
+                our <strong>female BMI calculator</strong> gives you instant, personalized answers based on
+                guidelines from the <strong>CDC</strong>, <strong>ACOG</strong>, <strong>NAMS</strong>, and the <strong>AHA</strong>.
               </p>
               <p>
                 The <strong>ideal BMI for females</strong> is between 19 and 24. A <strong>normal BMI for women</strong>
-                corresponds to a weight that varies by height. For a woman who is <strong>5'4"</strong>,
-                the <strong>ideal weight</strong> is about 125 lbs. For a <strong>5'7" woman</strong>, it's about 140 lbs.
+                corresponds to a weight that varies by height. For a woman who is <strong>5'4" (the US average)</strong>,
+                the <strong>ideal weight</strong> is about 128 lbs (58 kg). For a <strong>5'6" woman</strong>, it's about 137 lbs (62 kg).
+                The <strong>NIH</strong> provides BMI tables calibrated for the US population.
               </p>
               <p>
                 <strong>What should my BMI be female</strong>? The healthy range is 18.5-24.9, but athletic women may be slightly higher.
-                <strong> BMI for women over 40</strong> remains the same numerically, but body composition changes.
-                <strong> BMI for women over 50</strong> may tolerate a few extra pounds - focus on staying active.
+                <strong> BMI for women over 40</strong> remains the same numerically, but body composition changes with perimenopause.
+                <strong> BMI for women over 50</strong> may tolerate a few extra pounds — the <strong>NAMS</strong> and
+                <strong> NIH</strong> both note that a slightly higher BMI (25-27) in older women may be protective against osteoporosis.
+                Obesity rates vary by state, from <strong>West Virginia (41.6%)</strong> to <strong>Colorado (24.2%)</strong>.
               </p>
             </div>
           </div>

@@ -118,7 +118,7 @@ import BMIJuxianxing from "./pages/zh/BMIJuxianxing";
 import BMIChangjianwenti from "./pages/zh/BMIChangjianwenti";
 import JiankangTizhong from "./pages/zh/JiankangTizhong";
 
-import Admin from "./pages/Admin";
+
 import NotFound from "./pages/NotFound";
 
 const StripTrailingSlash = () => {
@@ -255,8 +255,6 @@ const App = () => (
           <Route path="/zh/bmi-changjianwenti" element={<BMIChangjianwenti />} />
           <Route path="/zh/jiankang-tizhong" element={<JiankangTizhong />} />
 
-          {/* Admin */}
-          <Route path="/admin" element={<Admin />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

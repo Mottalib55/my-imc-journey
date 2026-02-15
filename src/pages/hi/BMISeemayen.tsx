@@ -18,7 +18,7 @@ const BMISeemayen = () => {
             आलोचनात्मक विश्लेषण
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-warning">BMI की सीमाएं</span>: BMI क्या नहीं बताता
+            <span className="text-warning">BMI की सीमाएं</span> : BMI क्या नहीं बताता
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             समझें कि BMI हमेशा विश्वसनीय क्यों नहीं होता और इसके कौन-कौन से विकल्प मौजूद हैं

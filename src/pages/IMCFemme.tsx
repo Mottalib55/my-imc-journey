@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { BMICalculator } from "@/components/BMICalculator";
 import { BMIGauge } from "@/components/BMIGauge";
 import { BMIDetails } from "@/components/BMIDetails";
-import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles } from "lucide-react";
+import { Users, Heart, Target, Baby, Scale, Activity, AlertTriangle, CheckCircle2, Sparkles, Globe, BookOpen } from "lucide-react";
 
 const IMCFemme = () => {
   const [bmi, setBmi] = useState<number | null>(null);
@@ -34,10 +34,10 @@ const IMCFemme = () => {
             Calculateur spécial femmes
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-pink-500">IMC Femme</span> : Calculez votre indice
+            <span className="text-pink-500">IMC Femme</span> : Calcul IMC Féminin et Poids Idéal
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Calculateur d'IMC adapté aux femmes avec des conseils personnalisés pour chaque étape de votre vie
+            En France, <strong>44% des femmes sont en surpoids ou obèses</strong> (ObÉpi-Roche 2023). Calculateur d'IMC adapté aux femmes françaises avec références HAS, INSERM et PNNS.
           </p>
         </header>
 
@@ -64,15 +64,16 @@ const IMCFemme = () => {
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                L'<strong>IMC femme</strong> se calcule avec la même formule que pour les hommes, mais l'interprétation
-                diffère légèrement. Les femmes ont naturellement un <strong>taux de graisse corporelle plus élevé</strong>
-                (20-25% contre 15-20% chez les hommes), ce qui est tout à fait normal et nécessaire pour le bon
-                fonctionnement hormonal.
+                L'<strong>IMC femme</strong> se calcule avec la même formule (poids ÷ taille²), mais l'interprétation
+                diffère. Selon l'<strong>étude ObÉpi-Roche 2023</strong>, l'IMC moyen des femmes françaises est de <strong>25,1</strong>.
+                La taille moyenne féminine en France est de <strong>1,64 m</strong> pour un poids moyen de <strong>67 kg</strong>.
+                Les femmes ont naturellement un <strong>taux de graisse corporelle plus élevé</strong> (20-25% contre 15-20%
+                chez les hommes), nécessaire au bon fonctionnement hormonal.
               </p>
               <p>
-                Le <strong>tour de taille idéal</strong> pour une femme ne devrait pas dépasser <strong>80 cm</strong>
-                (risque modéré) ou <strong>88 cm</strong> (risque élevé). Cet indicateur est souvent plus pertinent
-                que l'IMC seul car il mesure la graisse abdominale, plus dangereuse pour la santé.
+                La <strong>HAS</strong> recommande de compléter l'IMC par la mesure du <strong>tour de taille</strong> :
+                il ne devrait pas dépasser <strong>80 cm</strong> (risque modéré) ou <strong>88 cm</strong> (risque élevé).
+                En France, <strong>41% des femmes</strong> ont un tour de taille supérieur à 80 cm (Santé Publique France).
               </p>
             </div>
           </div>
@@ -91,7 +92,7 @@ const IMCFemme = () => {
                   <tr className="border-b border-border">
                     <th className="text-left py-3 px-4 font-semibold">Catégorie</th>
                     <th className="text-left py-3 px-4 font-semibold">IMC</th>
-                    <th className="text-left py-3 px-4 font-semibold">Exemple (1m65)</th>
+                    <th className="text-left py-3 px-4 font-semibold">Exemple (1m64, moyenne FR)</th>
                   </tr>
                 </thead>
                 <tbody className="text-muted-foreground">
@@ -109,7 +110,7 @@ const IMCFemme = () => {
                       Poids normal
                     </td>
                     <td className="py-3 px-4">18,5 - 24,9</td>
-                    <td className="py-3 px-4">50 - 68 kg</td>
+                    <td className="py-3 px-4">50 - 67 kg</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -117,7 +118,7 @@ const IMCFemme = () => {
                       Surpoids
                     </td>
                     <td className="py-3 px-4">25 - 29,9</td>
-                    <td className="py-3 px-4">68 - 81 kg</td>
+                    <td className="py-3 px-4">67 - 80 kg</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 flex items-center gap-2">
@@ -125,7 +126,7 @@ const IMCFemme = () => {
                       Obésité
                     </td>
                     <td className="py-3 px-4">≥ 30</td>
-                    <td className="py-3 px-4">&gt; 81 kg</td>
+                    <td className="py-3 px-4">&gt; 80 kg</td>
                   </tr>
                 </tbody>
               </table>
@@ -143,11 +144,11 @@ const IMCFemme = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { height: "1m55", min: 44, max: 60, ideal: 53 },
-                { height: "1m60", min: 47, max: 64, ideal: 56 },
-                { height: "1m65", min: 50, max: 68, ideal: 60 },
-                { height: "1m70", min: 53, max: 72, ideal: 64 },
-                { height: "1m75", min: 57, max: 76, ideal: 67 },
-                { height: "1m80", min: 60, max: 81, ideal: 71 },
+                { height: "1m58", min: 46, max: 62, ideal: 55 },
+                { height: "1m61", min: 48, max: 65, ideal: 57 },
+                { height: "1m64 (moy. FR)", min: 50, max: 67, ideal: 59 },
+                { height: "1m68", min: 52, max: 70, ideal: 62 },
+                { height: "1m72", min: 55, max: 74, ideal: 65 },
               ].map((item) => (
                 <div key={item.height} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl">
                   <span className="font-semibold text-pink-500">{item.height}</span>
@@ -238,36 +239,102 @@ const IMCFemme = () => {
             </div>
           </div>
 
-          {/* SEO Content for Women */}
+          {/* Santé féminine en France */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-pink-500/10">
+                <Globe className="w-6 h-6 text-pink-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Surpoids féminin en France : les chiffres clés</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                Selon l'<strong>ObÉpi-Roche 2023</strong>, <strong>27% des femmes françaises sont en surpoids</strong>
+                et <strong>17% sont obèses</strong>. L'obésité féminine a <strong>doublé en 25 ans</strong> en France
+                (8,3% en 1997 vs 17% en 2023), une progression plus rapide que chez les hommes.
+              </p>
+              <p>
+                Les <strong>inégalités sociales</strong> sont marquées : l'obésité touche <strong>22% des femmes ouvrières</strong>
+                contre <strong>9% des cadres</strong> (INSERM CONSTANCES). Géographiquement, les Hauts-de-France et les DOM-TOM
+                affichent les taux les plus élevés, tandis que l'Île-de-France et la région PACA restent en dessous de la moyenne nationale.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mt-4">
+                <div className="p-4 bg-pink-500/5 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-pink-500">25,1</div>
+                  <div className="text-sm mt-1">IMC moyen femmes FR</div>
+                </div>
+                <div className="p-4 bg-warning/5 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-warning">44%</div>
+                  <div className="text-sm mt-1">en surpoids ou obèses</div>
+                </div>
+                <div className="p-4 bg-purple-500/5 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-purple-500">1,64 m</div>
+                  <div className="text-sm mt-1">taille moyenne féminine</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Parcours de soins femmes */}
+          <div className="glass-card p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-pink-500/10">
+                <BookOpen className="w-6 h-6 text-pink-500" />
+              </div>
+              <h2 className="text-2xl font-display font-bold">Prise en charge du surpoids féminin en France</h2>
+            </div>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                Le système de santé français offre un <strong>parcours de soins complet</strong> pour les femmes
+                en surpoids. La <strong>Sécurité Sociale</strong> rembourse à 70% les consultations chez un
+                <strong> médecin nutritionniste</strong> (sur prescription) et les bilans biologiques associés.
+              </p>
+              <ul className="space-y-3 ml-4">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Sage-femme</strong> : suivi nutritionnel pendant la grossesse et le post-partum, remboursé à 100% par la Sécu</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>PMI</strong> (Protection Maternelle et Infantile) : suivi gratuit du poids maternel avant et après accouchement</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>APA sur ordonnance</strong> : activité physique adaptée prescrite par le médecin, partiellement remboursée par certaines mutuelles</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Centres spécialisés de l'obésité</strong> (CSO) : 37 centres en France, prise en charge multidisciplinaire gratuite</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* SEO Content enrichi */}
           <div className="glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-pink-500/10">
                 <Activity className="w-6 h-6 text-pink-500" />
               </div>
-              <h2 className="text-2xl font-display font-bold">Tout savoir sur l'IMC féminin</h2>
+              <h2 className="text-2xl font-display font-bold">Tout savoir sur l'IMC féminin en France</h2>
             </div>
             <div className="text-muted-foreground space-y-4">
               <p>
-                Le <strong>calcul IMC femme</strong> est un outil essentiel pour évaluer votre <strong>corpulence féminine</strong>.
-                Que vous cherchiez à connaître votre <strong>IMC femme idéal</strong> ou à vérifier votre <strong>poids santé femme</strong>,
-                notre <strong>calculateur IMC femme</strong> vous donne une réponse instantanée et personnalisée.
+                Le <strong>calcul IMC femme</strong> est un outil essentiel pour les femmes françaises. Pour une femme
+                de taille moyenne (<strong>1m64</strong>), le <strong>poids idéal</strong> se situe entre <strong>50 et 67 kg</strong>.
+                L'IMC moyen observé chez les Françaises est de <strong>25,1</strong>, à la limite du surpoids.
               </p>
               <p>
-                L'<strong>indice de masse corporelle femme</strong> idéal se situe entre 19 et 24. Un <strong>IMC femme normal</strong>
-                correspond à un poids qui varie selon votre taille. Pour une femme de <strong>1m60</strong>,
-                le <strong>poids idéal femme</strong> est d'environ 56 kg. Pour une femme de <strong>1m65</strong>, il est d'environ 60 kg.
+                Les <strong>spécificités hormonales féminines</strong> influencent le poids tout au long de la vie :
+                <strong> puberté</strong>, <strong>contraception</strong>, <strong>grossesse</strong> et <strong>ménopause</strong>
+                sont autant d'étapes qui modifient la composition corporelle. L'<strong>INSERM</strong> recommande de ne pas
+                se focaliser uniquement sur le chiffre de l'IMC mais de considérer le <strong>bien-être global</strong>.
               </p>
               <p>
-                Le <strong>calcul du poids idéal femme</strong> prend en compte plusieurs facteurs. Les femmes de morphologie
-                <strong> gracile</strong> auront un IMC naturellement plus bas, tandis que les morphologies plus <strong>athlétiques</strong>
-                peuvent avoir un IMC légèrement plus élevé. L'<strong>IMC femme sportive</strong> peut être plus élevé en raison
-                de la masse musculaire.
-              </p>
-              <p>
-                Pour les femmes de plus de <strong>40 ans</strong>, l'<strong>IMC femme 40 ans</strong> reste le même,
-                mais le corps change. L'<strong>IMC femme 50 ans</strong> et l'<strong>IMC femme 60 ans</strong> peuvent
-                tolérer quelques kilos supplémentaires, l'important étant de rester active et de bien s'alimenter.
-                N'oubliez pas que l'<strong>IMC enceinte</strong> ne s'applique pas pendant la grossesse.
+                En France, la lutte contre la <strong>grossophobie</strong> et les <strong>troubles alimentaires</strong>
+                (anorexie, boulimie) est une priorité de santé publique. L'<strong>ANSES</strong> met en garde contre
+                les régimes restrictifs qui peuvent être dangereux. Un suivi par un <strong>professionnel de santé</strong>
+                est toujours recommandé pour toute démarche de perte de poids.
               </p>
             </div>
           </div>

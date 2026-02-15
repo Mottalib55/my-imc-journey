@@ -19,7 +19,7 @@ const JiankangTizhong = () => {
             健康与养生
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-success">健康与体重</span>：完整指南
+            <span className="text-success">健康与体重</span>：完整健康管理指南
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             了解体重、BMI与整体健康之间的关系
