@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SEOHead } from "@/components/SEOHead";
 
@@ -121,14 +121,6 @@ import JiankangTizhong from "./pages/zh/JiankangTizhong";
 
 import NotFound from "./pages/NotFound";
 
-const StripTrailingSlash = () => {
-  const { pathname } = useLocation();
-  if (pathname !== "/" && pathname.endsWith("/")) {
-    return <Navigate to={pathname.slice(0, -1)} replace />;
-  }
-  return null;
-};
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -138,7 +130,6 @@ const App = () => (
       <Sonner />
       <HelmetProvider>
       <BrowserRouter>
-        <StripTrailingSlash />
         <SEOHead />
         <Routes>
           {/* Homepage = English */}

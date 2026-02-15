@@ -565,8 +565,12 @@ export const defaultSEO: PageSEO[] = [
 
 const STORAGE_KEY = "seo-overrides";
 
+const normalizePath = (p: string): string =>
+  p !== "/" && p.endsWith("/") ? p.slice(0, -1) : p;
+
 export const getSEOForPath = (path: string): PageSEO => {
-  const defaults = defaultSEO.find((s) => s.path === path);
+  const normalized = normalizePath(path);
+  const defaults = defaultSEO.find((s) => s.path === normalized);
   if (!defaults) {
     return defaultSEO[0];
   }

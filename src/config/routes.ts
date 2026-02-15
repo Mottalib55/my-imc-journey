@@ -13,6 +13,9 @@ export const routeMap: Record<string, Record<Lang, string>> = {
   health:         { fr: "/sante-et-poids",      en: "/health-weight",        es: "/es/salud-peso",                pt: "/pt/saude-peso",                ar: "/ar/siha-wazn",        de: "/de/gesundheit-gewicht", it: "/it/salute-peso",            hi: "/hi/swasthya-vajan",   zh: "/zh/jiankang-tizhong" },
 };
 
+const normalizePath = (p: string): string =>
+  p !== "/" && p.endsWith("/") ? p.slice(0, -1) : p;
+
 export const pathToLang: Record<string, Lang> = {};
 for (const routes of Object.values(routeMap)) {
   for (const [lang, path] of Object.entries(routes)) {
@@ -20,11 +23,12 @@ for (const routes of Object.values(routeMap)) {
   }
 }
 
-export const getCurrentLang = (pathname: string): Lang => pathToLang[pathname] || "fr";
+export const getCurrentLang = (pathname: string): Lang => pathToLang[normalizePath(pathname)] || "fr";
 
 export const getEquivalentPath = (currentPath: string, targetLang: Lang): string => {
+  const normalized = normalizePath(currentPath);
   for (const routes of Object.values(routeMap)) {
-    if (Object.values(routes).includes(currentPath)) {
+    if (Object.values(routes).includes(normalized)) {
       return routes[targetLang];
     }
   }
@@ -32,8 +36,9 @@ export const getEquivalentPath = (currentPath: string, targetLang: Lang): string
 };
 
 export const getAlternates = (currentPath: string): Record<Lang, string> | null => {
+  const normalized = normalizePath(currentPath);
   for (const routes of Object.values(routeMap)) {
-    if (Object.values(routes).includes(currentPath)) {
+    if (Object.values(routes).includes(normalized)) {
       return routes as Record<Lang, string>;
     }
   }

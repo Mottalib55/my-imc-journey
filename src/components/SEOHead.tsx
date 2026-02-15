@@ -5,20 +5,24 @@ import { getAlternates, localeMap, type Lang } from "@/config/routes";
 
 const DOMAIN = "https://bmi-imc.com";
 
+const withTrailingSlash = (path: string): string =>
+  path.endsWith("/") ? path : `${path}/`;
+
 export const SEOHead = () => {
   const { pathname } = useLocation();
   const seo = getSEOForPath(pathname);
   const alternates = getAlternates(pathname);
+  const canonicalUrl = `${DOMAIN}${withTrailingSlash(seo.path)}`;
 
   return (
     <Helmet>
       <html lang={seo.lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <link rel="canonical" href={`${DOMAIN}${seo.path}`} />
+      <link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
-      <meta property="og:url" content={`${DOMAIN}${seo.path}`} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="BMI-IMC" />
       <meta property="og:image" content={`${DOMAIN}/og-image.png`} />
@@ -37,10 +41,10 @@ export const SEOHead = () => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={`${DOMAIN}/og-image.png`} />
       {alternates && Object.entries(alternates).map(([lang, path]) => (
-        <link key={`hreflang-${lang}`} rel="alternate" hrefLang={lang} href={`${DOMAIN}${path}`} />
+        <link key={`hreflang-${lang}`} rel="alternate" hrefLang={lang} href={`${DOMAIN}${withTrailingSlash(path)}`} />
       ))}
       {alternates && (
-        <link rel="alternate" hrefLang="x-default" href={`${DOMAIN}${alternates.en}`} />
+        <link rel="alternate" hrefLang="x-default" href={`${DOMAIN}${withTrailingSlash(alternates.en)}`} />
       )}
     </Helmet>
   );
